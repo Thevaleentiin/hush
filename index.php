@@ -15,7 +15,12 @@
 
     <h1>Bienvenue</h1>
 
+    <?php
+    if (isset($_SESSION['email'])) {
+      echo $_SESSION['email'];
+    }
 
+    ?>
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="src/script/style.js"></script>
   </body>

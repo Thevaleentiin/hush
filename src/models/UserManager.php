@@ -22,17 +22,20 @@ class UserManager extends User{
 
   // Inscription
   public function inscription(){
-    $sql = 'INSERT INTO users (email, mdp) VALUES (:email, :mdp)';
+    $sql = 'INSERT INTO users (email, mdp, nom) VALUES (:email, :mdp, :nom)';
     $array = array(
       'email'=>$this->email,
-      'mdp'=>$this->mdp
+      'mdp'=>$this->mdp,
+      'nom'=>$this->nom
     );
+    $_SESSION['email'] = $this->email;
+    header('location: /hush/index.php');
     return BDD::insert($sql, $array);
   }
 
-  public static function userExist($email){
+  public function userExist($email){
     $existe = self::findOneByEmail($email);
-    return $resultats;
+    return $existe;
   }
 
 }
