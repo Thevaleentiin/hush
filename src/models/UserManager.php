@@ -9,12 +9,11 @@ class UserManager extends User{
     $sql = 'SELECT * FROM users';
     return BDD::select($sql, null, 'UserManager');
   }
-
-  // public static function findOneById($id){
-  //   $sql = 'SELECT * FROM users WHERE id= :id ';
-  //   $array = array('id'=> $id);
-  //   return current(BDD::select($sql, $array, 'UserManager'));
-  // }
+  public static function findOneById($id){
+    $sql = 'SELECT * FROM users WHERE id= :id ';
+    $array = array('id'=> $id);
+    return current(BDD::select($sql, $array, 'UserManager'));
+  }
   public static function findOneByEmail($email){
     $sql = 'SELECT * FROM users WHERE email = :email';
     $array = array('email'=> $email);

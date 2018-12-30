@@ -30,15 +30,27 @@
       <?php
         require_once '../class/bdd.php';
         require_once '../class/util.php';
-        require_once '../model/UserManager.php';
         require_once '../orm/user.php';
+        require_once '../models/UserManager.php';
+
 
         if (isset($_POST['inscription'])) {
 
           // TESt le mail
           $email_exist = UserManager::userExist($_POST['email']);
+          if(empty($email_exist)){
+            if (Util::verifEmail($_POST['email']) == true) {
+              // insertion de l'Utilisateur
+              $user = new UserManager();
+              $user->setEmail($_POST['email']);
+              $user->setMdp($_POST['mdp']);
 
-
+              $_SESSION['email'] = $_POST['email'];
+              echo $_SESSION['email'];
+            }
+            echo'Mavais email , erreur de syntaxe';
+          }
+          echo 'Utilisateur déja existant';
         }
 
 
