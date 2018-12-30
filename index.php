@@ -1,8 +1,3 @@
-<?php
-
-
-
- ?>
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -14,3 +9,12 @@
 
   </body>
 </html>
+<?php
+
+require_once 'src/class/bdd.php';
+
+
+
+
+
+ ?>
