@@ -4,9 +4,15 @@
     <meta charset="utf-8">
     <title>Hush</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="src/css/master.css">
   </head>
   <body>
 
+    <div id="loader">
+
+    </div>
+
+    <h1>Bienvenue</h1>
   </body>
 </html>
 <?php
