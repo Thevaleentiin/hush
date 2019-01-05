@@ -35,12 +35,12 @@
 
 
         if (isset($_POST['connexion'])) {
-          $user = new UserManager();
-          // var_dump($_POST['email']);
-          // var_dump($_POST['mdp']);
-          $user->setEmail($_POST['email']);
-          $user->SetMdp($_POST['mdp']);
-          $user->accountExist();
+            $user = new UserManager();
+            // var_dump($_POST['email']);
+            // var_dump($_POST['mdp']);
+            $user->setEmail($_POST['email']);
+            $user->SetMdp($_POST['mdp']);
+            $user->accountExist();
         }
 
 

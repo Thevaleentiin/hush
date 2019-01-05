@@ -38,24 +38,24 @@
 
 
         if (isset($_POST['inscription'])) {
-          $user = new UserManager();
-          // TESt le mail
-          $email_exist = $user->userExist($_POST['email']);
-          if(empty($email_exist)){
-            if (Util::verifEmail($_POST['email']) == true) {
-              // insertion de l'Utilisateur
-              $user = new UserManager();
-              $user->setEmail($_POST['email']);
-              $user->setMdp($_POST['mdp']);
-              $user->setNom($_POST['nom']);
-              $user->inscription();
-              echo $_SESSION['email'];
-            }else{
-              echo'Mavais email , erreur de syntaxe';
+            $user = new UserManager();
+            // TESt le mail
+            $email_exist = $user->userExist($_POST['email']);
+            if (empty($email_exist)) {
+                if (Util::verifEmail($_POST['email']) == true) {
+                    // insertion de l'Utilisateur
+                    $user = new UserManager();
+                    $user->setEmail($_POST['email']);
+                    $user->setMdp($_POST['mdp']);
+                    $user->setNom($_POST['nom']);
+                    $user->inscription();
+                    echo $_SESSION['email'];
+                } else {
+                    echo'Mavais email , erreur de syntaxe';
+                }
+            } else {
+                echo 'Utilisateur déja existant';
             }
-          }else{
-            echo 'Utilisateur déja existant';
-          }
         }
 
 

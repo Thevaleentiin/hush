@@ -1,55 +1,56 @@
 @media screen and (max-width: 700px) {
-  *{
-    margin:0;
-    padding:0;
-  }
-  //Page d'accueil
-  body#index{
-    #loader {
-      position : fixed;
-      z-index: 9999;
-      background: white;
-      top : 0px;
-      left : 0px;
-      height : 100vh;
-      width : 100vw;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      img{
-        margin: 0 auto;
-        display: block;
-        width: 50%;
-      }
+    * {
+        margin: 0;
+        padding: 0;
     }
-    h1{
-      color: pink;
-    }
-  }
-
-  // Page inscription
-  body#inscription{
-    section.menu-inscription{
-      div{
-        ul{
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          li{
-            list-style: none;
-            margin: 0% 2%;
-            &:first-of-type{
-              margin-left: 0%;
+    //Page d'accueil
+    body#index {
+        #loader {
+            position: fixed;
+            z-index: 9999;
+            background: white;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                margin: 0 auto;
+                display: block;
+                width: 50%;
             }
-            &:last-of-type{
-              margin-right: 0%;
-            }
-          }
         }
-      }
+
+        h1 {
+            color: pink;
+        }
     }
-  }
+    // Page inscription
+    body#inscription {
+        section.menu-inscription {
+            div {
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
 
+                    li {
+                        list-style: none;
+                        margin: 0 2%;
 
-//fin media query
+                        &:first-of-type {
+                            margin-left: 0;
+                        }
+
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //fin media query
 }
