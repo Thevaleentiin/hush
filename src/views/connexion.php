@@ -3,16 +3,16 @@
 <html lang="fr">
   <head>
     <meta charset="utf-8">
-    <title>Inscription - Hush</title>
+    <title>Connectez vous - Hush</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/master.css">
   </head>
-  <body id="inscription">
+  <body id="connexion">
       <section class="menu-inscription">
         <div>
           <ul>
-            <li>Créer un compte</li>
-            <li><a href="connexion.php">Se Connecter</a></li>
+            <li><a href="inscription">Créer un compte</a></li>
+            <li>Se Connecter</li>
           </ul>
         </div>
       </section>
@@ -21,13 +21,10 @@
         <label for="email">Email</label>
         <input type="email" name="email" id="email" value="">
         <br>
-        <label for="nom">Pseudo</label>
-        <input type="text" name="nom" id="nom" value="">
-        <br>
         <label for="mdp">Mot de passe</label>
         <input type="password" name="mdp" id="mdp" value="">
         <br>
-        <input type="submit" name="inscription" value="Inscription">
+        <input type="submit" name="connexion" value="connexion">
       </form>
 
       <?php
@@ -37,25 +34,13 @@
         require_once '../models/UserManager.php';
 
 
-        if (isset($_POST['inscription'])) {
+        if (isset($_POST['connexion'])) {
           $user = new UserManager();
-          // TESt le mail
-          $email_exist = $user->userExist($_POST['email']);
-          if(empty($email_exist)){
-            if (Util::verifEmail($_POST['email']) == true) {
-              // insertion de l'Utilisateur
-              $user = new UserManager();
-              $user->setEmail($_POST['email']);
-              $user->setMdp($_POST['mdp']);
-              $user->setNom($_POST['nom']);
-              $user->inscription();
-              echo $_SESSION['email'];
-            }else{
-              echo'Mavais email , erreur de syntaxe';
-            }
-          }else{
-            echo 'Utilisateur déja existant';
-          }
+          // var_dump($_POST['email']);
+          // var_dump($_POST['mdp']);
+          $user->setEmail($_POST['email']);
+          $user->SetMdp($_POST['mdp']);
+          $user->accountExist();
         }
 
 

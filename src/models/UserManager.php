@@ -33,6 +33,31 @@ class UserManager extends User{
     return BDD::insert($sql, $array);
   }
 
+
+  // Connexion Utilisateur
+  public function connexion(){
+    $sql = 'SELECT * FROM users WHERE email = :email AND mdp = :mdp';
+    $array = array(
+      'email' => $this->email,
+      'mdp' => $this->mdp
+    );
+    return BDD::select($sql, $array, 'UserManager');
+    }
+
+  public function accountExist(){
+    $compte = self::connexion();
+    var_dump($compte);
+    if (!empty($compte)) {
+      $_SESSION['email'] = $this->email;
+      $_SESSION['pwd'] = $this->mdp;
+      echo'1';
+      header('location: /hush/src/views/mon-compte.php');
+    }else{
+      echo'<p> Mauvais email ou mdp</p>';
+    }
+  }
+
+  // Verifcation si un utilisateur existe
   public function userExist($email){
     $existe = self::findOneByEmail($email);
     return $existe;
