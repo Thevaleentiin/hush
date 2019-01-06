@@ -23,6 +23,12 @@ class UserManager extends User
         $array = array('email'=> $email);
         return current(BDD::select($sql, $array, 'UserManager'));
     }
+    public static function findNameByEmail($email)
+    {
+        $sql = 'SELECT nom FROM users WHERE email = :email';
+        $array = array('email'=> $email);
+        return BDD::select($sql, $array, 'UserManager');
+    }
 
     // Inscription
     public function inscription()
@@ -59,11 +65,22 @@ class UserManager extends User
         if (!empty($compte)) {
             $_SESSION['email'] = $this->email;
             $_SESSION['pwd'] = $this->mdp;
-            echo'1';
             header('location: /hush/src/views/mon-compte.php');
         } else {
             echo'<p> Mauvais email ou mdp</p>';
         }
+    }
+
+
+    //Update Utilisateur
+    public function MiseaJour()
+    {
+        $sql ='UPDATE users SET email = :email WHERE email = :ancien_mail';
+        $array = array(
+            'email' => $this->email,
+            'ancien_mail' => $_POST['ancien_mail']
+        );
+        return BDD::update($sql, $array);
     }
 
     // Verifcation si un utilisateur existe

@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="src/css/master.css">
   </head>
   <body id="index">
-
     <div id="loader">
       <img src="src/images/loader.gif" alt="loader hush">
     </div>
