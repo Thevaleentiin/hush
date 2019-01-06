@@ -36,7 +36,7 @@
                 $maj = new UserManager();
                 $maj->setEmail($_POST['email']);
                 $maj->MiseaJour();
-                var_dump($maj);
+                // var_dump($maj);
                 if (isset($_POST['email'])) {
                     // on verifie que l'email n'etait vide
                     $_SESSION['email'] = $_POST['email'];

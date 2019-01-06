@@ -78,7 +78,7 @@ class UserManager extends User
         $sql ='UPDATE users SET email = :email WHERE email = :ancien_mail';
         $array = array(
             'email' => $this->email,
-            'ancien_mail' => $_POST['ancien_mail']
+            'ancien_mail' => $_SESSION['email']
         );
         return BDD::update($sql, $array);
     }
