@@ -14,6 +14,15 @@
 
     <h1>Bienvenue</h1>
 
+    <section class="menu-inscription">
+      <div>
+        <ul>
+          <li><a href="/hush/src/views/inscription">Créer un compte</a></li>
+          <li><a href="/hush/src/views/connexion.php">Se Connecter</a></li>
+        </ul>
+      </div>
+    </section>
+
     <?php
     if (isset($_SESSION['email'])) {
         echo $_SESSION['email'];

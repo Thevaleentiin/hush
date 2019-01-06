@@ -43,7 +43,7 @@ class BDD
     {
         return self::prepareExecute($sql, $params);
     }
-    public static function delete($sql, $params)
+    public static function supprimer($sql, $params)
     {
         return self::prepareExecute($sql, $params);
     }

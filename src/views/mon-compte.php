@@ -19,15 +19,21 @@
         <h1>Mon Compte</h1>
         <section>
           <h2>Bienvenue</h2>
-          <article class="modif-email">
+          <article class="modification-compte">
             <p>Voici votre adresse e-mail: <?= $_SESSION['email'] ?></p>
-            <form class="" action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
+            <form class="modifmail-form" action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
                 <label for="email">Nouveau email :</label>
                 <input type="email" name="email" id="email "value="">
                 <input type="hidden" name="ancien_mail" value="<?= $_SESSION['email'] ?>">
                 <input type="submit" name="update" value="Mettre à jour">
             </form>
+            <a href="deconnexion.php">Se déconnecter</a>
+            <form class="delete-form" action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
+                <input type="hidden" name="email" value="<?= $_SESSION['email']; ?>">
+                <input type="submit" name="delete" value="Supprimer son compte">
+            </form>
           </article>
+
         </section>
       </main>
       <?php
@@ -46,6 +52,14 @@
                 }
             } else {
                 echo 'erreur de syntaxe , veuillez réessayer';
+            }
+        }
+
+        if (isset($_POST['delete'])) {
+            if (isset($_POST['email'])) {
+                $del = new UserManager();
+                $del->setEmail($_POST['email']);
+                $del->SupprUser();
             }
         }
 

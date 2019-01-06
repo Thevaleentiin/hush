@@ -83,6 +83,18 @@ class UserManager extends User
         return BDD::update($sql, $array);
     }
 
+
+    //Delete utilisateur
+    public function SupprUser()
+    {
+        $sql ='DELETE FROM users WHERE email = :email';
+        $array = array('email' => $this->email);
+        header('location: /hush/index.php');
+        session_destroy();
+        return BDD::supprimer($sql, $array);
+    }
+
+
     // Verifcation si un utilisateur existe
     public function userExist($email)
     {
