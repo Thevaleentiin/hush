@@ -2,32 +2,39 @@
     //Global
     $font-regular: 'Gilroy-Regular', sans-serif;
     $font-bold: 'Gilroy-Bold', sans-serif;
+    $blue-color: #2895a1;
+
     * {
         margin: 0;
         padding: 0;
         font-family: 'Gilroy-Regular', sans-serif;
     }
-    img{
+
+    img {
         max-width: 100%;
     }
+
     section.menu-inscription {
         div {
             ul {
                 display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
+
                 li {
                     list-style: none;
                     font-size: 22px;
-                    font-family:$font-bold;
+                    font-family: $font-bold;
                     font-weight: 600;
-                    a{
+
+                    a {
                         text-decoration: none;
                         color: black;
                         font-size: 22px;
                         font-family: $font-bold;
                         font-weight: 600;
                     }
+
                     &:first-of-type {
                         margin-left: 0;
                     }
@@ -35,19 +42,21 @@
                     &:last-of-type {
                         margin-right: 0;
                     }
-                    &.active{
-                        color: #2895a1;
 
+                    &.active {
+                        color: $blue-color;
                     }
                 }
             }
         }
     }
-    a.BtnReturn{
+
+    a.BtnReturn {
         position: fixed;
         top: 30px;
         left: 30px;
-        img{
+
+        img {
             height: 26px;
             width: auto;
         }
@@ -55,6 +64,7 @@
     //Page d'accueil
     body#index {
         background: lightgrey;
+
         main {
             #loader {
                 position: fixed;
@@ -96,13 +106,15 @@
                                 text-decoration: none;
                                 width: 100%;
                                 text-align: center;
-                                img{
+
+                                img {
                                     height: 34px;
                                     margin: 0 auto;
                                     display: block;
-                                    margin: 0px auto 8px;
+                                    margin: 0 auto 8px;
                                 }
-                                span{
+
+                                span {
                                     display: block;
                                     color: black;
                                     font-size: 13px;
@@ -135,32 +147,86 @@
     }
     // Page inscription
     body#inscription {
-        main{
+        main {
             padding-top: 100px;
-            section.form-user{
-                form{
-                    label{
 
-                    }
-                    input{
+            section.form-user {
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
 
+                    input {
+                        border: 0;
+                        padding: 20px;
+                        border-radius: 5px;
+                        margin: 50px 0;
+                        width: 60%;
+
+                        &:first-of-type,
+                        &:nth-child(2) {
+                            margin-bottom: 0;
+                        }
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+
+                        &[type=submit] {
+                            width: 100%;
+                            position: fixed;
+                            bottom: 0;
+                            left: 0;
+                            border-radius: 0;
+                            background: $blue-color;
+                            color: white;
+                            margin: 0;
+                            font-size: 16px;
+                        }
                     }
                 }
             }
         }
     }
-
     // Page Connexion
     body#connexion {
-        main{
+        main {
             padding-top: 100px;
-            section.form-user{
-                form{
-                    label{
 
-                    }
-                    input{
+            section.form-user {
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
 
+                    input {
+                        border: 0;
+                        padding: 20px;
+                        border-radius: 5px;
+                        margin: 50px 0;
+                        width: 60%;
+
+                        &:first-of-type {
+                            margin-bottom: 0;
+                        }
+
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+
+                        &[type=submit] {
+                            width: 100%;
+                            position: fixed;
+                            bottom: 0;
+                            left: 0;
+                            border-radius: 0;
+                            background: $blue-color;
+                            color: white;
+                            margin: 0;
+                            font-size: 16px;
+                        }
                     }
                 }
             }

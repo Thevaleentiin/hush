@@ -28,8 +28,26 @@ class UserManager extends User
         $sql = 'SELECT * FROM users WHERE email = :email';
         $array = array('email'=> $email);
         $requete = current(BDD::select($sql, $array, 'UserManager'));
-        $gty = getNom();
-        return $gty;
+        if ($params == 'nom') {
+            $gty = new User();
+            $gty->setNom($requete->nom);
+            $result = $gty->getNom();
+            $_SESSION['nom'] = $result;
+            return $result;
+        } elseif ($params == 'email') {
+            $gty = new User();
+            $gty->setEmail($requete->email);
+            $result = $gty->getEmail();
+            return $result;
+        } elseif ($params == 'mdp') {
+            $gty = new User();
+            $gty->setMdp($requete->mdp);
+            $result = $gty->getMdp();
+            return $result;
+        } else {
+            echo'Erreur';
+        }
+        // return $gty;
     }
 
 

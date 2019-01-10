@@ -22,9 +22,9 @@
           </section>
           <section class="form-user">
               <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
-                <input type="email" name="email" id="email" value="">
-                <input type="password" name="mdp" id="mdp" value="">
-                <input type="submit" name="connexion" value="connexion">
+                <input type="email" name="email" id="email" value="" placeholder="Adresse e-mail">
+                <input type="password" name="mdp" id="mdp" value="" placeholder="Mot de passe">
+                <input type="submit" name="connexion" value="Suivant">
               </form>
           </section>
       </main>

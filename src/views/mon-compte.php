@@ -16,11 +16,13 @@
       require_once '../orm/user.php';
       require_once '../models/UserManager.php';
 
+          $test = new UserManager();
+          $resultat = $test->findAnythingByEmail($_SESSION['email'], 'nom');
      ?>
       <main>
         <h1>Mon Compte</h1>
         <section>
-          <h2>Bienvenue</h2>
+          <h2>Bienvenue <?= $_SESSION['nom']; ?></h2>
           <article class="modification-compte">
             <p>Voici votre adresse e-mail: <?= $_SESSION['email'] ?></p>
             <form class="modifmail-form" action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
@@ -35,12 +37,6 @@
                 <input type="submit" name="delete" value="Supprimer son compte">
             </form>
           </article>
-            <?php
-                $test = new UserManager();
-                $test->findAnythingByEmail($_SESSION['email'], 'nom');
-                var_dump($test);
-
-             ?>
         </section>
       </main>
       <?php
