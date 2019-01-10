@@ -23,12 +23,15 @@ class UserManager extends User
         $array = array('email'=> $email);
         return current(BDD::select($sql, $array, 'UserManager'));
     }
-    public static function findNameByEmail($email)
+    public static function findAnythingByEmail($email, $params)
     {
-        $sql = 'SELECT nom FROM users WHERE email = :email';
+        $sql = 'SELECT * FROM users WHERE email = :email';
         $array = array('email'=> $email);
-        return BDD::select($sql, $array, 'UserManager');
+        $requete = current(BDD::select($sql, $array, 'UserManager'));
+        $gty = getNom();
+        return $gty;
     }
+
 
     // Inscription
     public function inscription()

@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <title>Connectez vous - Hush</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="src/css/master.css">
+    <link href="src/ressource/font/Gilroy-Bold.tff">
+    <link href="src/ressource/font/Gilroy-Regular.tff">
   </head>
   <body id="monCompte">
     <?php
@@ -33,7 +35,12 @@
                 <input type="submit" name="delete" value="Supprimer son compte">
             </form>
           </article>
+            <?php
+                $test = new UserManager();
+                $test->findAnythingByEmail($_SESSION['email'], 'nom');
+                var_dump($test);
 
+             ?>
         </section>
       </main>
       <?php

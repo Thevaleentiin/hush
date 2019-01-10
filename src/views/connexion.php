@@ -5,27 +5,32 @@
     <meta charset="utf-8">
     <title>Connectez vous - Hush</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="/hush/src/css/master.css">
+    <link href="/hush/src/ressource/font/Gilroy-Bold.tff">
+    <link href="/hush/src/ressource/font/Gilroy-Regular.tff">
   </head>
   <body id="connexion">
-      <section class="menu-inscription">
-        <div>
-          <ul>
-            <li><a href="inscription">Créer un compte</a></li>
-            <li>Se Connecter</li>
-          </ul>
-        </div>
-      </section>
+      <main>
+          <a href="#" class="BtnReturn"><img src="/hush/src/images/arrow-left.png" alt="flèche gauche retour en arrière"></a>
+          <section class="menu-inscription">
+            <div>
+              <ul>
+                <li><a href="inscription">Créer un compte</a></li>
+                <li class="active">Se Connecter</li>
+              </ul>
+            </div>
+          </section>
+          <section class="form-user">
+              <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
+                <input type="email" name="email" id="email" value="">
+                <input type="password" name="mdp" id="mdp" value="">
+                <input type="submit" name="connexion" value="connexion">
+              </form>
+          </section>
+      </main>
 
-      <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" value="">
-        <br>
-        <label for="mdp">Mot de passe</label>
-        <input type="password" name="mdp" id="mdp" value="">
-        <br>
-        <input type="submit" name="connexion" value="connexion">
-      </form>
+
+
 
       <?php
         require_once '../class/bdd.php';

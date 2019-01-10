@@ -5,30 +5,30 @@
     <meta charset="utf-8">
     <title>Inscription - Hush</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="/hush/src/css/master.css">
+    <link href="/hush/src/ressource/font/Gilroy-Bold.tff">
+    <link href="/hush/src/ressource/font/Gilroy-Regular.tff">
   </head>
   <body id="inscription">
-      <section class="menu-inscription">
-        <div>
-          <ul>
-            <li>Créer un compte</li>
-            <li><a href="connexion.php">Se Connecter</a></li>
-          </ul>
-        </div>
-      </section>
-
-      <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" value="">
-        <br>
-        <label for="nom">Pseudo</label>
-        <input type="text" name="nom" id="nom" value="">
-        <br>
-        <label for="mdp">Mot de passe</label>
-        <input type="password" name="mdp" id="mdp" value="">
-        <br>
-        <input type="submit" name="inscription" value="Inscription">
-      </form>
+      <main>
+          <a href="#" class="BtnReturn"><img src="/hush/src/images/arrow-left.png" alt="flèche gauche retour en arrière"></a>
+          <section class="menu-inscription">
+            <div>
+              <ul>
+                <li class="active">Créer un compte</li>
+                <li><a href="connexion.php">Se Connecter</a></li>
+              </ul>
+            </div>
+          </section>
+          <section>
+              <form action="<?= $_SERVER['PHP_SELF']; ?>" method="post">
+                <input type="email" name="email" id="email" value="">
+                <input type="text" name="nom" id="nom" value="">
+                <input type="password" name="mdp" id="mdp" value="">
+                <input type="submit" name="inscription" value="Inscription">
+              </form>
+          </section>
+      </main>
 
       <?php
         require_once '../class/bdd.php';

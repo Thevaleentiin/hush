@@ -1,13 +1,60 @@
 @media screen and (max-width: 700px) {
+    //Global
+    $font-regular: 'Gilroy-Regular', sans-serif;
+    $font-bold: 'Gilroy-Bold', sans-serif;
     * {
         margin: 0;
         padding: 0;
         font-family: 'Gilroy-Regular', sans-serif;
     }
+    img{
+        max-width: 100%;
+    }
+    section.menu-inscription {
+        div {
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                li {
+                    list-style: none;
+                    font-size: 22px;
+                    font-family:$font-bold;
+                    font-weight: 600;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                        font-size: 22px;
+                        font-family: $font-bold;
+                        font-weight: 600;
+                    }
+                    &:first-of-type {
+                        margin-left: 0;
+                    }
+
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                    &.active{
+                        color: #2895a1;
+
+                    }
+                }
+            }
+        }
+    }
+    a.BtnReturn{
+        position: fixed;
+        top: 30px;
+        left: 30px;
+        img{
+            height: 26px;
+            width: auto;
+        }
+    }
     //Page d'accueil
     body#index {
         background: lightgrey;
-
         main {
             #loader {
                 position: fixed;
@@ -88,24 +135,32 @@
     }
     // Page inscription
     body#inscription {
-        section.menu-inscription {
-            div {
-                ul {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: center;
+        main{
+            padding-top: 100px;
+            section.form-user{
+                form{
+                    label{
 
-                    li {
-                        list-style: none;
-                        margin: 0 2%;
+                    }
+                    input{
 
-                        &:first-of-type {
-                            margin-left: 0;
-                        }
+                    }
+                }
+            }
+        }
+    }
 
-                        &:last-of-type {
-                            margin-right: 0;
-                        }
+    // Page Connexion
+    body#connexion {
+        main{
+            padding-top: 100px;
+            section.form-user{
+                form{
+                    label{
+
+                    }
+                    input{
+
                     }
                 }
             }
