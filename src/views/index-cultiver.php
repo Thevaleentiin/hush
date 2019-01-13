@@ -46,10 +46,10 @@
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        <div class="swiper-slide type-content"><p>Arbustre</p></div>
-                        <div class="swiper-slide type-content"><p>Fleurs</p></div>
-                        <div class="swiper-slide type-content"><p>Fleurs éxotique</p></div>
-                        <div class="swiper-slide type-content"><p>Plante</p></div>
+                        <div class="swiper-slide type-content"><img src="/hush/src/images/foret.jpg" alt=""><p>Arbustre</p></div>
+                        <div class="swiper-slide type-content"><img src="/hush/src/images/foret.jpg" alt=""><p>Fleurs</p></div>
+                        <div class="swiper-slide type-content"><img src="/hush/src/images/foret.jpg" alt=""><p>Fleurs éxotique</p></div>
+                        <div class="swiper-slide type-content"><img src="/hush/src/images/foret.jpg" alt=""><p>Plante</p></div>
                     </div>
           </section>
           <section class="aroundMe">

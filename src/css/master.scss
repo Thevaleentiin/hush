@@ -244,19 +244,27 @@
                         div.type-content {
                             background: #d8d8d8;
                             display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            height: 120px;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            height: 140px;
                             border-radius: 10px;
 
-                            p {}
+                            img {
+                                border-top-left-radius: 10px;
+                                border-top-right-radius: 10px;
+                            }
+
+                            p {
+                                margin: 10px 10px 0;
+                            }
                         }
                     }
                 }
             }
 
             section.aroundMe {
-                margin-top: 10%;
+                margin-top: 5%;
 
                 h2 {
                     font-size: 30px;
@@ -278,7 +286,8 @@
                             border-radius: 10px;
 
                             img {
-                                border-radius: 10px;
+                                border-top-left-radius: 10px;
+                                border-top-right-radius: 10px;
                             }
 
                             div.content-borne {
@@ -307,6 +316,8 @@
                                 p:last-of-type {
                                     text-align: right;
                                     padding-right: 10px;
+                                    font-weight: 600;
+                                    color: $blue-color;
                                 }
                             }
                         }
