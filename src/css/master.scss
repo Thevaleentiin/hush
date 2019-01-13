@@ -145,8 +145,180 @@
             }
         }
     }
+    //Page d'accueil Cultiver
+    body#indexCultiver {
+        background: lightgrey;
+
+        main {
+            #loader {
+                position: fixed;
+                z-index: 9999;
+                background: white;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    margin: 0 auto;
+                    display: block;
+                    width: 50%;
+                }
+            }
+
+            header {
+                position: fixed;
+                bottom: 0;
+                background: #afafaf;
+                padding: 20px;
+                box-sizing: border-box;
+                width: 100%;
+
+                nav.navBar {
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        li {
+                            list-style: none;
+
+                            a {
+                                text-decoration: none;
+                                width: 100%;
+                                text-align: center;
+
+                                img {
+                                    height: 34px;
+                                    margin: 0 auto;
+                                    display: block;
+                                    margin: 0 auto 8px;
+                                }
+
+                                span {
+                                    display: block;
+                                    color: black;
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            section.container-search {
+                form {
+                    margin: 20% 0 0;
+                    text-align: center;
+
+                    input {
+                        padding: 16px 0 15px 40px;
+                        border-radius: 5px;
+                        border: 0;
+                        background: url('/hush/src/images/loupe-gris.png')no-repeat;
+                        background-position: 5px 11px;
+                        background-color: white;
+                        background-size: 25px;
+                        width: 80%;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+
+            section.type-vegetation {
+                margin-top: 10%;
+
+                h1 {
+                    font-size: 30px;
+                    padding-left: 15px;
+                }
+
+                div.container-type {
+                    padding-left: 15px;
+                    margin-top: 4%;
+
+                    div.swiper-wrapper {
+                        div.type-content {
+                            background: #d8d8d8;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 120px;
+                            border-radius: 10px;
+
+                            p {}
+                        }
+                    }
+                }
+            }
+
+            section.aroundMe {
+                margin-top: 10%;
+
+                h2 {
+                    font-size: 30px;
+                    padding-left: 15px;
+                }
+
+                div.container-type {
+                    padding-left: 15px;
+                    margin-top: 4%;
+
+                    div.swiper-wrapper {
+                        div.type-content {
+                            background: #d8d8d8;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            align-items: center;
+                            height: 195px;
+                            border-radius: 10px;
+
+                            img {
+                                border-radius: 10px;
+                            }
+
+                            div.content-borne {
+                                margin-top: 5px;
+                                font-size: 13px;
+                                width: 100%;
+                                padding-left: 10px;
+                                box-sizing: border-box;
+
+                                p.title-borne {
+                                    font-weight: 600;
+
+                                    &.adress-borne {
+                                        font-size: 12px;
+                                    }
+                                }
+
+                                p:nth-child(3),
+                                p:nth-child(4) {
+                                    img {
+                                        width: 17px;
+                                        border-radius: 0;
+                                    }
+                                }
+
+                                p:last-of-type {
+                                    text-align: right;
+                                    padding-right: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     // Page inscription
     body#inscription {
+        min-height: 100vh;
+
         main {
             padding-top: 100px;
 
@@ -191,6 +363,8 @@
     }
     // Page Connexion
     body#connexion {
+        min-height: 100vh;
+
         main {
             padding-top: 100px;
 
