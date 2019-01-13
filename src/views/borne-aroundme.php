@@ -10,39 +10,14 @@
     <link href="/hush/src/ressource/font/Gilroy-Bold.tff">
     <link href="/hush/src/ressource/font/Gilroy-Regular.tff">
   </head>
-  <body id="indexCultiver">
+  <body id="borneAroundMe">
       <main>
-          <header>
-              <nav class="navBar">
-                  <ul>
-                      <li><a href="/hush/index.php"><img src="/hush/src/images/prise-noir.png" alt=""><span>Recharger</span></a></li>
-                      <li><a href="/hush/src/views/index-cultiver.php"><img src="/hush/src/images/feuille-bleu.png" alt=""><span>Cultiver</span></a></li>
-                      <li><a href=""><img src="/hush/src/images/carnet-bleu.png" alt=""><span>Carnet</span></a></li>
-                      <li><a href=""><img src="/hush/src/images/message-bleu.png" alt=""><span>Message</span></a></li>
-                      <li><a href="/hush/src/views/mon-compte.php"><img src="/hush/src/images/message-bleu.png" alt=""><span>Compte</span></a></li>
-                  </ul>
-              </nav>
-          </header>
           <section class="container-search">
               <form class="search_bar" id="SearchBar" action="index.html" method="post">
                   <input type="text" name="search" value="" placeholder="Où allez-vous ?">
               </form>
           </section>
-          <section class="type-vegetation">
-              <h1>Végétation</h1>
-                <!-- Slider main container -->
-                <div class="swiper-container container-type">
-                    <!-- Additional required wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide type-content"><img src="/hush/src/images/foret.jpg" alt=""><p>Arbustre</p></div>
-                        <div class="swiper-slide type-content"><img src="/hush/src/images/foret.jpg" alt=""><p>Fleurs</p></div>
-                        <div class="swiper-slide type-content"><img src="/hush/src/images/foret.jpg" alt=""><p>Fleurs éxotique</p></div>
-                        <div class="swiper-slide type-content"><img src="/hush/src/images/foret.jpg" alt=""><p>Plante</p></div>
-                    </div>
-          </section>
           <section class="aroundMe">
-              <h2>Autour de moi</h2>
                 <!-- Slider main container -->
                 <div class="swiper-container container-type">
                     <!-- Additional required wrapper -->
@@ -92,12 +67,6 @@
           </section>
       </main>
 
-    <!-- <?php
-    if (isset($_SESSION['email'])) {
-        echo $_SESSION['email'];
-    }
-
-    ?> -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
     <script type="text/javascript" src="/hush/src/script/style.js"></script>
@@ -107,10 +76,9 @@
         var mySwiper = new Swiper ('.swiper-container', {
         // Optional parameters
         direction: 'horizontal',
-        slidesPerView: 2.5,
+        slidesPerView: 3,
         spaceBetween: 15,
-        freeMode: true,
-        loop: false
+        freeMode: true
         })
         });
     </script>

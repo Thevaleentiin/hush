@@ -64,6 +64,8 @@
     //Page d'accueil
     body#index {
         background: lightgrey;
+        min-height: 100vh;
+        box-sizing: border-box;
 
         main {
             #loader {
@@ -125,9 +127,13 @@
                 }
             }
 
-            section {
+            section.container-search {
+                position: absolute;
+                top: 12%;
+                z-index: 1;
+                width: 100%;
+
                 form {
-                    margin: 20% 0 0;
                     text-align: center;
 
                     input {
@@ -140,6 +146,60 @@
                         background-size: 25px;
                         width: 80%;
                         box-sizing: border-box;
+                    }
+                }
+            }
+
+            #map {
+                position: fixed;
+                top: 0;
+            }
+        }
+    }
+    //Page mon compte
+    body#monCompte {
+        background: lightgrey;
+        min-height: 100vh;
+        box-sizing: border-box;
+        padding-top: 20%;
+
+        main {
+            header {
+                position: fixed;
+                bottom: 0;
+                background: #afafaf;
+                padding: 20px;
+                box-sizing: border-box;
+                width: 100%;
+
+                nav.navBar {
+                    ul {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+
+                        li {
+                            list-style: none;
+
+                            a {
+                                text-decoration: none;
+                                width: 100%;
+                                text-align: center;
+
+                                img {
+                                    height: 34px;
+                                    margin: 0 auto;
+                                    display: block;
+                                    margin: 0 auto 8px;
+                                }
+
+                                span {
+                                    display: block;
+                                    color: black;
+                                    font-size: 13px;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -283,6 +343,96 @@
                             justify-content: flex-start;
                             align-items: center;
                             height: 195px;
+                            border-radius: 10px;
+
+                            img {
+                                border-top-left-radius: 10px;
+                                border-top-right-radius: 10px;
+                            }
+
+                            div.content-borne {
+                                margin-top: 5px;
+                                font-size: 13px;
+                                width: 100%;
+                                padding-left: 10px;
+                                box-sizing: border-box;
+
+                                p.title-borne {
+                                    font-weight: 600;
+
+                                    &.adress-borne {
+                                        font-size: 12px;
+                                    }
+                                }
+
+                                p:nth-child(3),
+                                p:nth-child(4) {
+                                    img {
+                                        width: 17px;
+                                        border-radius: 0;
+                                    }
+                                }
+
+                                p:last-of-type {
+                                    text-align: right;
+                                    padding-right: 10px;
+                                    font-weight: 600;
+                                    color: $blue-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //Page bornes autour de moi
+    body#borneAroundMe {
+        background: lightgrey;
+        padding-top: 20%;
+        box-sizing: border-box;
+        min-height: 100vh;
+
+        main {
+            section.container-search {
+                form {
+                    text-align: center;
+
+                    input {
+                        padding: 16px 0 15px 40px;
+                        border-radius: 5px;
+                        border: 0;
+                        background: url('/hush/src/images/loupe-gris.png')no-repeat;
+                        background-position: 5px 11px;
+                        background-color: white;
+                        background-size: 25px;
+                        width: 80%;
+                        box-sizing: border-box;
+                    }
+                }
+            }
+
+            section.aroundMe {
+                margin-top: 5%;
+                position: fixed;
+                bottom: 2%;
+
+                h2 {
+                    font-size: 30px;
+                    padding-left: 15px;
+                }
+
+                div.container-type {
+                    padding-left: 15px;
+
+                    div.swiper-wrapper {
+                        div.type-content {
+                            background: #d8d8d8;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: flex-start;
+                            align-items: center;
+                            height: auto;
                             border-radius: 10px;
 
                             img {

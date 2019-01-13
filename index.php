@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="src/css/master.css">
     <link href="src/ressource/font/Gilroy-Bold.tff">
     <link href="src/ressource/font/Gilroy-Regular.tff">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
   </head>
   <body id="index">
       <main>
@@ -17,38 +19,32 @@
           <header>
               <nav class="navBar">
                   <ul>
-                      <li><a href=""><img src="src/images/prise-noir.png" alt=""><span>Recharger</span></a></li>
-                      <li><a href=""><img src="src/images/feuille-bleu.png" alt=""><span>Cultiver</span></a></li>
+                      <li><a href="/hush/index.php"><img src="src/images/prise-noir.png" alt=""><span>Recharger</span></a></li>
+                      <li><a href="/hush/src/views/index-cultiver.php"><img src="src/images/feuille-bleu.png" alt=""><span>Cultiver</span></a></li>
                       <li><a href=""><img src="src/images/carnet-bleu.png" alt=""><span>Carnet</span></a></li>
                       <li><a href=""><img src="src/images/message-bleu.png" alt=""><span>Message</span></a></li>
-                      <li><a href="/src/views/mon-compte.php"><img src="src/images/message-bleu.png" alt=""><span>Compte</span></a></li>
+                      <li><a href="src/views/mon-compte.php"><img src="src/images/message-bleu.png" alt=""><span>Compte</span></a></li>
                   </ul>
               </nav>
           </header>
-          <section>
+          <section class="container-search">
               <form class="search_bar" id="SearchBar" action="index.html" method="post">
                   <input type="text" name="search" value="" placeholder="Où allez-vous ?">
               </form>
           </section>
-
-          <section class="menu-inscription">
-            <div>
-              <ul>
-                <li><a href="/hush/src/views/inscription">Créer un compte</a></li>
-                <li><a href="/hush/src/views/connexion.php">Se Connecter</a></li>
-              </ul>
-            </div>
-          </section>
+          <div id='map' style='width: 100%; height: 600px;'></div>
       </main>
-
-    <?php
-    if (isset($_SESSION['email'])) {
-        echo $_SESSION['email'];
-    }
-
-    ?>
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="src/script/style.js"></script>
+    <script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoidmFsZW50aW5rYWhuIiwiYSI6ImNqcXBtYm90MjAyajU0OG8xZmxuaDJ2bDMifQ.4lXM63hKjqz6waLAbSLxsg';
+    const map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/valentinkahn/cjqvhko3w3g4e2rlh0dadaeef',
+    center: [2.349830, 48.856580],
+    zoom: 11.3
+    });
+</script>
   </body>
 </html>
 <?php
