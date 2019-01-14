@@ -120,6 +120,10 @@
                                     display: block;
                                     color: black;
                                     font-size: 13px;
+
+                                    &.active {
+                                        color: $blue-color;
+                                    }
                                 }
                             }
                         }
@@ -146,13 +150,18 @@
                         background-size: 25px;
                         width: 80%;
                         box-sizing: border-box;
+                        -webkit-box-shadow: 5px 5px 5px 0 rgba(46,74,117,0.32);
+                        -moz-box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
+                        box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
                     }
                 }
             }
 
             #map {
-                position: fixed;
+                position: absolute;
                 top: 0;
+                bottom: 0;
+                height: calc(100% - 97px)!important;
             }
         }
     }
@@ -262,6 +271,10 @@
                                     display: block;
                                     color: black;
                                     font-size: 13px;
+
+                                    &.active {
+                                        color: $blue-color;
+                                    }
                                 }
                             }
                         }
@@ -284,6 +297,9 @@
                         background-size: 25px;
                         width: 80%;
                         box-sizing: border-box;
+                        -webkit-box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
+                        -moz-box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
+                        box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
                     }
                 }
             }

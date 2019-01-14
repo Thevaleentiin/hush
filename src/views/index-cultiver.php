@@ -16,10 +16,10 @@
               <nav class="navBar">
                   <ul>
                       <li><a href="/hush/index.php"><img src="/hush/src/images/prise-noir.png" alt=""><span>Recharger</span></a></li>
-                      <li><a href="/hush/src/views/index-cultiver.php"><img src="/hush/src/images/feuille-bleu.png" alt=""><span>Cultiver</span></a></li>
-                      <li><a href=""><img src="/hush/src/images/carnet-bleu.png" alt=""><span>Carnet</span></a></li>
-                      <li><a href=""><img src="/hush/src/images/message-bleu.png" alt=""><span>Message</span></a></li>
-                      <li><a href="/hush/src/views/mon-compte.php"><img src="/hush/src/images/message-bleu.png" alt=""><span>Compte</span></a></li>
+                      <li><a href="/hush/src/views/index-cultiver.php"><img src="/hush/src/images/feuille-bleu.png" alt=""><span class="active">Cultiver</span></a></li>
+                      <li><a href=""><img src="/hush/src/images/carnet-noir.png" alt=""><span>Carnet</span></a></li>
+                      <li><a href=""><img src="/hush/src/images/message-noir.png" alt=""><span>Message</span></a></li>
+                      <li><a href="/hush/src/views/mon-compte.php"><img src="/hush/src/images/message-noir.png" alt=""><span>Compte</span></a></li>
                   </ul>
               </nav>
           </header>
