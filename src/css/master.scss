@@ -3,6 +3,7 @@
     $font-regular: 'Gilroy-Regular', sans-serif;
     $font-bold: 'Gilroy-Bold', sans-serif;
     $blue-color: #2895a1;
+    $back-menu: white;
 
     * {
         margin: 0;
@@ -90,7 +91,7 @@
             header {
                 position: fixed;
                 bottom: 0;
-                background: #afafaf;
+                background: $back-menu;
                 padding: 20px;
                 box-sizing: border-box;
                 width: 100%;
@@ -131,37 +132,46 @@
                 }
             }
 
-            section.container-search {
-                position: absolute;
-                top: 12%;
-                z-index: 1;
-                width: 100%;
-
-                form {
-                    text-align: center;
-
-                    input {
-                        padding: 16px 0 15px 40px;
-                        border-radius: 5px;
-                        border: 0;
-                        background: url('/hush/src/images/loupe-gris.png')no-repeat;
-                        background-position: 5px 11px;
-                        background-color: white;
-                        background-size: 25px;
-                        width: 80%;
-                        box-sizing: border-box;
-                        -webkit-box-shadow: 5px 5px 5px 0 rgba(46,74,117,0.32);
-                        -moz-box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
-                        box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
-                    }
-                }
-            }
-
             #map {
                 position: absolute;
                 top: 0;
                 bottom: 0;
-                height: calc(100% - 97px)!important;
+                height: calc(100% - 98px)!important;
+                border-bottom: 1px solid #bcbcbc;
+
+                .mapboxgl-ctrl-top-right {
+                    top: 13.3%;
+                    right: 16%;
+                }
+            }
+
+            #geocoder {
+                position: absolute;
+                top: 12%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                .geocoder-icon-search {
+                    background-image: url("/hush/src/images/loupe-gris.png");
+                    background-size: 20px;
+                }
+
+                .mapboxgl-ctrl-geocoder,
+                .mapboxgl-ctrl-geocoder ul {
+                    -webkit-box-shadow: 5px 5px 5px 0 rgba(46,74,117,0.32);
+                    -moz-box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
+                    box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
+                    -webkit-box-shadow: 5px 5px 5px 0 rgba(46,74,117,0.32);
+                    -moz-box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
+                    box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
+                }
+
+                .mapboxgl-ctrl-geocoder input[type='text'] {
+                    padding: 16px 0 15px 40px;
+                    border-radius: 5px;
+                    width: 80%;
+                }
             }
         }
     }
@@ -176,7 +186,7 @@
             header {
                 position: fixed;
                 bottom: 0;
-                background: #afafaf;
+                background: $back-menu;
                 padding: 20px;
                 box-sizing: border-box;
                 width: 100%;
@@ -219,6 +229,8 @@
         background: lightgrey;
 
         main {
+            padding-top: 15%;
+
             #loader {
                 position: fixed;
                 z-index: 9999;
@@ -241,7 +253,7 @@
             header {
                 position: fixed;
                 bottom: 0;
-                background: #afafaf;
+                background: $back-menu;
                 padding: 20px;
                 box-sizing: border-box;
                 width: 100%;
@@ -282,30 +294,8 @@
                 }
             }
 
-            section.container-search {
-                form {
-                    margin: 20% 0 0;
-                    text-align: center;
-
-                    input {
-                        padding: 16px 0 15px 40px;
-                        border-radius: 5px;
-                        border: 0;
-                        background: url('/hush/src/images/loupe-gris.png')no-repeat;
-                        background-position: 5px 11px;
-                        background-color: white;
-                        background-size: 25px;
-                        width: 80%;
-                        box-sizing: border-box;
-                        -webkit-box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
-                        -moz-box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
-                        box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
-                    }
-                }
-            }
-
             section.type-vegetation {
-                margin-top: 10%;
+                margin-top: 6%;
 
                 h1 {
                     font-size: 30px;
@@ -340,7 +330,7 @@
             }
 
             section.aroundMe {
-                margin-top: 5%;
+                margin-top: 4%;
 
                 h2 {
                     font-size: 30px;
@@ -358,7 +348,7 @@
                             flex-direction: column;
                             justify-content: flex-start;
                             align-items: center;
-                            height: 195px;
+                            height: 185px;
                             border-radius: 10px;
 
                             img {
@@ -398,6 +388,48 @@
                             }
                         }
                     }
+                }
+            }
+
+            #map {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                height: 0!important;
+                border-bottom: 1px solid #bcbcbc;
+
+                .mapboxgl-ctrl-top-right {
+                    top: 13.3%;
+                    right: 16%;
+                }
+            }
+
+            #geocoder {
+                position: relative;
+                top: 12%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+
+                .geocoder-icon-search {
+                    background-image: url("/hush/src/images/loupe-gris.png");
+                    background-size: 20px;
+                }
+
+                .mapboxgl-ctrl-geocoder,
+                .mapboxgl-ctrl-geocoder ul {
+                    -webkit-box-shadow: 5px 5px 5px 0 rgba(46,74,117,0.32);
+                    -moz-box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
+                    box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
+                    -webkit-box-shadow: 5px 5px 5px 0 rgba(46,74,117,0.32);
+                    -moz-box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
+                    box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
+                }
+
+                .mapboxgl-ctrl-geocoder input[type='text'] {
+                    padding: 16px 0 15px 40px;
+                    border-radius: 5px;
+                    width: 80%;
                 }
             }
         }

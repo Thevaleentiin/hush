@@ -28,8 +28,8 @@
                             <div class="content-borne">
                                 <p class="title-borne">Borne Reuilly</p>
                                 <p class="adress-borne">32 Rue de Crozatier,<br>75012, Paris</p>
-                                <p><img src="/hush/src/images/prise-noir.png" alt=""> 4 Disponible</p>
-                                <p><img src="/hush/src/images/euro-noir.png" alt=""> 5€ / 2 heures</p>
+                                <p><img src="/hush/src/images/feuille-noir.png" alt=""> 15 Plantes </p>
+                                <p><img src="/hush/src/images/user-noir.png" alt=""> 8 personnes </p>
                                 <p>2km</p>
                             </div>
                         </div>
@@ -38,8 +38,8 @@
                             <div class="content-borne">
                                 <p class="title-borne">Borne Reuilly</p>
                                 <p class="adress-borne">32 Rue de Crozatier,<br>75012, Paris</p>
-                                <p><img src="/hush/src/images/prise-noir.png" alt=""> 4 Disponible</p>
-                                <p><img src="/hush/src/images/euro-noir.png" alt=""> 5€ / 2 heures</p>
+                                <p><img src="/hush/src/images/feuille-noir.png" alt=""> 15 Plantes </p>
+                                <p><img src="/hush/src/images/user-noir.png" alt=""> 8 personnes </p>
                                 <p>2km</p>
                             </div>
                         </div>
@@ -48,8 +48,8 @@
                             <div class="content-borne">
                                 <p class="title-borne">Borne Reuilly</p>
                                 <p class="adress-borne">32 Rue de Crozatier,<br>75012, Paris</p>
-                                <p><img src="/hush/src/images/prise-noir.png" alt=""> 4 Disponible</p>
-                                <p><img src="/hush/src/images/euro-noir.png" alt=""> 5€ / 2 heures</p>
+                                <p><img src="/hush/src/images/feuille-noir.png" alt=""> 15 Plantes </p>
+                                <p><img src="/hush/src/images/user-noir.png" alt=""> 8 personnes </p>
                                 <p>2km</p>
                             </div>
                         </div>
@@ -58,8 +58,8 @@
                             <div class="content-borne">
                                 <p class="title-borne">Borne Reuilly</p>
                                 <p class="adress-borne">32 Rue de Crozatier,<br>75012, Paris</p>
-                                <p><img src="/hush/src/images/prise-noir.png" alt=""> 4 Disponible</p>
-                                <p><img src="/hush/src/images/euro-noir.png" alt=""> 5€ / 2 heures</p>
+                                <p><img src="/hush/src/images/feuille-noir.png" alt=""> 15 Plantes </p>
+                                <p><img src="/hush/src/images/user-noir.png" alt=""> 8 personnes </p>
                                 <p>2km</p>
                             </div>
                         </div>
