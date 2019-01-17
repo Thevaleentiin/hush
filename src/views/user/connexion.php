@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <title>Connectez vous - Hush</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/hush/src/css/master.css">
+    <link rel="stylesheet" href="/hush/src/asset/css/master.css">
     <link href="/hush/src/ressource/font/Gilroy-Bold.tff">
     <link href="/hush/src/ressource/font/Gilroy-Regular.tff">
   </head>
   <body id="connexion">
       <main>
-          <a href="#" class="BtnReturn"><img src="/hush/src/images/arrow-left.png" alt="flèche gauche retour en arrière"></a>
+          <a href="#" class="BtnReturn"><img src="/hush/src/asset/images/arrow-left.png" alt="flèche gauche retour en arrière"></a>
           <section class="menu-inscription">
             <div>
               <ul>
@@ -33,10 +33,10 @@
 
 
       <?php
-        require_once '../class/bdd.php';
-        require_once '../class/util.php';
-        require_once '../orm/user.php';
-        require_once '../models/UserManager.php';
+      require_once '../../class/bdd.php';
+      require_once '../../class/util.php';
+      require_once '../../orm/user.php';
+      require_once '../../models/UserManager.php';
 
 
         if (isset($_POST['connexion'])) {
@@ -51,6 +51,6 @@
 
        ?>
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="/hush/src/script/style.js"></script>
+    <script type="text/javascript" src="/hush/src/asset/script/style.js"></script>
   </body>
 </html>

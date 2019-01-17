@@ -8,7 +8,7 @@ $autolib = Util::Autolib();
     <meta charset="utf-8">
     <title>Hush</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/hush/src/css/master.css">
+    <link rel="stylesheet" href="/hush/src/asset/css/master.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
     <link href="/hush/src/ressource/font/Gilroy-Bold.tff">
     <link href="/hush/src/ressource/font/Gilroy-Regular.tff">
@@ -22,11 +22,11 @@ $autolib = Util::Autolib();
           <header>
               <nav class="navBar">
                   <ul>
-                      <li><a href="/hush/index.php"><img src="/hush/src/images/prise-noir.png" alt=""><span>Recharger</span></a></li>
-                      <li><a href="/hush/src/views/index-cultiver.php"><img src="/hush/src/images/feuille-bleu.png" alt=""><span class="active">Cultiver</span></a></li>
-                      <li><a href=""><img src="/hush/src/images/carnet-noir.png" alt=""><span>Carnet</span></a></li>
-                      <li><a href=""><img src="/hush/src/images/message-noir.png" alt=""><span>Message</span></a></li>
-                      <li><a href="/hush/src/views/mon-compte.php"><img src="/hush/src/images/message-noir.png" alt=""><span>Compte</span></a></li>
+                      <li><a href="/hush/index.php"><img src="/hush/src/asset/images/prise-noir.png" alt=""><span>Recharger</span></a></li>
+                      <li><a href="/hush/src/views/index-cultiver.php"><img src="/hush/src/asset/images/feuille-bleu.png" alt=""><span class="active">Cultiver</span></a></li>
+                      <li><a href=""><img src="/hush/src/asset/images/carnet-noir.png" alt=""><span>Carnet</span></a></li>
+                      <li><a href=""><img src="/hush/src/asset/images/message-noir.png" alt=""><span>Message</span></a></li>
+                      <li><a href="/hush/src/views/mon-compte.php"><img src="/hush/src/asset/images/message-noir.png" alt=""><span>Compte</span></a></li>
                   </ul>
               </nav>
           </header>
@@ -39,10 +39,10 @@ $autolib = Util::Autolib();
                     <!-- Additional required wrapper -->
                     <div class="swiper-wrapper">
                         <!-- Slides -->
-                        <div class="swiper-slide type-content"><img src="/hush/src/images/foret.jpg" alt=""><p>Arbustre</p></div>
-                        <div class="swiper-slide type-content"><img src="/hush/src/images/foret.jpg" alt=""><p>Fleurs</p></div>
-                        <div class="swiper-slide type-content"><img src="/hush/src/images/foret.jpg" alt=""><p>Fleurs éxotique</p></div>
-                        <div class="swiper-slide type-content"><img src="/hush/src/images/foret.jpg" alt=""><p>Plante</p></div>
+                        <div class="swiper-slide type-content"><img src="/hush/src/asset/images/foret.jpg" alt=""><p>Arbustre</p></div>
+                        <div class="swiper-slide type-content"><img src="/hush/src/asset/images/foret.jpg" alt=""><p>Fleurs</p></div>
+                        <div class="swiper-slide type-content"><img src="/hush/src/asset/images/foret.jpg" alt=""><p>Fleurs éxotique</p></div>
+                        <div class="swiper-slide type-content"><img src="/hush/src/asset/images/foret.jpg" alt=""><p>Plante</p></div>
                     </div>
           </section>
           <section class="aroundMe">
@@ -53,42 +53,42 @@ $autolib = Util::Autolib();
                     <div class="swiper-wrapper">
                         <!-- Slides -->
                         <div class="swiper-slide type-content">
-                            <img src="/hush/src/images/autolib-diderot.jpg" alt="borne diderot">
+                            <img src="/hush/src/asset/images/autolib-diderot.jpg" alt="borne diderot">
                             <div class="content-borne">
                                 <p class="title-borne">Borne Reuilly</p>
                                 <p class="adress-borne">32 Rue de Crozatier,<br>75012, Paris</p>
-                                <p><img src="/hush/src/images/feuille-noir.png" alt=""> 15 Plantes </p>
-                                <p><img src="/hush/src/images/user-noir.png" alt=""> 8 personnes </p>
+                                <p><img src="/hush/src/asset/images/feuille-noir.png" alt=""> 15 Plantes </p>
+                                <p><img src="/hush/src/asset/images/user-noir.png" alt=""> 8 personnes </p>
                                 <p>2km</p>
                             </div>
                         </div>
                         <div class="swiper-slide type-content">
-                            <img src="/hush/src/images/autolib-diderot.jpg" alt="borne diderot">
+                            <img src="/hush/src/asset/images/autolib-diderot.jpg" alt="borne diderot">
                             <div class="content-borne">
                                 <p class="title-borne">Borne Reuilly</p>
                                 <p class="adress-borne">32 Rue de Crozatier,<br>75012, Paris</p>
-                                <p><img src="/hush/src/images/feuille-noir.png" alt=""> 15 Plantes </p>
-                                <p><img src="/hush/src/images/user-noir.png" alt=""> 8 personnes </p>
+                                <p><img src="/hush/src/asset/images/feuille-noir.png" alt=""> 15 Plantes </p>
+                                <p><img src="/hush/src/asset/images/user-noir.png" alt=""> 8 personnes </p>
                                 <p>2km</p>
                             </div>
                         </div>
                         <div class="swiper-slide type-content">
-                            <img src="/hush/src/images/autolib-diderot.jpg" alt="borne diderot">
+                            <img src="/hush/src/asset/images/autolib-diderot.jpg" alt="borne diderot">
                             <div class="content-borne">
                                 <p class="title-borne">Borne Reuilly</p>
                                 <p class="adress-borne">32 Rue de Crozatier,<br>75012, Paris</p>
-                                <p><img src="/hush/src/images/feuille-noir.png" alt=""> 15 Plantes </p>
-                                <p><img src="/hush/src/images/user-noir.png" alt=""> 8 personnes </p>
+                                <p><img src="/hush/src/asset/images/feuille-noir.png" alt=""> 15 Plantes </p>
+                                <p><img src="/hush/src/asset/images/user-noir.png" alt=""> 8 personnes </p>
                                 <p>2km</p>
                             </div>
                         </div>
                         <div class="swiper-slide type-content">
-                            <img src="/hush/src/images/autolib-diderot.jpg" alt="borne diderot">
+                            <img src="/hush/src/asset/images/autolib-diderot.jpg" alt="borne diderot">
                             <div class="content-borne">
                                 <p class="title-borne">Borne Reuilly</p>
                                 <p class="adress-borne">32 Rue de Crozatier,<br>75012, Paris</p>
-                                <p><img src="/hush/src/images/feuille-noir.png" alt=""> 15 Plantes </p>
-                                <p><img src="/hush/src/images/user-noir.png" alt=""> 8 personnes </p>
+                                <p><img src="/hush/src/asset/images/feuille-noir.png" alt=""> 15 Plantes </p>
+                                <p><img src="/hush/src/asset/images/user-noir.png" alt=""> 8 personnes </p>
                                 <p>2km</p>
                             </div>
                         </div>
@@ -98,7 +98,7 @@ $autolib = Util::Autolib();
 
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
-    <script type="text/javascript" src="/hush/src/script/style.js"></script>
+    <script type="text/javascript" src="/hush/src/asset/script/style.js"></script>
     <script type="text/javascript">
     $(document).ready(function () {
         //initialize swiper when document ready

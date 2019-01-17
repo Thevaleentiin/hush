@@ -5,16 +5,16 @@
     <meta charset="utf-8">
     <title>Connectez vous - Hush</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/hush/src/css/master.css">
+    <link rel="stylesheet" href="/hush/src/asset/css/master.css">
     <link href="/hush/src/ressource/font/Gilroy-Bold.tff">
     <link href="/hush/src/ressource/font/Gilroy-Regular.tff">
   </head>
   <body id="monCompte">
     <?php
-      require_once '../class/bdd.php';
-      require_once '../class/util.php';
-      require_once '../orm/user.php';
-      require_once '../models/UserManager.php';
+    require_once '../../class/bdd.php';
+    require_once '../../class/util.php';
+    require_once '../../orm/user.php';
+    require_once '../../models/UserManager.php';
 
           $test = new UserManager();
           $resultat = $test->findAnythingByEmail($_SESSION['email'], 'nom');
@@ -23,11 +23,11 @@
           <header>
               <nav class="navBar">
                   <ul>
-                      <li><a href="/hush/index.php"><img src="/hush/src/images/prise-noir.png" alt=""><span>Recharger</span></a></li>
-                      <li><a href="/hush/src/views/index-cultiver.php"><img src="/hush/src/images/feuille-bleu.png" alt=""><span>Cultiver</span></a></li>
-                      <li><a href=""><img src="/hush/src/images/carnet-bleu.png" alt=""><span>Carnet</span></a></li>
-                      <li><a href=""><img src="/hush/src/images/message-bleu.png" alt=""><span>Message</span></a></li>
-                      <li><a href="#"><img src="/hush/src/images/message-bleu.png" alt=""><span>Compte</span></a></li>
+                      <li><a href="/hush/index.php"><img src="/hush/src/asset/images/prise-noir.png" alt=""><span>Recharger</span></a></li>
+                      <li><a href="/hush/src/views/index-cultiver.php"><img src="/hush/src/asset/images/feuille-bleu.png" alt=""><span>Cultiver</span></a></li>
+                      <li><a href=""><img src="/hush/src/asset/images/carnet-bleu.png" alt=""><span>Carnet</span></a></li>
+                      <li><a href=""><img src="/hush/src/asset/images/message-bleu.png" alt=""><span>Message</span></a></li>
+                      <li><a href="#"><img src="/hush/src/asset/images/message-bleu.png" alt=""><span>Compte</span></a></li>
                   </ul>
               </nav>
           </header>

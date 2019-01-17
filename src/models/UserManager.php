@@ -63,7 +63,7 @@ class UserManager extends User
         $_SESSION['email'] = $this->email;
         $_SESSION['mdp'] = $this->mdp;
         $_SESSION['nom'] = $this->nom;
-        header('location: /hush/src/views/mon-compte.php');
+        header('location: /hush/src/views/user/mon-compte.php');
         return BDD::insert($sql, $array);
     }
 
@@ -86,7 +86,7 @@ class UserManager extends User
         if (!empty($compte)) {
             $_SESSION['email'] = $this->email;
             $_SESSION['pwd'] = $this->mdp;
-            header('location: /hush/src/views/mon-compte.php');
+            header('location: /hush/src/views/user/mon-compte.php');
         } else {
             echo'<p> Mauvais email ou mdp</p>';
         }

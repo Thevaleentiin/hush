@@ -62,6 +62,50 @@
             width: auto;
         }
     }
+
+    header {
+        position: fixed;
+        bottom: 0;
+        background: $back-menu;
+        padding: 20px;
+        box-sizing: border-box;
+        width: 100%;
+
+        nav.navBar {
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                li {
+                    list-style: none;
+
+                    a {
+                        text-decoration: none;
+                        width: 100%;
+                        text-align: center;
+
+                        img {
+                            height: 34px;
+                            margin: 0 auto;
+                            display: block;
+                            margin: 0 auto 8px;
+                        }
+
+                        span {
+                            display: block;
+                            color: black;
+                            font-size: 13px;
+
+                            &.active {
+                                color: $blue-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     //Page d'accueil
     body#index {
         background: lightgrey;
@@ -88,50 +132,6 @@
                 }
             }
 
-            header {
-                position: fixed;
-                bottom: 0;
-                background: $back-menu;
-                padding: 20px;
-                box-sizing: border-box;
-                width: 100%;
-
-                nav.navBar {
-                    ul {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-
-                        li {
-                            list-style: none;
-
-                            a {
-                                text-decoration: none;
-                                width: 100%;
-                                text-align: center;
-
-                                img {
-                                    height: 34px;
-                                    margin: 0 auto;
-                                    display: block;
-                                    margin: 0 auto 8px;
-                                }
-
-                                span {
-                                    display: block;
-                                    color: black;
-                                    font-size: 13px;
-
-                                    &.active {
-                                        color: $blue-color;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
             #map {
                 position: absolute;
                 top: 0;
@@ -143,6 +143,10 @@
                     top: 13.3%;
                     right: 16%;
                 }
+
+                .mapboxgl-canvas:focus {
+                    outline: none !important;
+                }
             }
 
             #geocoder {
@@ -153,7 +157,7 @@
                 justify-content: center;
 
                 .geocoder-icon-search {
-                    background-image: url("/hush/src/images/loupe-gris.png");
+                    background-image: url("/hush/src/asset/images/loupe-gris.png");
                     background-size: 20px;
                 }
 
@@ -313,7 +317,7 @@
                             flex-direction: column;
                             justify-content: flex-start;
                             align-items: flex-start;
-                            height: 140px;
+                            height: 130px;
                             border-radius: 10px;
 
                             img {
@@ -412,7 +416,7 @@
                 justify-content: center;
 
                 .geocoder-icon-search {
-                    background-image: url("/hush/src/images/loupe-gris.png");
+                    background-image: url("/hush/src/asset/images/loupe-gris.png");
                     background-size: 20px;
                 }
 
@@ -450,7 +454,7 @@
                         padding: 16px 0 15px 40px;
                         border-radius: 5px;
                         border: 0;
-                        background: url('/hush/src/images/loupe-gris.png')no-repeat;
+                        background: url('/hush/src/asset/images/loupe-gris.png')no-repeat;
                         background-position: 5px 11px;
                         background-color: white;
                         background-size: 25px;
@@ -518,6 +522,180 @@
                                     color: $blue-color;
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //Page bornes
+    body#borne {
+        box-sizing: border-box;
+        min-height: 100vh;
+
+        main {
+            a.BtnReturn {
+                z-index: 1;
+            }
+
+            #map {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                height: 100%!important;
+                border-bottom: 1px solid #bcbcbc;
+
+                .mapboxgl-control-container {
+                    display: none!important;
+                }
+
+                .mapboxgl-ctrl-top-right {
+                    top: 13.3%;
+                    right: 16%;
+                }
+
+                .mapboxgl-canvas:focus {
+                    outline: none !important;
+                }
+            }
+
+            section {
+                z-index: 1;
+                position: fixed;
+                bottom: 10px;
+                padding: 0 5%;
+                box-sizing: border-box;
+
+                div.borne-content {
+                    background: white;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    height: auto;
+                    z-index: 1;
+                    border-radius: 10px;
+
+                    img {
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                    }
+
+                    div.content-borne {
+                        margin-top: 5px;
+                        font-size: 13px;
+                        width: 100%;
+                        padding: 0 0 10px 10px;
+                        box-sizing: border-box;
+
+                        p.title-borne {
+                            font-weight: 900;
+                            letter-spacing: 0.5px;
+
+                            &.adress-borne {
+                                font-size: 12px;
+                            }
+                        }
+
+                        p:nth-child(3) {
+                            text-align: right;
+                            color: $blue-color;
+                            font-weight: 600;
+                            padding-right: 10px;
+                        }
+
+                        p:last-of-type {
+                            text-align: center;
+                            letter-spacing: 1px;
+                            color: $blue-color;
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //Page bornes cultiver
+    body#borneCultiver {
+        box-sizing: border-box;
+        min-height: 100vh;
+
+        main {
+            a.BtnReturn {
+                z-index: 1;
+            }
+
+            #map {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                height: 100%!important;
+                border-bottom: 1px solid #bcbcbc;
+
+                .mapboxgl-control-container {
+                    display: none!important;
+                }
+
+                .mapboxgl-ctrl-top-right {
+                    top: 13.3%;
+                    right: 16%;
+                }
+
+                .mapboxgl-canvas:focus {
+                    outline: none !important;
+                }
+            }
+
+            section {
+                z-index: 1;
+                position: fixed;
+                bottom: 10px;
+                padding: 0 5%;
+                box-sizing: border-box;
+
+                div.borne-content {
+                    background: white;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
+                    height: auto;
+                    z-index: 1;
+                    border-radius: 10px;
+
+                    img {
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+                    }
+
+                    div.content-borne {
+                        margin-top: 5px;
+                        font-size: 13px;
+                        width: 100%;
+                        padding: 0 0 10px 10px;
+                        box-sizing: border-box;
+
+                        p.title-borne {
+                            font-weight: 900;
+                            letter-spacing: 0.5px;
+
+                            &.adress-borne {
+                                font-size: 12px;
+                            }
+                        }
+
+                        p:nth-child(3) {
+                            text-align: right;
+                            color: $blue-color;
+                            font-weight: 600;
+                            padding-right: 10px;
+                        }
+
+                        p:last-of-type {
+                            text-align: center;
+                            letter-spacing: 1px;
+                            color: $blue-color;
+                            font-size: 17px;
                         }
                     }
                 }

@@ -9,7 +9,7 @@ $autolib = Util::Autolib();
     <meta charset="utf-8">
     <title>Hush</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="src/css/master.css">
+    <link rel="stylesheet" href="src/asset/css/master.css">
     <link href="src/ressource/font/Gilroy-Bold.tff">
     <link href="src/ressource/font/Gilroy-Regular.tff">
     <script src='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
@@ -20,16 +20,16 @@ $autolib = Util::Autolib();
   <body id="index">
       <main>
           <div id="loader">
-            <img src="src/images/loader.gif" alt="loader hush">
+            <img src="src/asset/images/loader.gif" alt="loader hush">
           </div>
           <header>
               <nav class="navBar">
                   <ul>
-                      <li><a href="/hush/index.php"><img src="src/images/prise-bleu.png" alt=""><span class="active">Recharger</span></a></li>
-                      <li><a href="/hush/src/views/index-cultiver.php"><img src="src/images/feuille-noir.png" alt=""><span>Cultiver</span></a></li>
-                      <li><a href=""><img src="src/images/carnet-noir.png" alt=""><span>Carnet</span></a></li>
-                      <li><a href=""><img src="src/images/message-noir.png" alt=""><span>Message</span></a></li>
-                      <li><a href="src/views/mon-compte.php"><img src="src/images/message-noir.png" alt=""><span>Compte</span></a></li>
+                      <li><a href="/hush/index.php"><img src="src/asset/images/prise-bleu.png" alt=""><span class="active">Recharger</span></a></li>
+                      <li><a href="/hush/src/views/index-cultiver.php"><img src="src/asset/images/feuille-noir.png" alt=""><span>Cultiver</span></a></li>
+                      <li><a href=""><img src="src/asset/images/carnet-noir.png" alt=""><span>Carnet</span></a></li>
+                      <li><a href=""><img src="src/asset/images/message-noir.png" alt=""><span>Message</span></a></li>
+                      <li><a href="src/views/mon-compte.php"><img src="src/asset/images/message-noir.png" alt=""><span>Compte</span></a></li>
                   </ul>
               </nav>
           </header>
@@ -38,12 +38,12 @@ $autolib = Util::Autolib();
           <div id="geocoder" class="geocoder"></div>
       </main>
     <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="src/script/style.js"></script>
+    <script type="text/javascript" src="src/asset/script/style.js"></script>
     <script>
     mapboxgl.accessToken = 'pk.eyJ1IjoidmFsZW50aW5rYWhuIiwiYSI6ImNqcXBtYm90MjAyajU0OG8xZmxuaDJ2bDMifQ.4lXM63hKjqz6waLAbSLxsg';
     const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/valentinkahn/cjqvhko3w3g4e2rlh0dadaeef',
+    style: 'mapbox://styles/mapbox/basic-v9',
     center: [2.349830, 48.856580],
     zoom: 11.3
     });
@@ -105,6 +105,30 @@ $autolib = Util::Autolib();
         {
             map.getCanvas().style.cursor = '';
         });
+        // point apres la recherche
+        map.addSource('single-point', {
+        "type": "geojson",
+        "data": {
+            "type": "FeatureCollection",
+            "features": []
+        }
+    });
+
+    map.addLayer({
+        "id": "point",
+        "source": "single-point",
+        "type": "circle",
+        "paint": {
+            "circle-radius": 10,
+            "circle-color": "#007cbf"
+        }
+    });
+
+    // Listen for the `result` event from the MapboxGeocoder that is triggered when a user
+    // makes a selection and add a symbol that matches the result.
+    geocoder.on('result', function(ev) {
+        map.getSource('single-point').setData(ev.result.geometry);
+    });
     });
 
     var geocoder = new MapboxGeocoder({
