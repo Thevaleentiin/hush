@@ -1,149 +1,31 @@
 <?php
-session_start();
-require_once 'src/class/util.php';
-$autolib = Util::Autolib();
-?>
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <title>Hush</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="src/asset/css/master.css">
-    <link href="src/ressource/font/Gilroy-Bold.tff">
-    <link href="src/ressource/font/Gilroy-Regular.tff">
-    <script src='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
-    <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
-	<link rel="stylesheet" type="text/css" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css">
-  </head>
-  <body id="index">
-      <main>
-          <div id="loader">
-            <img src="src/asset/images/loader.gif" alt="loader hush">
-          </div>
-          <header>
-              <nav class="navBar">
-                  <ul>
-                      <li><a href="/hush/index.php"><img src="src/asset/images/prise-bleu.png" alt=""><span class="active">Recharger</span></a></li>
-                      <li><a href="/hush/src/views/index-cultiver.php"><img src="src/asset/images/feuille-noir.png" alt=""><span>Cultiver</span></a></li>
-                      <li><a href=""><img src="src/asset/images/carnet-noir.png" alt=""><span>Carnet</span></a></li>
-                      <li><a href=""><img src="src/asset/images/message-noir.png" alt=""><span>Message</span></a></li>
-                      <li><a href="src/views/mon-compte.php"><img src="src/asset/images/message-noir.png" alt=""><span>Compte</span></a></li>
-                  </ul>
-              </nav>
-          </header>
+// require_once
+    require_once 'src/class/bdd.php';
+    require_once 'src/class/util.php';
+    require_once 'src/orm/user.php';
+    require_once 'src/models/UserManager.php';
+    require_once 'src/controller/DefaultController.php';
+    require_once 'src/controller/UserController.php';
 
-          <div id='map' style='width: 100%; height: 600px;'></div>
-          <div id="geocoder" class="geocoder"></div>
-      </main>
-    <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="src/asset/script/style.js"></script>
-    <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoidmFsZW50aW5rYWhuIiwiYSI6ImNqcXBtYm90MjAyajU0OG8xZmxuaDJ2bDMifQ.4lXM63hKjqz6waLAbSLxsg';
-    const map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/mapbox/basic-v9',
-    center: [2.349830, 48.856580],
-    zoom: 11.3
-    });
+    $page = ''; // Page par défaut
+  if (isset($_GET['p'])) { // Si on reçois un paramètre "p"
+    $page = $_GET['p']; // On considère que c'est la page à afficher
+  }
 
-    map.on('load', function()
-    {
-        map.loadImage("https://i.imgur.com/B9OfNZt.png", function(error, image)
-        {
-            if (error) throw error;
-            map.addImage("custom-marker", image);
+    switch ($page) {
+        case 'home':
+            $ctrl = new UserController();
+            $ctrl->appelRender('home', array());
+            break;
+        case 'home-cultiver':
+            echo'home-cultiver';
+            break;
+        case 'inscription':
+            $ctrl = new UserController();
+            $ctrl->appelRender('user/inscription', array());
+            break;
 
-            map.addLayer({
-                "id": "places",
-                "type": "symbol",
-                "source": {
-                    "type": "geojson",
-                    "data": {
-                        "type": "FeatureCollection",
-                        "features": [
-                        <?php
-                        foreach ($autolib as $coordinates) {
-                            ?>
-                            {
-                                "type": "Feature",
-                                "properties": {
-                                    "description": "<p>Et olim licet otiosae sint tribus pacataeque centuriae et nulla suffragiorum certamina set Pompiliani redierit securitas temporis, per omnes tamen quotquot sunt partes terrarum, ut domina</p>",
-                                    "icon": "custom-marker"
-                                },
-                                "geometry": {
-                                    "type": "Point",
-                                    "coordinates": [<?php echo $coordinates; ?>]
-                                }
-                            },
-                            <?php
-                        }?>]
-                    }
-                },
-                "layout": {
-                    "icon-image": "custom-marker"
-                }
-            });
-
-        });
-        map.on('click', 'places', function (e)
-        {
-            var coordinates = e.features[0].geometry.coordinates.slice();
-            var description = e.features[0].properties.description;
-            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180)
-            {
-                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-            }
-            new mapboxgl.Popup().setLngLat(coordinates).setHTML(description).addTo(map);
-        });
-        map.on('mouseenter', 'places', function()
-        {
-            map.getCanvas().style.cursor = 'pointer';
-        });
-        map.on('mouseleave', 'places', function()
-        {
-            map.getCanvas().style.cursor = '';
-        });
-        // point apres la recherche
-        map.addSource('single-point', {
-        "type": "geojson",
-        "data": {
-            "type": "FeatureCollection",
-            "features": []
-        }
-    });
-
-    map.addLayer({
-        "id": "point",
-        "source": "single-point",
-        "type": "circle",
-        "paint": {
-            "circle-radius": 10,
-            "circle-color": "#007cbf"
-        }
-    });
-
-    // Listen for the `result` event from the MapboxGeocoder that is triggered when a user
-    // makes a selection and add a symbol that matches the result.
-    geocoder.on('result', function(ev) {
-        map.getSource('single-point').setData(ev.result.geometry);
-    });
-    });
-
-    var geocoder = new MapboxGeocoder({
-        accessToken: mapboxgl.accessToken,
-        placeholder: 'Où allez-vous ? ...'
-    });
-    document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
-
-    map.addControl(new mapboxgl.GeolocateControl({
-       positionOptions:
-       {
-          enableHighAccuracy: true
-       },
-       trackUserLocation: true
-    }));
-    </script>
-  </body>
-</html>
+        default:
+            echo'defaut';
+            break;
+    }

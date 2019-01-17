@@ -63,8 +63,8 @@ class UserManager extends User
         $_SESSION['email'] = $this->email;
         $_SESSION['mdp'] = $this->mdp;
         $_SESSION['nom'] = $this->nom;
+        BDD::insert($sql, $array);
         header('location: /hush/src/views/user/mon-compte.php');
-        return BDD::insert($sql, $array);
     }
 
 
