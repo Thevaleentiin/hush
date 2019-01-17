@@ -15,14 +15,14 @@
     switch ($page) {
         case 'home':
             $ctrl = new UserController();
-            $ctrl->appelRender('home', array());
+            $ctrl->appelRender('home');
             break;
         case 'home-cultiver':
             echo'home-cultiver';
             break;
         case 'inscription':
             $ctrl = new UserController();
-            $ctrl->appelRender('user/inscription', array());
+            $ctrl->appelRender('user/inscription');
             break;
 
         default:

@@ -5,7 +5,7 @@
  */
 class UserController extends DefaultController
 {
-    public function appelRender($vue, $variables)
+    public function appelRender($vue, $variables = array())
     {
         parent::render($vue, $variables);
     }
