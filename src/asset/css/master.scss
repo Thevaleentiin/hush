@@ -67,7 +67,7 @@
         position: fixed;
         bottom: 0;
         background: $back-menu;
-        padding: 20px;
+        padding: 5px 20px;
         box-sizing: border-box;
         width: 100%;
 
@@ -86,16 +86,16 @@
                         text-align: center;
 
                         img {
-                            height: 34px;
+                            height: 28px;
                             margin: 0 auto;
                             display: block;
-                            margin: 0 auto 8px;
+                            margin: 0 auto 4px;
                         }
 
                         span {
                             display: block;
                             color: black;
-                            font-size: 13px;
+                            font-size: 11px;
 
                             &.active {
                                 color: $blue-color;
@@ -128,7 +128,7 @@
                 img {
                     margin: 0 auto;
                     display: block;
-                    width: 50%;
+                    width: 25%;
                 }
             }
 
@@ -136,12 +136,17 @@
                 position: absolute;
                 top: 0;
                 bottom: 0;
-                height: calc(100% - 98px)!important;
+                height: calc(100% - 54px)!important;
                 border-bottom: 1px solid #bcbcbc;
 
                 .mapboxgl-ctrl-top-right {
-                    top: 13.3%;
-                    right: 16%;
+                    top: 10px;
+                    right: 10px;
+                }
+
+                .mapboxgl-ctrl-group {
+                    background: none!important;
+                    box-shadow: none!important;
                 }
 
                 .mapboxgl-canvas:focus {

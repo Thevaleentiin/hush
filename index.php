@@ -1,4 +1,5 @@
 <?php
+session_start();
 // require_once
     require_once 'src/class/bdd.php';
     require_once 'src/class/util.php';
@@ -24,7 +25,14 @@
             $ctrl = new UserController();
             $ctrl->appelRender('user/inscription');
             break;
-
+        case 'connexion':
+            $ctrl = new UserController();
+            $ctrl->appelRender('user/connexion');
+            break;
+        case 'moncompte':
+            $ctrl = new UserController();
+            $ctrl->appelRender('user/mon-compte');
+            break;
         default:
             echo'defaut';
             break;

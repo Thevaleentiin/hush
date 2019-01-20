@@ -1,8 +1,8 @@
-<?php session_start();
+<?php
 $autolib = Util::Autolib();
 ?>
 <!DOCTYPE html>
-<html lang="fr">
+<html>
   <head>
     <meta charset="utf-8">
     <title>Hush</title>

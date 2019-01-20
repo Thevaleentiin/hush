@@ -27,7 +27,8 @@ class UserManager extends User
     {
         $sql = 'SELECT * FROM users WHERE email = :email';
         $array = array('email'=> $email);
-        $requete = current(BDD::select($sql, $array, 'UserManager'));
+        $requete = BDD::select($sql, $array, 'UserManager');
+        var_dump($requete);
         if ($params == 'nom') {
             $gty = new User();
             $gty->setNom($requete->nom);
@@ -64,7 +65,7 @@ class UserManager extends User
         $_SESSION['mdp'] = $this->mdp;
         $_SESSION['nom'] = $this->nom;
         BDD::insert($sql, $array);
-        header('location: /hush/src/views/user/mon-compte.php');
+        header('location:?p=moncompte');
     }
 
 
@@ -82,11 +83,11 @@ class UserManager extends User
     public function accountExist()
     {
         $compte = self::connexion();
-        var_dump($compte);
+        // var_dump($compte);
         if (!empty($compte)) {
             $_SESSION['email'] = $this->email;
             $_SESSION['pwd'] = $this->mdp;
-            header('location: /hush/src/views/user/mon-compte.php');
+            header('location: ?p=moncompte');
         } else {
             echo'<p> Mauvais email ou mdp</p>';
         }
