@@ -27,8 +27,7 @@ class UserManager extends User
     {
         $sql = 'SELECT * FROM users WHERE email = :email';
         $array = array('email'=> $email);
-        $requete = BDD::select($sql, $array, 'UserManager');
-        var_dump($requete);
+        $requete = current(BDD::select($sql, $array, 'UserManager'));
         if ($params == 'nom') {
             $gty = new User();
             $gty->setNom($requete->nom);

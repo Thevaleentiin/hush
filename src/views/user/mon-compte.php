@@ -1,6 +1,6 @@
   <body id="monCompte">
     <?php
-        var_dump($_SESSION['email']);
+        // var_dump($_SESSION['email']);
         $recup = new UserController();
         $resultat = $recup->AfficherNomCompte($_SESSION['email'], 'nom');
         // var_dump($resultat);
