@@ -259,50 +259,6 @@
                 }
             }
 
-            header {
-                position: fixed;
-                bottom: 0;
-                background: $back-menu;
-                padding: 20px;
-                box-sizing: border-box;
-                width: 100%;
-
-                nav.navBar {
-                    ul {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-
-                        li {
-                            list-style: none;
-
-                            a {
-                                text-decoration: none;
-                                width: 100%;
-                                text-align: center;
-
-                                img {
-                                    height: 34px;
-                                    margin: 0 auto;
-                                    display: block;
-                                    margin: 0 auto 8px;
-                                }
-
-                                span {
-                                    display: block;
-                                    color: black;
-                                    font-size: 13px;
-
-                                    &.active {
-                                        color: $blue-color;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
             section.type-vegetation {
                 margin-top: 6%;
 
@@ -793,6 +749,175 @@
                             margin: 0;
                             font-size: 16px;
                         }
+                    }
+                }
+            }
+        }
+    }
+    //page carnet
+    body#carnet {
+        background: #f3f3f3;
+
+        main {
+            section.content {
+                border-bottom: 1px solid #bcbcbc;
+                padding-top: 20%;
+
+                h1 {
+                    color: $blue-color;
+                    padding-left: 30px;
+                    padding-bottom: 20px;
+                }
+
+                a.BtnReturn {
+                    position: absolute;
+                }
+            }
+
+            section.publication-container {
+                padding: 0 20px 80px;
+                box-sizing: border-box;
+
+                article.publication-content {
+                    margin-top: 6%;
+
+                    div.top-content {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+
+                        img {
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 50%;
+                            border: 1px solid #bcbcbc;
+                            margin: 0 10px 0 0;
+                        }
+
+                        div.text-content {
+                            p.title-content {
+                                span {
+                                    font-weight: 600;
+                                }
+                            }
+
+                            p.date {
+                                color: $blue-color;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+
+                    p.message-content {
+                        margin-top: 4%;
+                    }
+                }
+            }
+        }
+    }
+    // page My carnet
+    body#Mycarnet {
+        background: #f3f3f3;
+
+        main {
+            section.content {
+                border-bottom: 1px solid #bcbcbc;
+                padding-top: 20px;
+
+                h1 {
+                    color: $blue-color;
+                    padding-left: 30px;
+                    padding-bottom: 20px;
+                }
+
+                a.BtnReturn {
+                    position: absolute;
+                }
+            }
+
+            section.publication-container {
+                padding: 0 20px 80px;
+                box-sizing: border-box;
+
+                article.send-in {
+                    margin-top: 6%;
+
+                    form {
+                        background: white;
+                        border-radius: 10px;
+
+                        div.container-input {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: flex-start;
+                            padding: 10px 0 0 10px;
+
+                            textarea {
+                                -webkit-appearance: none;
+                                border: 0;
+                                width: 82%;
+                                margin-top: 10px;
+
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+
+                            img {
+                                width: 35px;
+                                height: auto;
+                                border-radius: 50%;
+                                border: 1px solid #bcbcbc;
+                                margin-right: 10px;
+                            }
+                        }
+
+                        div.cont-bottom {
+                            text-align: right;
+
+                            img {
+                                width: 25px;
+                                height: auto;
+                                margin: 0 10px 10px 0;
+                            }
+                        }
+                    }
+                }
+
+                article.publication-content {
+                    margin-top: 6%;
+
+                    div.top-content {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+
+                        img {
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 50%;
+                            border: 1px solid #bcbcbc;
+                            margin: 0 10px 0 0;
+                        }
+
+                        div.text-content {
+                            p.title-content {
+                                span {
+                                    font-weight: 600;
+                                }
+                            }
+
+                            p.date {
+                                color: $blue-color;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+
+                    p.message-content {
+                        margin-top: 4%;
                     }
                 }
             }

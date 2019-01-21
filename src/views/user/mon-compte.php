@@ -9,7 +9,7 @@
           <header>
               <nav class="navBar">
                   <ul>
-                      <li><a href="/hush/index.php"><img src="/hush/src/asset/images/prise-noir.png" alt=""><span>Recharger</span></a></li>
+                      <li><a href="?p=home"><img src="/hush/src/asset/images/prise-noir.png" alt=""><span>Recharger</span></a></li>
                       <li><a href="/hush/src/views/index-cultiver.php"><img src="/hush/src/asset/images/feuille-bleu.png" alt=""><span>Cultiver</span></a></li>
                       <li><a href=""><img src="/hush/src/asset/images/carnet-bleu.png" alt=""><span>Carnet</span></a></li>
                       <li><a href=""><img src="/hush/src/asset/images/message-bleu.png" alt=""><span>Message</span></a></li>

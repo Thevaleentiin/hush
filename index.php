@@ -19,7 +19,8 @@ session_start();
             $ctrl->appelRender('home');
             break;
         case 'home-cultiver':
-            echo'home-cultiver';
+            $ctrl = new UserController();
+            $ctrl->appelRender('home-cultiver');
             break;
         case 'inscription':
             $ctrl = new UserController();
@@ -32,6 +33,14 @@ session_start();
         case 'moncompte':
             $ctrl = new UserController();
             $ctrl->appelRender('user/mon-compte');
+            break;
+        case 'carnet':
+            $ctrl = new UserController();
+            $ctrl->appelRender('carnet/carnet');
+            break;
+        case 'mycarnet':
+            $ctrl = new UserController();
+            $ctrl->appelRender('carnet/my-carnet');
             break;
         default:
             echo'defaut';
