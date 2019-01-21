@@ -34,5 +34,43 @@
                 <p>9</p>
             </div>
         </section>
+        <section class="publication-container">
+            <article class="publication-content">
+                <div class="top-content">
+                    <img src="src/asset/images/profil-picture.png" alt="photo de profil">
+                    <div class="text-content">
+                        <p class="title-content"><span>Julie Sauvignet</span> à partagé une publication</p>
+                        <p class="date">mardi, à 17:30</p>
+                    </div>
+                </div>
+                <p class="message-content">
+                    J’ai entretenue les tulipes aujourd’hui ! Elle sont sublime.
+                </p>
+            </article>
+            <article class="publication-content">
+                <div class="top-content">
+                    <img src="src/asset/images/profil-picture.png" alt="photo de profil">
+                    <div class="text-content">
+                        <p class="title-content"><span>Julie Sauvignet</span> à partagé une publication</p>
+                        <p class="date">mardi, à 17:30</p>
+                    </div>
+                </div>
+                <p class="message-content">
+                    J’ai entretenue les tulipes aujourd’hui ! Elle sont sublime.
+                </p>
+            </article>
+            <article class="publication-content">
+                <div class="top-content">
+                    <img src="src/asset/images/profil-picture.png" alt="photo de profil">
+                    <div class="text-content">
+                        <p class="title-content"><span>Julie Sauvignet</span> à partagé une publication</p>
+                        <p class="date">mardi, à 17:30</p>
+                    </div>
+                </div>
+                <p class="message-content">
+                    J’ai entretenue les tulipes aujourd’hui ! Elle sont sublime.
+                </p>
+            </article>
+        </section>
 
     </main>
