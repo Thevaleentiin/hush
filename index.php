@@ -42,6 +42,10 @@ session_start();
             $ctrl = new UserController();
             $ctrl->appelRender('carnet/my-carnet');
             break;
+        case 'profil':
+            $ctrl = new UserController();
+            $ctrl->appelRender('user/profil');
+            break;
         default:
             echo'defaut';
             break;

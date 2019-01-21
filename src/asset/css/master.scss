@@ -923,5 +923,66 @@
             }
         }
     }
+    // page profil utilisateur
+    body#profilUser {
+        background: #f3f3f3;
+
+        main {
+            section.content-top {
+                background: white;
+                // border-bottom: 1px solid #bcbcbc;
+                padding: 20px 0;
+
+                a.MsgButton {
+                    position: absolute;
+                    right: 30px;
+                    top: 30px;
+
+                    img {
+                        height: 26px;
+                        width: auto;
+                    }
+                }
+
+                div.profil-info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    h1 {
+                        color: $blue-color;
+                        margin: 3% 0;
+                    }
+
+                    p {}
+                }
+            }
+
+            section.icon-profil {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                padding: 20px 0;
+
+                div.icon-content {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    img {
+                        width: 30px;
+                        height: auto;
+                    }
+
+                    p {
+                        font-size: 20px;
+                        margin: 0 10px;
+                    }
+                }
+            }
+        }
+    }
     //fin media query
 }

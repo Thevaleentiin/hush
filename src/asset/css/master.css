@@ -143,4 +143,14 @@
   body#Mycarnet main section.publication-container article.publication-content div.top-content img { width: 35px; height: 35px; border-radius: 50%; border: 1px solid #bcbcbc; margin: 0 10px 0 0; }
   body#Mycarnet main section.publication-container article.publication-content div.top-content div.text-content p.title-content span { font-weight: 600; }
   body#Mycarnet main section.publication-container article.publication-content div.top-content div.text-content p.date { color: #2895a1; font-size: 13px; }
-  body#Mycarnet main section.publication-container article.publication-content p.message-content { margin-top: 4%; } }
+  body#Mycarnet main section.publication-container article.publication-content p.message-content { margin-top: 4%; }
+  body#profilUser { background: #f3f3f3; }
+  body#profilUser main section.content-top { background: white; padding: 20px 0; }
+  body#profilUser main section.content-top a.MsgButton { position: absolute; right: 30px; top: 30px; }
+  body#profilUser main section.content-top a.MsgButton img { height: 26px; width: auto; }
+  body#profilUser main section.content-top div.profil-info { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+  body#profilUser main section.content-top div.profil-info h1 { color: #2895a1; margin: 3% 0; }
+  body#profilUser main section.icon-profil { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 20px 0; }
+  body#profilUser main section.icon-profil div.icon-content { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+  body#profilUser main section.icon-profil div.icon-content img { width: 30px; height: auto; }
+  body#profilUser main section.icon-profil div.icon-content p { font-size: 20px; margin: 0 10px; } }
