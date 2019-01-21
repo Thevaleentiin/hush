@@ -32,6 +32,10 @@ session_start();
             break;
         case 'moncompte':
             $ctrl = new UserController();
+            $ctrl->appelRender('user/my-profil');
+            break;
+        case 'reglage-compte':
+            $ctrl = new UserController();
             $ctrl->appelRender('user/mon-compte');
             break;
         case 'carnet':

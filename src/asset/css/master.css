@@ -161,4 +161,30 @@
   body#profilUser main section.publication-container article.publication-content div.top-content img { width: 35px; height: 35px; border-radius: 50%; border: 1px solid #bcbcbc; margin: 0 10px 0 0; }
   body#profilUser main section.publication-container article.publication-content div.top-content div.text-content p.title-content span { font-weight: 600; }
   body#profilUser main section.publication-container article.publication-content div.top-content div.text-content p.date { color: #2895a1; font-size: 13px; }
-  body#profilUser main section.publication-container article.publication-content p.message-content { margin-top: 4%; } }
+  body#profilUser main section.publication-container article.publication-content p.message-content { margin-top: 4%; }
+  body#Myprofil { background: #f3f3f3; }
+  body#Myprofil main section.content-top { background: white; padding: 20px 0; }
+  body#Myprofil main section.content-top a.BtnReturn { position: absolute; }
+  body#Myprofil main section.content-top a.MsgButton { position: absolute; right: 30px; top: 30px; }
+  body#Myprofil main section.content-top a.MsgButton img { height: 26px; width: auto; }
+  body#Myprofil main section.content-top div.profil-info { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+  body#Myprofil main section.content-top div.profil-info h1 { color: #2895a1; margin: 3% 0; }
+  body#Myprofil main section.icon-profil { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: center; -ms-flex-align: center; align-items: center; padding: 20px 0; }
+  body#Myprofil main section.icon-profil div.icon-content { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+  body#Myprofil main section.icon-profil div.icon-content img { width: 30px; height: auto; }
+  body#Myprofil main section.icon-profil div.icon-content p { font-size: 20px; margin: 0 10px; }
+  body#Myprofil main section.publication-container { padding: 0 20px 80px; -webkit-box-sizing: border-box; box-sizing: border-box; }
+  body#Myprofil main section.publication-container article.send-in { margin-top: 6%; }
+  body#Myprofil main section.publication-container article.send-in form { background: white; border-radius: 10px; }
+  body#Myprofil main section.publication-container article.send-in form div.container-input { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; padding: 10px 0 0 10px; }
+  body#Myprofil main section.publication-container article.send-in form div.container-input textarea { -webkit-appearance: none; border: 0; width: 82%; margin-top: 10px; }
+  body#Myprofil main section.publication-container article.send-in form div.container-input textarea:focus { outline: none; }
+  body#Myprofil main section.publication-container article.send-in form div.container-input img { width: 35px; height: auto; border-radius: 50%; border: 1px solid #bcbcbc; margin-right: 10px; }
+  body#Myprofil main section.publication-container article.send-in form div.cont-bottom { text-align: right; }
+  body#Myprofil main section.publication-container article.send-in form div.cont-bottom img { width: 25px; height: auto; margin: 0 10px 10px 0; }
+  body#Myprofil main section.publication-container article.publication-content { margin-top: 6%; background: white; border-radius: 10px; padding: 15px; }
+  body#Myprofil main section.publication-container article.publication-content div.top-content { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: flex-start; -webkit-box-align: start; -ms-flex-align: start; align-items: flex-start; }
+  body#Myprofil main section.publication-container article.publication-content div.top-content img { width: 35px; height: 35px; border-radius: 50%; border: 1px solid #bcbcbc; margin: 0 10px 0 0; }
+  body#Myprofil main section.publication-container article.publication-content div.top-content div.text-content p.title-content span { font-weight: 600; }
+  body#Myprofil main section.publication-container article.publication-content div.top-content div.text-content p.date { color: #2895a1; font-size: 13px; }
+  body#Myprofil main section.publication-container article.publication-content p.message-content { margin-top: 4%; } }

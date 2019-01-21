@@ -1032,5 +1032,159 @@
             }
         }
     }
+    // page profil utilisateur
+    body#Myprofil {
+        background: #f3f3f3;
+
+        main {
+            section.content-top {
+                background: white;
+                // border-bottom: 1px solid #bcbcbc;
+                padding: 20px 0;
+
+                a.BtnReturn {
+                    position: absolute;
+                }
+
+                a.MsgButton {
+                    position: absolute;
+                    right: 30px;
+                    top: 30px;
+
+                    img {
+                        height: 26px;
+                        width: auto;
+                    }
+                }
+
+                div.profil-info {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    h1 {
+                        color: $blue-color;
+                        margin: 3% 0;
+                    }
+
+                    p {}
+                }
+            }
+
+            section.icon-profil {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                padding: 20px 0;
+
+                div.icon-content {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    img {
+                        width: 30px;
+                        height: auto;
+                    }
+
+                    p {
+                        font-size: 20px;
+                        margin: 0 10px;
+                    }
+                }
+            }
+
+            section.publication-container {
+                padding: 0 20px 80px;
+                box-sizing: border-box;
+
+                article.send-in {
+                    margin-top: 6%;
+
+                    form {
+                        background: white;
+                        border-radius: 10px;
+
+                        div.container-input {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: flex-start;
+                            padding: 10px 0 0 10px;
+
+                            textarea {
+                                -webkit-appearance: none;
+                                border: 0;
+                                width: 82%;
+                                margin-top: 10px;
+
+                                &:focus {
+                                    outline: none;
+                                }
+                            }
+
+                            img {
+                                width: 35px;
+                                height: auto;
+                                border-radius: 50%;
+                                border: 1px solid #bcbcbc;
+                                margin-right: 10px;
+                            }
+                        }
+
+                        div.cont-bottom {
+                            text-align: right;
+
+                            img {
+                                width: 25px;
+                                height: auto;
+                                margin: 0 10px 10px 0;
+                            }
+                        }
+                    }
+                }
+
+                article.publication-content {
+                    margin-top: 6%;
+                    background: white;
+                    border-radius: 10px;
+                    padding: 15px;
+
+                    div.top-content {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+
+                        img {
+                            width: 35px;
+                            height: 35px;
+                            border-radius: 50%;
+                            border: 1px solid #bcbcbc;
+                            margin: 0 10px 0 0;
+                        }
+
+                        div.text-content {
+                            p.title-content {
+                                span {
+                                    font-weight: 600;
+                                }
+                            }
+
+                            p.date {
+                                color: $blue-color;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+
+                    p.message-content {
+                        margin-top: 4%;
+                    }
+                }
+            }
+        }
+    }
     //fin media query
 }
