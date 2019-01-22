@@ -5,8 +5,11 @@ session_start();
     require_once 'src/class/util.php';
     require_once 'src/orm/user.php';
     require_once 'src/models/UserManager.php';
+    require_once 'src/orm/borne.php';
+    require_once 'src/models/BorneManager.php';
     require_once 'src/controller/DefaultController.php';
     require_once 'src/controller/UserController.php';
+    require_once 'src/controller/BorneController.php';
 
     $page = ''; // Page par défaut
   if (isset($_GET['p'])) { // Si on reçois un paramètre "p"

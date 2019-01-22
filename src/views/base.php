@@ -1,5 +1,4 @@
 <?php
-$autolib = Util::Autolib();
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,10 +16,16 @@ $autolib = Util::Autolib();
 	<link rel="stylesheet" type="text/css" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css">
   </head>
   <?= $contenu; ?>
+
+  <?php
+    $select = new BorneManager();
+    $bornes = $select->findAllBorne();
+  // var_dump($bornes);
+   ?>
   <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
   <script type="text/javascript" src="/hush/src/asset/script/style.js"></script>
-  <script>
+  <script type="text/javascript">
   mapboxgl.accessToken = 'pk.eyJ1IjoidmFsZW50aW5rYWhuIiwiYSI6ImNqcXBtYm90MjAyajU0OG8xZmxuaDJ2bDMifQ.4lXM63hKjqz6waLAbSLxsg';
   const map = new mapboxgl.Map({
   container: 'map',
@@ -29,102 +34,85 @@ $autolib = Util::Autolib();
   zoom: 11.3
   });
 
-  map.on('load', function()
-  {
-      map.loadImage("https://i.imgur.com/B9OfNZt.png", function(error, image)
-      {
-          if (error) throw error;
-          map.addImage("custom-marker", image);
 
-          map.addLayer({
+    map.on('load', function(){
+
+      map.loadImage("src/asset/images/localisation-resize.png", function(error, image){
+            if (error) throw error;
+            map.addImage("custom-marker", image);
+
+            map.addLayer({
               "id": "places",
               "type": "symbol",
               "source": {
                   "type": "geojson",
                   "data": {
-                      "type": "FeatureCollection",
-                      "features": [
+                    "type": "FeatureCollection",
+                    "features": [
                       <?php
-                      foreach ($autolib as $coordinates) {
-                          ?>
-                          {
-                              "type": "Feature",
-                              "properties": {
-                                  "description": "<p>Et olim licet otiosae sint tribus pacataeque centuriae et nulla suffragiorum certamina set Pompiliani redierit securitas temporis, per omnes tamen quotquot sunt partes terrarum, ut domina</p>",
-                                  "icon": "custom-marker"
-                              },
-                              "geometry": {
-                                  "type": "Point",
-                                  "coordinates": [<?php echo $coordinates; ?>]
-                              }
+                      foreach ($bornes as $coordinates) {
+                          $numb = $coordinates->getId(); ?>
+
+                        {
+                          "type": "Feature",
+                          "properties": {
+                            "description":"<?= $coordinates->getAdresse(); ?>",
+                            "icon": "custom-marker"
                           },
-                          <?php
+                          "geometry": {
+                            "type": "Point",
+                            "coordinates": [<?php echo $coordinates->getPosition(); ?>]
+                          }
+                        },
+                        <?php
                       }?>]
+                    }
+                  },
+                  "layout": {
+                      "icon-image": "custom-marker"
                   }
-              },
-              "layout": {
-                  "icon-image": "custom-marker"
-              }
-          });
+              });
+        });
 
-      });
-      map.on('click', 'places', function (e)
-      {
-          var coordinates = e.features[0].geometry.coordinates.slice();
-          var description = e.features[0].properties.description;
-          while (Math.abs(e.lngLat.lng - coordinates[0]) > 180)
-          {
-              coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
-          }
-          new mapboxgl.Popup().setLngLat(coordinates).setHTML(description).addTo(map);
-      });
-      map.on('mouseenter', 'places', function()
-      {
-          map.getCanvas().style.cursor = 'pointer';
-      });
-      map.on('mouseleave', 'places', function()
-      {
-          map.getCanvas().style.cursor = '';
-      });
-      // point apres la recherche
-      map.addSource('single-point', {
-      "type": "geojson",
-      "data": {
-          "type": "FeatureCollection",
-          "features": []
-      }
-  });
+        map.on('click', 'places', function (e)
+        {
+            var coordinates = e.features[0].geometry.coordinates.slice();
+            var description = e.features[0].properties.description;
 
-  map.addLayer({
-      "id": "point",
-      "source": "single-point",
-      "type": "circle",
-      "paint": {
-          "circle-radius": 10,
-          "circle-color": "#007cbf"
-      }
-  });
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180)
+            {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
 
-  // Listen for the `result` event from the MapboxGeocoder that is triggered when a user
-  // makes a selection and add a symbol that matches the result.
-  geocoder.on('result', function(ev) {
-      map.getSource('single-point').setData(ev.result.geometry);
-  });
-  });
+            new mapboxgl.Popup().setLngLat(coordinates).setHTML(description).addTo(map);
+        });
 
-  var geocoder = new MapboxGeocoder({
-      accessToken: mapboxgl.accessToken,
-      placeholder: 'Où allez-vous ? ...'
-  });
-  document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+        map.on('mouseenter', 'places', function()
+        {
+            map.getCanvas().style.cursor = 'pointer';
+        });
 
-  map.addControl(new mapboxgl.GeolocateControl({
+        map.on('mouseleave', 'places', function()
+        {
+            map.getCanvas().style.cursor = '';
+        });
+    });
+
+    /* Barre de recherche */
+    var geocoder = new MapboxGeocoder({
+        accessToken: mapboxgl.accessToken,
+        placeholder: 'Ou allez-vous?...'
+    });
+
+    document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
+
+    map.addControl(new mapboxgl.GeolocateControl({
      positionOptions:
      {
         enableHighAccuracy: true
      },
      trackUserLocation: true
-  }));
+    }));
   </script>
 </body>
 </html>
