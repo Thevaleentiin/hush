@@ -26,7 +26,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
   <script type="text/javascript" src="/hush/src/asset/script/style.js"></script>
   <script type="text/javascript">
-  mapboxgl.accessToken = 'pk.eyJ1IjoidmFsZW50aW5rYWhuIiwiYSI6ImNqcXBtYm90MjAyajU0OG8xZmxuaDJ2bDMifQ.4lXM63hKjqz6waLAbSLxsg';
+    $(document).ready(function () {
+        //initialize swiper when document ready
+        var mySwiper = new Swiper ('.swiper-container', {
+        // Optional parameters
+        direction: 'horizontal',
+        slidesPerView: 2.5,
+        spaceBetween: 15,
+        freeMode: true,
+        loop: false
+        })
+        });
+    </script>
+  <script type="text/javascript">
+   mapboxgl.accessToken = 'pk.eyJ1IjoidmFsZW50aW5rYWhuIiwiYSI6ImNqcXBtYm90MjAyajU0OG8xZmxuaDJ2bDMifQ.4lXM63hKjqz6waLAbSLxsg';
   const map = new mapboxgl.Map({
   container: 'map',
   style: 'mapbox://styles/mapbox/basic-v9',
@@ -101,7 +114,7 @@
     /* Barre de recherche */
     var geocoder = new MapboxGeocoder({
         accessToken: mapboxgl.accessToken,
-        placeholder: 'Ou allez-vous?...'
+        placeholder: 'Où allez-vous?...'
     });
 
     document.getElementById('geocoder').appendChild(geocoder.onAdd(map));
