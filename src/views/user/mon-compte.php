@@ -1,10 +1,4 @@
   <body id="monCompte">
-    <?php
-        // var_dump($_SESSION['email']);
-        $recup = new UserController();
-        $resultat = $recup->AfficherNomCompte($_SESSION['email'], 'nom');
-        // var_dump($resultat);
-     ?>
       <main>
           <header>
               <nav class="navBar">
@@ -18,44 +12,15 @@
               </nav>
           </header>
           <section class="content">
-              <a href="#" class="BtnReturn"><img src="/hush/src/asset/images/arrow-left.png" alt="flèche gauche retour en arrière"></a>
+              <a href="?p=moncompte" class="BtnReturn"><img src="/hush/src/asset/images/arrow-left.png" alt="flèche gauche retour en arrière"></a>
               <h1>Paramètres</h1>
           </section>
           <section class="option-param">
               <ul>
-                  <li><a href="">Profil</a></li>
+                  <li><a href="?p=profil-param">Profil</a></li>
                   <li><a href="">Paiements</a></li>
                   <li><a href="">Notifications</a></li>
                   <li><a href="">Mentions légales</a></li>
                   <li><a href="">Deconnexion</a></li>
               </ul>
           </section>
-        <!-- <section>
-          <article class="modification-compte">
-            <p>Voici votre adresse e-mail: <?= $_SESSION['email'] ?></p>
-            <form class="modifmail-form" action="<?= $_SERVER['PHP_SELF']; ?>?p=moncompte" method="post">
-                <label for="email">Nouveau email :</label>
-                <input type="email" name="email" id="email "value="">
-                <input type="hidden" name="ancien_mail" value="<?= $_SESSION['email'] ?>">
-                <input type="submit" name="update" value="Mettre à jour">
-            </form>
-            <a href="deconnexion.php">Se déconnecter</a>
-            <form class="delete-form" action="<?= $_SERVER['PHP_SELF']; ?>?p=moncompte" method="post">
-                <input type="hidden" name="email" value="<?= $_SESSION['email']; ?>">
-                <input type="submit" name="delete" value="Supprimer son compte">
-            </form>
-          </article>
-        </section> -->
-      </main>
-      <?php
-        if (isset($_POST['update'])) {
-            $up = new UserController();
-            $up->lancerUpdate($_POST);
-        }
-
-        if (isset($_POST['delete'])) {
-            $del = new UserController();
-            $del->lancerDelete($_POST);
-        }
-
-       ?>

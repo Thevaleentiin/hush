@@ -53,6 +53,10 @@ session_start();
             $ctrl = new UserController();
             $ctrl->appelRender('user/profil');
             break;
+        case 'profil-param':
+            $ctrl = new UserController();
+            $ctrl->appelRender('user/profil-param');
+            break;
         default:
             echo'defaut';
             break;

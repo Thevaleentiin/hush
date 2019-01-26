@@ -192,44 +192,7 @@
 
         main {
             header {
-                position: fixed;
-                bottom: 0;
-                background: $back-menu;
-                padding: 20px;
-                box-sizing: border-box;
-                width: 100%;
                 border-top: 1px solid #bcbcbc;
-
-                nav.navBar {
-                    ul {
-                        display: flex;
-                        flex-direction: row;
-                        justify-content: space-between;
-
-                        li {
-                            list-style: none;
-
-                            a {
-                                text-decoration: none;
-                                width: 100%;
-                                text-align: center;
-
-                                img {
-                                    height: 34px;
-                                    margin: 0 auto;
-                                    display: block;
-                                    margin: 0 auto 8px;
-                                }
-
-                                span {
-                                    display: block;
-                                    color: black;
-                                    font-size: 13px;
-                                }
-                            }
-                        }
-                    }
-                }
             }
 
             section.content {
@@ -248,10 +211,13 @@
 
             section.option-param {
                 ul {
+                    padding: 0 0 0 5%;
+                    box-sizing: border-box;
+
                     li {
                         list-style: none;
                         border-bottom: 1px solid $blue-color;
-                        padding: 10% 0 10% 5%;
+                        padding: 10% 0 5%;
 
                         a {
                             text-decoration: none;
