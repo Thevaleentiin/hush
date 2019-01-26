@@ -26,13 +26,18 @@
   body#index main #geocoder .geocoder-icon-search { background-image: url("/hush/src/asset/images/loupe-gris.png"); background-size: 20px; }
   body#index main #geocoder .mapboxgl-ctrl-geocoder, body#index main #geocoder .mapboxgl-ctrl-geocoder ul { -webkit-box-shadow: 5px 5px 5px 0 rgba(46, 74, 117, 0.32); -moz-box-shadow: 2px 2px 1px 0 rgba(46, 74, 117, 0.32); box-shadow: 2px 2px 1px 0 rgba(46, 74, 117, 0.32); -webkit-box-shadow: 5px 5px 5px 0 rgba(46, 74, 117, 0.32); -moz-box-shadow: 2px 2px 1px 0 rgba(46, 74, 117, 0.32); box-shadow: 2px 2px 1px 0 rgba(46, 74, 117, 0.32); border-radius: 10px; }
   body#index main #geocoder .mapboxgl-ctrl-geocoder input[type='text'] { padding: 16px 0 15px 40px; border-radius: 5px; width: 80%; }
-  body#monCompte { background: lightgrey; min-height: 100vh; -webkit-box-sizing: border-box; box-sizing: border-box; padding-top: 20%; }
-  body#monCompte main header { position: fixed; bottom: 0; background: white; padding: 20px; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; }
+  body#monCompte { min-height: 100vh; -webkit-box-sizing: border-box; box-sizing: border-box; }
+  body#monCompte main header { position: fixed; bottom: 0; background: white; padding: 20px; -webkit-box-sizing: border-box; box-sizing: border-box; width: 100%; border-top: 1px solid #bcbcbc; }
   body#monCompte main header nav.navBar ul { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
   body#monCompte main header nav.navBar ul li { list-style: none; }
   body#monCompte main header nav.navBar ul li a { text-decoration: none; width: 100%; text-align: center; }
   body#monCompte main header nav.navBar ul li a img { height: 34px; margin: 0 auto; display: block; margin: 0 auto 8px; }
   body#monCompte main header nav.navBar ul li a span { display: block; color: black; font-size: 13px; }
+  body#monCompte main section.content { padding-top: 20%; }
+  body#monCompte main section.content h1 { color: #000; padding-left: 30px; padding-bottom: 20px; }
+  body#monCompte main section.content a.BtnReturn { position: absolute; }
+  body#monCompte main section.option-param ul li { list-style: none; border-bottom: 1px solid #2895a1; padding: 10% 0 10% 5%; }
+  body#monCompte main section.option-param ul li a { text-decoration: none; color: black; margin-bottom: 10px; }
   body#indexCultiver { background: lightgrey; }
   body#indexCultiver main { padding-top: 15%; }
   body#indexCultiver main #loader { position: fixed; z-index: 9999; background: white; top: 0; left: 0; height: 100vh; width: 100vw; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }

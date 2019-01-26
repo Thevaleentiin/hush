@@ -17,9 +17,20 @@
                   </ul>
               </nav>
           </header>
-        <h1>Mon Compte</h1>
-        <section>
-          <h2>Bienvenue <?= $_SESSION['nom']; ?></h2>
+          <section class="content">
+              <a href="#" class="BtnReturn"><img src="/hush/src/asset/images/arrow-left.png" alt="flèche gauche retour en arrière"></a>
+              <h1>Paramètres</h1>
+          </section>
+          <section class="option-param">
+              <ul>
+                  <li><a href="">Profil</a></li>
+                  <li><a href="">Paiements</a></li>
+                  <li><a href="">Notifications</a></li>
+                  <li><a href="">Mentions légales</a></li>
+                  <li><a href="">Deconnexion</a></li>
+              </ul>
+          </section>
+        <!-- <section>
           <article class="modification-compte">
             <p>Voici votre adresse e-mail: <?= $_SESSION['email'] ?></p>
             <form class="modifmail-form" action="<?= $_SERVER['PHP_SELF']; ?>?p=moncompte" method="post">
@@ -34,7 +45,7 @@
                 <input type="submit" name="delete" value="Supprimer son compte">
             </form>
           </article>
-        </section>
+        </section> -->
       </main>
       <?php
         if (isset($_POST['update'])) {
