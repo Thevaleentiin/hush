@@ -101,11 +101,15 @@
   body#borneCultiver main section div.borne-content div.content-borne p.title-borne.adress-borne { font-size: 12px; }
   body#borneCultiver main section div.borne-content div.content-borne p:nth-child(3) { text-align: right; color: #2895a1; font-weight: 600; padding-right: 10px; }
   body#borneCultiver main section div.borne-content div.content-borne p:last-of-type { text-align: center; letter-spacing: 1px; color: #2895a1; font-size: 17px; }
-  body#inscription { min-height: 100vh; }
+  body#inscription { min-height: 100vh; padding-bottom: 58px; }
   body#inscription main { padding-top: 100px; }
+  body#inscription main a.BtnReturn { position: absolute; }
   body#inscription main section.form-user form { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
-  body#inscription main section.form-user form input { border: 0; padding: 20px; border-radius: 5px; margin: 50px 0; width: 60%; }
-  body#inscription main section.form-user form input:first-of-type, body#inscription main section.form-user form input:nth-child(2) { margin-bottom: 0; }
+  body#inscription main section.form-user form div.container-name { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; width: 70%; }
+  body#inscription main section.form-user form div.container-name input { margin: 10% 10px; }
+  body#inscription main section.form-user form div.container-name input:first-of-type { margin-left: 0; }
+  body#inscription main section.form-user form div.container-name input:last-of-type { margin-bottom: 10%; margin-left: 0; }
+  body#inscription main section.form-user form input { border: 0; padding: 20px; border-radius: 10px; margin: 10% 0; width: 70%; background: #f5f5f5; -webkit-box-sizing: border-box; box-sizing: border-box; }
   body#inscription main section.form-user form input:last-of-type { margin-bottom: 0; }
   body#inscription main section.form-user form input[type=submit] { width: 100%; position: fixed; bottom: 0; left: 0; border-radius: 0; background: #2895a1; color: white; margin: 0; font-size: 16px; }
   body#connexion { min-height: 100vh; }

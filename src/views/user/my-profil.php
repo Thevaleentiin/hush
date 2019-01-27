@@ -1,5 +1,5 @@
 <?php $recup = new UserController();
-$resultat = $recup->AfficherNomCompte($_SESSION['email'], 'nom'); ?>
+$resultat = $recup->AfficherNomCompte($_SESSION['email'], 'prenom'); ?>
 <body id="Myprofil">
     <main>
         <header>
@@ -12,13 +12,13 @@ $resultat = $recup->AfficherNomCompte($_SESSION['email'], 'nom'); ?>
                     <li><a href="src/views/mon-compte.php"><img src="src/asset/images/message-noir.png" alt=""><span>Compte</span></a></li>
                 </ul>
             </nav>
-        </header> 
+        </header>
         <section class="content-top">
             <a href="#" class="BtnReturn"><img src="src/asset/images/arrow-left.png" alt="flèche gauche retour en arrière"></a>
             <a href="?p=reglage-compte" class="MsgButton"><img src="src/asset/images/ellipsis.png" alt="pictogramme message"></a>
             <div class="profil-info">
                 <img src="src/asset/images/profil-picture.png" alt="photo de profil">
-                <h1><?= $_SESSION['nom']; ?></h1>
+                <h1><?= $_SESSION['prenom']; ?></h1>
                 <p>Borne Nation</p>
             </div>
         </section>

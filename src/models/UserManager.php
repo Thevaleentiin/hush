@@ -39,6 +39,11 @@ class UserManager extends User
             $gty->setEmail($requete->email);
             $result = $gty->getEmail();
             return $result;
+        } elseif ($params == 'prenom') {
+            $gty = new User();
+            $gty->setPrenom($requete->prenom);
+            $result = $gty->getPrenom();
+            return $result;
         } elseif ($params == 'mdp') {
             $gty = new User();
             $gty->setMdp($requete->mdp);
@@ -54,15 +59,19 @@ class UserManager extends User
     // Inscription
     public function inscription()
     {
-        $sql = 'INSERT INTO users (email, mdp, nom) VALUES (:email, :mdp, :nom)';
+        $sql = 'INSERT INTO users (email, mdp, nom, prenom, phone) VALUES (:email, :mdp, :nom, :prenom, :phone)';
         $array = array(
       'email'=>$this->email,
       'mdp'=>$this->mdp,
-      'nom'=>$this->nom
+      'nom'=>$this->nom,
+      'prenom'=>$this->prenom,
+      'phone'=>$this->phone
     );
         $_SESSION['email'] = $this->email;
         $_SESSION['mdp'] = $this->mdp;
         $_SESSION['nom'] = $this->nom;
+        $_SESSION['prenom'] = $this->prenom;
+        $_SESSION['phone'] = $this->phone;
         BDD::insert($sql, $array);
         header('location:?p=moncompte');
     }

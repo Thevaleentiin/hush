@@ -18,9 +18,11 @@ class UserController extends DefaultController
             if (Util::verifEmail($post['email']) == true) {
                 // insertion de l'Utilisateur
                 $user = new UserManager();
+                $user->setPrenom($post['prenom']);
                 $user->setEmail($post['email']);
                 $user->setMdp($post['mdp']);
                 $user->setNom($post['nom']);
+                $user->setPhone($post['phone']);
                 $user->inscription();
                 echo $_SESSION['email'];
             } else {

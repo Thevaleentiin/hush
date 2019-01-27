@@ -8,6 +8,8 @@ class User extends BDD
     protected $email;
     protected $mdp;
     protected $nom;
+    protected $prenom;
+    protected $phone;
     protected $id;
 
     public function setEmail($email)
@@ -33,6 +35,22 @@ class User extends BDD
     public function getNom()
     {
         return $this->nom;
+    }
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+    }
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+    public function setPhone($phone)
+    {
+        $this->phone = $phone;
+    }
+    public function getPhone()
+    {
+        return $this->phone;
     }
     public function setId($id)
     {

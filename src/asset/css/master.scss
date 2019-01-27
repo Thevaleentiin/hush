@@ -3,6 +3,8 @@
     $font-regular: 'Gilroy-Regular', sans-serif;
     $font-bold: 'Gilroy-Bold', sans-serif;
     $blue-color: #2895a1;
+    $grey-bakground: #f3f3f3;
+    $other-grey: #f5f5f5;
     $back-menu: white;
 
     * {
@@ -663,9 +665,14 @@
     // Page inscription
     body#inscription {
         min-height: 100vh;
+        padding-bottom: 58px;
 
         main {
             padding-top: 100px;
+
+            a.BtnReturn {
+                position: absolute;
+            }
 
             section.form-user {
                 form {
@@ -674,17 +681,34 @@
                     justify-content: center;
                     align-items: center;
 
+                    div.container-name {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 70%;
+
+                        input {
+                            margin: 10% 10px;
+
+                            &:first-of-type {
+                                margin-left: 0;
+                            }
+
+                            &:last-of-type {
+                                margin-bottom: 10%;
+                                margin-left: 0;
+                            }
+                        }
+                    }
+
                     input {
                         border: 0;
                         padding: 20px;
-                        border-radius: 5px;
-                        margin: 50px 0;
-                        width: 60%;
-
-                        &:first-of-type,
-                        &:nth-child(2) {
-                            margin-bottom: 0;
-                        }
+                        border-radius: 10px;
+                        margin: 10% 0;
+                        width: 70%;
+                        background: $other-grey;
+                        box-sizing: border-box;
 
                         &:last-of-type {
                             margin-bottom: 0;
@@ -753,7 +777,7 @@
     }
     //page carnet
     body#carnet {
-        background: #f3f3f3;
+        background: $grey-bakground;
 
         main {
             section.content {
@@ -815,7 +839,7 @@
     }
     // page My carnet
     body#Mycarnet {
-        background: #f3f3f3;
+        background: $grey-bakground;
 
         main {
             section.content {
@@ -922,7 +946,7 @@
     }
     // page profil utilisateur
     body#profilUser {
-        background: #f3f3f3;
+        background: $grey-bakground;
 
         main {
             section.content-top {
@@ -1031,7 +1055,7 @@
     }
     // page profil utilisateur
     body#Myprofil {
-        background: #f3f3f3;
+        background: $grey-bakground;
 
         main {
             section.content-top {

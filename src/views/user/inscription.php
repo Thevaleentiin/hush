@@ -11,8 +11,12 @@
           </section>
           <section class="form-user">
               <form action="<?= $_SERVER['PHP_SELF']; ?>?p=inscription" method="post">
+                <div class="container-name">
+                    <input type="text" name="nom" id="nom" value="" placeholder="Nom">
+                    <input type="text" name="prenom" id="prenom" value="" placeholder="Prénom">
+                </div>
                 <input type="email" name="email" id="email" value="" placeholder="Adresse e-mail">
-                <input type="text" name="nom" id="nom" value="" placeholder="Nom">
+                <input type="text" name="phone" id="phone" value="" placeholder="Numéro de téléphone">
                 <input type="password" name="mdp" id="mdp" value="" placeholder="Mot de Passe">
                 <input type="submit" name="inscription" value="Inscription">
               </form>
