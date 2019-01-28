@@ -164,7 +164,7 @@
                 justify-content: center;
 
                 .geocoder-icon-search {
-                    background-image: url("/hush/src/asset/images/loupe-gris.png");
+                    background-image: url("/hush/src/asset/images/loupe-noir.png");
                     background-size: 20px;
                 }
 
@@ -375,7 +375,7 @@
                 justify-content: center;
 
                 .geocoder-icon-search {
-                    background-image: url("/hush/src/asset/images/loupe-gris.png");
+                    background-image: url("/hush/src/asset/images/loupe-noir.png");
                     background-size: 20px;
                 }
 
@@ -414,7 +414,7 @@
                         padding: 16px 0 15px 40px;
                         border-radius: 5px;
                         border: 0;
-                        background: url('/hush/src/asset/images/loupe-gris.png')no-repeat;
+                        background: url('/hush/src/asset/images/loupe-noir.png')no-repeat;
                         background-position: 5px 11px;
                         background-color: white;
                         background-size: 25px;
@@ -1202,6 +1202,47 @@
 
                     p.message-content {
                         margin-top: 4%;
+                    }
+                }
+            }
+        }
+    }
+    //page conversation
+    body#conversation {
+        background: $grey-bakground;
+
+        main {
+            section.content-top {
+                background: white;
+                // border-bottom: 1px solid #bcbcbc;
+                padding: 40px 0;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                min-height: 4.5vh;
+
+                h1 {
+                    // padding-left: 30px;
+                }
+
+                form {
+                    input {
+                        border: 0;
+
+                        &[type=submit] {
+                            background-image: url("../images/cross-noir.png");
+                            width: 10px;
+                            height: 10px;
+                            background-size: cover;
+                            background-color: transparent;
+                            transform: rotate(45deg);
+                        }
+
+                        &[type=text] {
+                            max-width: 130px;
+                            padding: 5px 0;
+                        }
                     }
                 }
             }

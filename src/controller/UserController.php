@@ -70,4 +70,17 @@ class UserController extends DefaultController
         $test = new UserManager();
         $resultat = $test->findAnythingByEmail($data, $champ);
     }
+    public function AddOneuser($params)
+    {
+        $requete = new UserManager();
+        $lesnoms = explode(" ", $params);
+        $nom = $lesnoms[0];
+        $prenom = $lesnoms[1];
+        $rez = $requete->findOneByName($nom, $prenom);
+        if (!empty($rez)) {
+            echo $rez->getNom().' '.$rez->getPrenom();
+        } else {
+            echo'erreur lors de l\'ajout';
+        }
+    }
 }

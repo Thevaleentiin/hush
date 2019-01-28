@@ -23,6 +23,12 @@ class UserManager extends User
         $array = array('email'=> $email);
         return current(BDD::select($sql, $array, 'UserManager'));
     }
+    public static function findOneByName($nom, $prenom)
+    {
+        $sql = 'SELECT * FROM users WHERE nom = :nom AND prenom = :prenom';
+        $array = array('nom'=> $nom, 'prenom'=> $prenom);
+        return current(BDD::select($sql, $array, 'UserManager'));
+    }
     public static function findAnythingByEmail($email, $params)
     {
         $sql = 'SELECT * FROM users WHERE email = :email';

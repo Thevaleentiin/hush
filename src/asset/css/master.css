@@ -23,7 +23,7 @@
   body#index main #map .mapboxgl-ctrl-group { background: none !important; -webkit-box-shadow: none !important; box-shadow: none !important; }
   body#index main #map .mapboxgl-canvas:focus { outline: none !important; }
   body#index main #geocoder { position: absolute; top: 12%; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
-  body#index main #geocoder .geocoder-icon-search { background-image: url("/hush/src/asset/images/loupe-gris.png"); background-size: 20px; }
+  body#index main #geocoder .geocoder-icon-search { background-image: url("/hush/src/asset/images/loupe-noir.png"); background-size: 20px; }
   body#index main #geocoder .mapboxgl-ctrl-geocoder, body#index main #geocoder .mapboxgl-ctrl-geocoder ul { -webkit-box-shadow: 5px 5px 5px 0 rgba(46, 74, 117, 0.32); -moz-box-shadow: 2px 2px 1px 0 rgba(46, 74, 117, 0.32); box-shadow: 2px 2px 1px 0 rgba(46, 74, 117, 0.32); -webkit-box-shadow: 5px 5px 5px 0 rgba(46, 74, 117, 0.32); -moz-box-shadow: 2px 2px 1px 0 rgba(46, 74, 117, 0.32); box-shadow: 2px 2px 1px 0 rgba(46, 74, 117, 0.32); border-radius: 10px; }
   body#index main #geocoder .mapboxgl-ctrl-geocoder input[type='text'] { padding: 16px 0 15px 40px; border-radius: 5px; width: 80%; }
   body#monCompte { min-height: 100vh; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -57,12 +57,12 @@
   body#indexCultiver main #map { position: absolute; top: 0; bottom: 0; height: 0 !important; border-bottom: 1px solid #bcbcbc; }
   body#indexCultiver main #map .mapboxgl-ctrl-top-right { top: 13.3%; right: 16%; }
   body#indexCultiver main #geocoder { position: relative; top: 12%; width: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
-  body#indexCultiver main #geocoder .geocoder-icon-search { background-image: url("/hush/src/asset/images/loupe-gris.png"); background-size: 20px; }
+  body#indexCultiver main #geocoder .geocoder-icon-search { background-image: url("/hush/src/asset/images/loupe-noir.png"); background-size: 20px; }
   body#indexCultiver main #geocoder .mapboxgl-ctrl-geocoder, body#indexCultiver main #geocoder .mapboxgl-ctrl-geocoder ul { -webkit-box-shadow: 5px 5px 5px 0 rgba(46, 74, 117, 0.32); -moz-box-shadow: 2px 2px 1px 0 rgba(46, 74, 117, 0.32); box-shadow: 2px 2px 1px 0 rgba(46, 74, 117, 0.32); -webkit-box-shadow: 5px 5px 5px 0 rgba(46, 74, 117, 0.32); -moz-box-shadow: 2px 2px 1px 0 rgba(46, 74, 117, 0.32); box-shadow: 2px 2px 1px 0 rgba(46, 74, 117, 0.32); border-radius: 10px; }
   body#indexCultiver main #geocoder .mapboxgl-ctrl-geocoder input[type='text'] { padding: 16px 0 15px 40px; border-radius: 5px; width: 80%; }
   body#borneAroundMe { background: lightgrey; padding-top: 20%; -webkit-box-sizing: border-box; box-sizing: border-box; min-height: 100vh; }
   body#borneAroundMe main section.container-search form { text-align: center; }
-  body#borneAroundMe main section.container-search form input { padding: 16px 0 15px 40px; border-radius: 5px; border: 0; background: url("/hush/src/asset/images/loupe-gris.png") no-repeat; background-position: 5px 11px; background-color: white; background-size: 25px; width: 80%; -webkit-box-sizing: border-box; box-sizing: border-box; }
+  body#borneAroundMe main section.container-search form input { padding: 16px 0 15px 40px; border-radius: 5px; border: 0; background: url("/hush/src/asset/images/loupe-noir.png") no-repeat; background-position: 5px 11px; background-color: white; background-size: 25px; width: 80%; -webkit-box-sizing: border-box; box-sizing: border-box; }
   body#borneAroundMe main section.aroundMe { margin-top: 5%; position: fixed; bottom: 2%; }
   body#borneAroundMe main section.aroundMe h2 { font-size: 30px; padding-left: 15px; }
   body#borneAroundMe main section.aroundMe div.container-type { padding-left: 15px; }
@@ -192,4 +192,9 @@
   body#Myprofil main section.publication-container article.publication-content div.top-content img { width: 35px; height: 35px; border-radius: 50%; border: 1px solid #bcbcbc; margin: 0 10px 0 0; }
   body#Myprofil main section.publication-container article.publication-content div.top-content div.text-content p.title-content span { font-weight: 600; }
   body#Myprofil main section.publication-container article.publication-content div.top-content div.text-content p.date { color: #2895a1; font-size: 13px; }
-  body#Myprofil main section.publication-container article.publication-content p.message-content { margin-top: 4%; } }
+  body#Myprofil main section.publication-container article.publication-content p.message-content { margin-top: 4%; }
+  body#conversation { background: #f3f3f3; }
+  body#conversation main section.content-top { background: white; padding: 40px 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: center; -ms-flex-align: center; align-items: center; min-height: 4.5vh; }
+  body#conversation main section.content-top form input { border: 0; }
+  body#conversation main section.content-top form input[type=submit] { background-image: url("../images/cross-noir.png"); width: 10px; height: 10px; background-size: cover; background-color: transparent; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
+  body#conversation main section.content-top form input[type=text] { max-width: 130px; padding: 5px 0; } }

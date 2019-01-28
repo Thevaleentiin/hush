@@ -12,7 +12,7 @@
   </head>
   <body id="borneAroundMe">
       <main>
-          <a href="#" class="BtnReturn"><img src="/hush/src/asset/images/arrow-left.png" alt="flèche gauche retour en arrière"></a>
+          <a href="#" class="BtnReturn"><img src="/hush/src/asset/images/arrow-left-noir.png" alt="flèche gauche retour en arrière"></a>
 
           <section class="container-search">
               <form class="search_bar" id="SearchBar" action="index.html" method="post">

@@ -50,7 +50,7 @@
 
     map.on('load', function(){
 
-      map.loadImage("src/asset/images/localisation-resize.png", function(error, image){
+      map.loadImage("src/asset/images/location-marker.png", function(error, image){
             if (error) throw error;
             map.addImage("custom-marker", image);
 

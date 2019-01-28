@@ -7,12 +7,12 @@
                     <li><a href="/hush/src/views/index-cultiver.php"><img src="src/asset/images/feuille-noir.png" alt=""><span>Cultiver</span></a></li>
                     <li><a href=""><img src="src/asset/images/carnet-noir.png" alt=""><span>Carnet</span></a></li>
                     <li><a href=""><img src="src/asset/images/message-noir.png" alt=""><span>Message</span></a></li>
-                    <li><a href="src/views/mon-compte.php"><img src="src/asset/images/message-noir.png" alt=""><span>Compte</span></a></li>
+                    <li><a href="?p=moncompte"><img src="src/asset/images/profil-empty-noir.png" alt=""><span>Compte</span></a></li>
                 </ul>
             </nav>
         </header>
         <section class="content">
-            <a href="#" class="BtnReturn"><img src="/hush/src/asset/images/arrow-left.png" alt="flèche gauche retour en arrière"></a>
+            <a href="#" class="BtnReturn"><img src="/hush/src/asset/images/arrow-left-noir.png" alt="flèche gauche retour en arrière"></a>
             <h1>Borne Fondation Louis Vuitton</h1>
         </section>
         <section class="publication-container">

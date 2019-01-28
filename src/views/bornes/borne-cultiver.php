@@ -16,7 +16,7 @@ $autolib = Util::Autolib();
 </head>
     <body id="borneCultiver">
         <main>
-            <a href="#" class="BtnReturn"><img src="/hush/src/asset/images/arrow-left.png" alt="flèche gauche retour en arrière"></a>
+            <a href="#" class="BtnReturn"><img src="/hush/src/asset/images/arrow-left-noir.png" alt="flèche gauche retour en arrière"></a>
             <div id='map' style='width: 100%; height: 600px;'></div>
             <section>
                 <div class="borne-content">
