@@ -197,4 +197,25 @@
   body#conversation main section.content-top { background: white; padding: 40px 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: center; -ms-flex-align: center; align-items: center; min-height: 4.5vh; }
   body#conversation main section.content-top form input { border: 0; }
   body#conversation main section.content-top form input[type=submit] { background-image: url("../images/cross-noir.png"); width: 10px; height: 10px; background-size: cover; background-color: transparent; -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg); }
-  body#conversation main section.content-top form input[type=text] { max-width: 130px; padding: 5px 0; } }
+  body#conversation main section.content-top form input[type=text] { max-width: 130px; padding: 5px 0; }
+  body#conversation main section.conversations article.conversation { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: horizontal; -webkit-box-direction: normal; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: distribute; justify-content: space-around; -webkit-box-align: center; -ms-flex-align: center; align-items: center; margin-top: 7%; }
+  body#conversation main section.conversations article.conversation div.img-container { -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; text-align: center; }
+  body#conversation main section.conversations article.conversation div.img-container img { width: 60px; height: 60px; }
+  body#conversation main section.conversations article.conversation div.infos-conversation { -webkit-box-flex: 2; -ms-flex-positive: 2; flex-grow: 2; padding: 20px 0 20px 20px; -webkit-box-sizing: border-box; box-sizing: border-box; border-bottom: 1px solid #c3c3c3; }
+  body#conversation main section.conversations article.conversation div.infos-conversation p:first-of-type { font-weight: 600; font-size: 18px; }
+  body#conversation main section.conversations article.conversation div.infos-conversation p:last-of-type { font-weight: lighter; font-size: 14px; }
+  body#message main header { border-top: 1px solid #bcbcbc; }
+  body#message main section.content-top { height: 8vh; background: #f3f3f3; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; position: fixed; width: 100%; }
+  body#message main section.content-top a.BtnReturn { position: absolute; top: calc(80% - 30px); left: 20px; }
+  body#message main section.messages { padding-top: 8.5vh; padding-bottom: 300px; position: relative; z-index: -1; overflow: hidden; padding-bottom: 120px; }
+  body#message main section.messages article.message { width: 70%; margin: 2% 1%; }
+  body#message main section.messages article.message:nth-child(odd) { float: right; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+  body#message main section.messages article.message:nth-child(odd) img { width: 30px; height: 30px; margin: 5px; -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
+  body#message main section.messages article.message:nth-child(odd) p { background: #2895a1; color: white; padding: 10px; border-radius: 15px; }
+  body#message main section.messages article.message:nth-child(even) { float: left; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+  body#message main section.messages article.message:nth-child(even) img { width: 30px; height: 30px; margin: 5px; }
+  body#message main section.messages article.message:nth-child(even) p { background: #f6f6f6; color: black; padding: 10px; border-radius: 15px; }
+  body#message main section.inputMessage { position: fixed; bottom: 55px; width: 100%; padding: 10px 0 10px 10px; -webkit-box-sizing: border-box; box-sizing: border-box; background: white; }
+  body#message main section.inputMessage form input[type=text] { border: 0; padding: 10px 0 10px 35px; border-radius: 10px; border: 1px solid #ececec; width: 85%; -webkit-box-sizing: border-box; box-sizing: border-box; }
+  body#message main section.inputMessage form input[type=text]:focus { outline: none; }
+  body#message main section.inputMessage form input[type=submit] { background-image: url("../images/message-blanc.png"); background-repeat: no-repeat; background-size: 1em; width: 30px; border: 0; background-color: #2895a1; background-position: 8px 8px; height: 30px; border-radius: 50%; vertical-align: middle; margin-left: 1%; } }

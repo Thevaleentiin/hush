@@ -57,6 +57,10 @@ session_start();
             $ctrl = new UserController();
             $ctrl->appelRender('messenger/conversation');
             break;
+        case 'message':
+            $ctrl = new UserController();
+            $ctrl->appelRender('messenger/message');
+            break;
         case 'profil-param':
             $ctrl = new UserController();
             $ctrl->appelRender('user/profil-param');

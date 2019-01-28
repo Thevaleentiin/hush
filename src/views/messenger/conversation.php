@@ -19,7 +19,24 @@
             </form>
         </section>
         <section class="conversations">
-
+            <article class="conversation">
+                <div class="img-container">
+                    <img src="src/asset/images/profil-picture.png" alt="">
+                </div>
+                <div class="infos-conversation">
+                    <p>Julie Sauvignet</p>
+                    <p>Super et toi ? je pense...</p>
+                </div>
+            </article>
+            <article class="conversation">
+                <div class="img-container">
+                    <img src="src/asset/images/profil-picture.png" alt="">
+                </div>
+                <div class="infos-conversation">
+                    <p>Julie Sauvignet</p>
+                    <p>Super et toi ? je pense...</p>
+                </div>
+            </article>
         </section>
     </main>
 </body>
