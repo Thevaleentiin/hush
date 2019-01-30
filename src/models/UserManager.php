@@ -56,6 +56,12 @@ class UserManager extends User
             $gty->setMdp($requete->mdp);
             $result = $gty->getMdp();
             return $result;
+        } elseif ($params == 'id') {
+            $gty = new User();
+            $gty->setId($requete->id);
+            $result = $gty->getId();
+            $_SESSION['id'] = $result;
+            return $result;
         } else {
             echo'Erreur';
         }

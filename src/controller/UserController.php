@@ -69,6 +69,8 @@ class UserController extends DefaultController
     {
         $test = new UserManager();
         $resultat = $test->findAnythingByEmail($data, $champ);
+        return $resultat;
+        // var_dump($resultat);
     }
     public function AddOneuser($params)
     {

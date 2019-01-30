@@ -19,7 +19,8 @@
             </form>
         </section>
         <section class="conversations">
-            <article class="conversation">
+
+            <!-- <article class="conversation">
                 <div class="img-container">
                     <img src="src/asset/images/profil-picture.png" alt="">
                 </div>
@@ -27,25 +28,18 @@
                     <p>Julie Sauvignet</p>
                     <p>Super et toi ? je pense...</p>
                 </div>
-            </article>
-            <article class="conversation">
-                <div class="img-container">
-                    <img src="src/asset/images/profil-picture.png" alt="">
-                </div>
-                <div class="infos-conversation">
-                    <p>Julie Sauvignet</p>
-                    <p>Super et toi ? je pense...</p>
-                </div>
-            </article>
+            </article> -->
+            <?php
+            $convers = new ChatController();
+            $requete = $convers ->RecupConversation(); ?>
         </section>
     </main>
 </body>
 
 <?php
-
+// var_dump($_SESSION);
 if (isset($_POST['ajouterfriend'])) {
     $user = new UserController();
     $result = $user->AddOneuser($_POST['oneuser']);
 }
-
  ?>

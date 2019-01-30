@@ -6,10 +6,13 @@ session_start();
     require_once 'src/orm/user.php';
     require_once 'src/models/UserManager.php';
     require_once 'src/orm/borne.php';
+    require_once 'src/orm/chat.php';
     require_once 'src/models/BorneManager.php';
+    require_once 'src/models/ChatManager.php';
     require_once 'src/controller/DefaultController.php';
     require_once 'src/controller/UserController.php';
     require_once 'src/controller/BorneController.php';
+    require_once 'src/controller/ChatController.php';
 
     $page = ''; // Page par défaut
   if (isset($_GET['p'])) { // Si on reçois un paramètre "p"
@@ -54,11 +57,11 @@ session_start();
             $ctrl->appelRender('user/profil');
             break;
         case 'conversations':
-            $ctrl = new UserController();
+            $ctrl = new ChatController();
             $ctrl->appelRender('messenger/conversation');
             break;
         case 'message':
-            $ctrl = new UserController();
+            $ctrl = new ChatController();
             $ctrl->appelRender('messenger/message');
             break;
         case 'profil-param':
