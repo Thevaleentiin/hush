@@ -49,6 +49,7 @@ class UserManager extends User
             $gty = new User();
             $gty->setPrenom($requete->prenom);
             $result = $gty->getPrenom();
+            $_SESSION['prenom'] = $result;
             return $result;
         } elseif ($params == 'mdp') {
             $gty = new User();

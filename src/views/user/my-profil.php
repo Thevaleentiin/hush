@@ -1,5 +1,6 @@
 <?php $recup = new UserController();
-$resultat = $recup->AfficherNomCompte($_SESSION['email'], 'prenom'); ?>
+$resultat = $recup->AfficherNomCompte($_SESSION['email'], 'prenom');
+?>
 <body id="Myprofil">
     <main>
         <header>

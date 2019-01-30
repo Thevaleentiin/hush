@@ -65,6 +65,10 @@ session_start();
             $ctrl = new UserController();
             $ctrl->appelRender('user/profil-param');
             break;
+        case 'deconnexion':
+            $ctrl = new UserController();
+            $ctrl->appelRender('user/deconnexion');
+            break;
         default:
             echo'defaut';
             break;

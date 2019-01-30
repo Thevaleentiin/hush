@@ -5,7 +5,7 @@
             <div>
               <ul>
                 <li class="active">Créer un compte</li>
-                <li><a href="connexion.php">Se Connecter</a></li>
+                <li><a href="?p=connexion">Se Connecter</a></li>
               </ul>
             </div>
           </section>

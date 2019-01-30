@@ -1326,7 +1326,8 @@
 
                 article.message {
                     width: 70%;
-                    margin: 2% 1%;
+                    margin: 3% 1% 2%;
+                    position: relative;
 
                     &:nth-child(odd) {
                         float: right;
@@ -1346,6 +1347,13 @@
                             padding: 10px;
                             border-radius: 15px;
                         }
+
+                        span {
+                            position: absolute;
+                            bottom: -17px;
+                            right: 48px;
+                            font-size: 12px;
+                        }
                     }
 
                     &:nth-child(even) {
@@ -1364,6 +1372,13 @@
                             color: black;
                             padding: 10px;
                             border-radius: 15px;
+                        }
+
+                        span {
+                            position: absolute;
+                            bottom: -17px;
+                            left: 48px;
+                            font-size: 12px;
                         }
                     }
                 }

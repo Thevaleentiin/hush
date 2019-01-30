@@ -208,13 +208,15 @@
   body#message main section.content-top { height: 8vh; background: #f3f3f3; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; position: fixed; width: 100%; }
   body#message main section.content-top a.BtnReturn { position: absolute; top: calc(80% - 30px); left: 20px; }
   body#message main section.messages { padding-top: 8.5vh; padding-bottom: 300px; position: relative; z-index: -1; overflow: hidden; padding-bottom: 120px; }
-  body#message main section.messages article.message { width: 70%; margin: 2% 1%; }
+  body#message main section.messages article.message { width: 70%; margin: 3% 1% 2%; position: relative; }
   body#message main section.messages article.message:nth-child(odd) { float: right; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
   body#message main section.messages article.message:nth-child(odd) img { width: 30px; height: 30px; margin: 5px; -webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; }
   body#message main section.messages article.message:nth-child(odd) p { background: #2895a1; color: white; padding: 10px; border-radius: 15px; }
+  body#message main section.messages article.message:nth-child(odd) span { position: absolute; bottom: -17px; right: 48px; font-size: 12px; }
   body#message main section.messages article.message:nth-child(even) { float: left; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
   body#message main section.messages article.message:nth-child(even) img { width: 30px; height: 30px; margin: 5px; }
   body#message main section.messages article.message:nth-child(even) p { background: #f6f6f6; color: black; padding: 10px; border-radius: 15px; }
+  body#message main section.messages article.message:nth-child(even) span { position: absolute; bottom: -17px; left: 48px; font-size: 12px; }
   body#message main section.inputMessage { position: fixed; bottom: 55px; width: 100%; padding: 10px 0 10px 10px; -webkit-box-sizing: border-box; box-sizing: border-box; background: white; }
   body#message main section.inputMessage form input[type=text] { border: 0; padding: 10px 0 10px 35px; border-radius: 10px; border: 1px solid #ececec; width: 85%; -webkit-box-sizing: border-box; box-sizing: border-box; }
   body#message main section.inputMessage form input[type=text]:focus { outline: none; }

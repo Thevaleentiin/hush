@@ -4,7 +4,7 @@
           <section class="menu-inscription">
             <div>
               <ul>
-                <li><a href="inscription">Créer un compte</a></li>
+                <li><a href="?p=inscription">Créer un compte</a></li>
                 <li class="active">Se Connecter</li>
               </ul>
             </div>
