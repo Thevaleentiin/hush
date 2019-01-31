@@ -16,7 +16,7 @@
             <h1>Julie Sauvignet</h1>
         </section>
         <section class="messages">
-            <article class="message">
+            <!-- <article class="message">
                 <img src="src/asset/images/profil-empty-noir" alt="">
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -38,28 +38,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
                 <span>29/01 22:40</span>
-            </article>
-            <article class="message">
-                <img src="src/asset/images/profil-empty-noir" alt="">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-                <span>29/01 22:40</span>
-            </article>
-            <article class="message">
-                <img src="src/asset/images/profil-empty-noir" alt="">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-                <span>29/01 22:40</span>
-            </article>
-            <article class="message">
-                <img src="src/asset/images/profil-empty-noir" alt="">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                </p>
-                <span>29/01 22:40</span>
-            </article>
+            </article> -->
         </section>
         <section class="inputMessage">
             <form class="SendMessage" action="" method="post">

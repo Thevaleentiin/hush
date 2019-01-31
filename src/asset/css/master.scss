@@ -1272,15 +1272,21 @@
                         box-sizing: border-box;
                         border-bottom: 1px solid $conversation-grey;
 
-                        p {
-                            &:first-of-type {
+                        p:first-of-type {
+                            a {
                                 font-weight: 600;
                                 font-size: 18px;
+                                text-decoration: none;
+                                color: black;
                             }
+                        }
 
-                            &:last-of-type {
+                        p:last-of-type {
+                            a {
                                 font-weight: lighter;
                                 font-size: 14px;
+                                text-decoration: none;
+                                color: black;
                             }
                         }
                     }

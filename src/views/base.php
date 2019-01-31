@@ -25,6 +25,16 @@
   <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
   <script type="text/javascript" src="/hush/src/asset/script/style.js"></script>
+
+     <script type="text/javascript">
+         function recup_msg(){
+             $.post('src/ajax/getMessage.php', function(data){
+                 $('#message .messages').html(data);
+             });
+         }
+         setInterval(recup_msg,2000);
+         recup_msg();
+     </script>
   <script type="text/javascript">
     $(document).ready(function () {
         //initialize swiper when document ready

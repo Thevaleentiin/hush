@@ -15,4 +15,9 @@ class ChatController extends DefaultController
         $conv = new ChatManager();
         $req = $conv->findAllMessage();
     }
+
+    public function RecupMessages($toId,$fromId){
+        $text = new ChatManager();
+        $req = $text->findMessages($toId,$fromId)
+    }
 }

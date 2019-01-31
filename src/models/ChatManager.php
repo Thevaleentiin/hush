@@ -10,10 +10,10 @@ class ChatManager extends Chat
         $req = new UserController();
         $resultat = $req->AfficherNomCompte($_SESSION['email'], 'id');
 
-        $sql = 'SELECT MAX(id), fromId, message FROM message WHERE toId = :id GROUP BY fromId ';
+        $sql = 'SELECT MAX(id), fromId, message, toId FROM message WHERE toId = :id GROUP BY fromId ';
         $array = array('id' => $resultat);
         $test = BDD::select($sql, $array, 'ChatManager');
-        var_dump($test);
+        // var_dump($test);
         $users = array();
         foreach ($test as $key) {
             $sql2 = 'SELECT * FROM users WHERE id = :fromId';
@@ -22,20 +22,24 @@ class ChatManager extends Chat
             if (!in_array($user->getEmail(), $users)) {
                 array_push($users, $user);
             }
-            var_dump($users);
-            // foreach ($users as $a) {
-            //     echo'
-            //     <article class="conversation">
-            //         <div class="img-container">
-            //             <img src="src/asset/images/profil-picture.png" alt="">
-            //         </div>
-            //         <div class="infos-conversation">
-            //             <p>'.$a->getNom().' '.$a->getPrenom().'</p>
-            //             <p>Super et toi ? je pense...</p>
-            //         </div>
-            //     </article>
-            //     ';
-            // }
+            // var_dump($users);
+            foreach ($users as $a) {
+                echo'
+                <article class="conversation">
+                    <div class="img-container">
+                        <img src="src/asset/images/profil-picture.png" alt="">
+                    </div>
+                    <div class="infos-conversation">
+                        <p><a href="?p=message&toId='.$key->getfromId().'&fromId='.$key->gettoId().'">'.$a->getNom().' '.$a->getPrenom().'</a></p>
+                        <p><a href="?p=message&toId='.$key->getfromId().'&fromId='.$key->gettoId().'">Super et toi ? je pense...</a></p>
+                    </div>
+                </article>
+                ';
+            }
         }
+    }
+    public function findMessages($toId, $fromId)
+    {
+        // $sql = "SELECT";
     }
 }
