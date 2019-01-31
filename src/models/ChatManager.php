@@ -10,7 +10,7 @@ class ChatManager extends Chat
         $req = new UserController();
         $resultat = $req->AfficherNomCompte($_SESSION['email'], 'id');
 
-        $sql = 'SELECT * FROM message WHERE toId = :id';
+        $sql = 'SELECT MAX(id), fromId, message FROM message WHERE toId = :id GROUP BY fromId ';
         $array = array('id' => $resultat);
         $test = BDD::select($sql, $array, 'ChatManager');
         var_dump($test);
