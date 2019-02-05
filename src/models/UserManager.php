@@ -132,7 +132,7 @@ class UserManager extends User
     {
         $sql ='DELETE FROM users WHERE email = :email';
         $array = array('email' => $this->email);
-        header('location: /hush/index.php');
+        header('location: ?p=home');
         session_destroy();
         return BDD::supprimer($sql, $array);
     }

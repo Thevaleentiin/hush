@@ -8,7 +8,7 @@ class BDD
     const host   = 'localhost';
     const user   = 'root';
     const pwd    = '';
-    const dbname = 'hush_bdd';
+    const dbname = 'hush_bdd;charset=UTF8';
 
     public static $bdd = false;
 
@@ -33,6 +33,7 @@ class BDD
     {
         $requete = self::$bdd->prepare($sql);
         $requete->execute($params);
+        // echo $requete->debugDumpParams();
         return $requete->rowCount();
     }
     public static function insert($sql, $params)

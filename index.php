@@ -28,6 +28,22 @@ session_start();
             $ctrl = new UserController();
             $ctrl->appelRender('home-cultiver');
             break;
+        case 'borne-around':
+            $ctrl = new UserController();
+            $ctrl->appelRender('bornes/borne-aroundme');
+            break;
+        case 'borne-around-cultiver':
+            $ctrl = new UserController();
+            $ctrl->appelRender('bornes/borne-aroundme-cultiver');
+            break;
+        case 'borne':
+            $ctrl = new UserController();
+            $ctrl->appelRender('bornes/borne');
+            break;
+        case 'borne-cultiver':
+            $ctrl = new UserController();
+            $ctrl->appelRender('bornes/borne-cultiver');
+            break;
         case 'inscription':
             $ctrl = new UserController();
             $ctrl->appelRender('user/inscription');
@@ -71,6 +87,10 @@ session_start();
         case 'deconnexion':
             $ctrl = new UserController();
             $ctrl->appelRender('user/deconnexion');
+            break;
+        case 'mentions-legales':
+            $ctrl = new UserController();
+            $ctrl->appelRender('mentions-legales');
             break;
         default:
             echo'defaut';

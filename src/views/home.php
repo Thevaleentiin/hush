@@ -1,15 +1,21 @@
 <body id="index">
     <main>
-        <div id="loader">
-          <img src="src/asset/images/loader.gif" alt="loader hush">
-        </div>
+        <?php
+            if (!isset($_SESSION['email'])) {
+                echo '
+                <div id="loader">
+                  <img src="src/asset/images/loader.gif" alt="loader hush">
+                </div>
+                ';
+            }
+         ?>
         <header>
             <nav class="navBar">
                 <ul>
-                    <li><a href="/hush/index.php"><img src="src/asset/images/prise-bleu.png" alt=""><span class="active">Recharger</span></a></li>
-                    <li><a href="/hush/src/views/index-cultiver.php"><img src="src/asset/images/feuille-noir.png" alt=""><span>Cultiver</span></a></li>
+                    <li><a href="?p=home"><img src="src/asset/images/prise-bleu.png" alt=""><span class="active">Recharger</span></a></li>
+                    <li><a href="?p=home-cultiver"><img src="src/asset/images/feuille-noir.png" alt=""><span>Cultiver</span></a></li>
                     <li><a href=""><img src="src/asset/images/carnet-noir.png" alt=""><span>Carnet</span></a></li>
-                    <li><a href=""><img src="src/asset/images/message-noir.png" alt=""><span>Message</span></a></li>
+                    <li><a href="?p=conversations"><img src="src/asset/images/message-noir.png" alt=""><span>Message</span></a></li>
                     <li><a href="?p=moncompte"><img src="src/asset/images/profil-empty-noir.png" alt=""><span>Compte</span></a></li>
                 </ul>
             </nav>

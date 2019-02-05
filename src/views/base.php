@@ -14,6 +14,10 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v0.52.0/mapbox-gl.css' rel='stylesheet' />
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.min.js'></script>
 	<link rel="stylesheet" type="text/css" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.3.0/mapbox-gl-geocoder.css">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+    <script type="text/javascript" src="/hush/src/asset/script/style.js"></script>
+    <script type="text/javascript" src="/hush/src/asset/script/autosize.min.js"></script>
   </head>
   <?= $contenu; ?>
 
@@ -22,29 +26,20 @@
     $bornes = $select->findAllBorne();
   // var_dump($bornes);
    ?>
-  <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
-  <script type="text/javascript" src="/hush/src/asset/script/style.js"></script>
 
-     <script type="text/javascript">
-         function recup_msg(){
-             $.post('src/ajax/getMessage.php', function(data){
-                 $('#message .messages').html(data);
-             });
-         }
-         setInterval(recup_msg,2000);
-         recup_msg();
-     </script>
   <script type="text/javascript">
     $(document).ready(function () {
         //initialize swiper when document ready
         var mySwiper = new Swiper ('.swiper-container', {
         // Optional parameters
         direction: 'horizontal',
-        slidesPerView: 2.5,
+        slidesPerView: 2,
         spaceBetween: 15,
+        slidesOffsetBefore: 15,
+        slidesOffsetAfter: 15,
+        roundLengths : true,
         freeMode: true,
-        loop: false
+        centeredSlides : false
         })
         });
     </script>

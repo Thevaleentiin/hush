@@ -30,8 +30,16 @@ class ChatManager extends Chat
                         <img src="src/asset/images/profil-picture.png" alt="">
                     </div>
                     <div class="infos-conversation">
-                        <p><a href="?p=message&toId='.$key->getfromId().'&fromId='.$key->gettoId().'">'.$a->getNom().' '.$a->getPrenom().'</a></p>
-                        <p><a href="?p=message&toId='.$key->getfromId().'&fromId='.$key->gettoId().'">Super et toi ? je pense...</a></p>
+                    <form class="convtomessage" action="?p=message" method="post">
+                        <input type="hidden" name="toid" value="'.$key->gettoId().'">
+                        <input type="hidden" name="fromid" value="'.$key->getfromId().'">
+                        <input type="hidden" name="Nom" value="'.$a->getNom().' '.$a->getPrenom().'">
+
+                        <button type="submit" name="button">
+                        <p>'.$a->getNom().' '.$a->getPrenom().'</p>
+                        <p>Super et toi ? je pense...</p>
+                        </button>
+                    </form>
                     </div>
                 </article>
                 ';
@@ -40,6 +48,21 @@ class ChatManager extends Chat
     }
     public function findMessages($toId, $fromId)
     {
-        // $sql = "SELECT";
+        $sql = 'SELECT * FROM message WHERE toId = :currentid AND fromId = :otherid OR toId = :otherid AND fromId = :currentid ORDER BY datemessage ASC';
+        $array = array('currentid' => $toId, 'otherid' => $fromId);
+        return BDD::select($sql, $array, 'ChatManager');
+    }
+    // Inscription
+    public function AjouterMsg($toId, $fromId, $message)
+    {
+        $date = new DateTime('now');
+        $sql = 'INSERT INTO message (toId, fromId, message, datemessage) VALUES (:toId, :fromId, :message, :datemessage)';
+        $array = array(
+          'toId'=>$toId,
+          'fromId'=>$fromId,
+          'message'=>$message,
+          'datemessage'=> $date->format('Y-m-d H:i:s')
+        );
+        return BDD::insert($sql, $array);
     }
 }
