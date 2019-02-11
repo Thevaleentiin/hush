@@ -1,19 +1,19 @@
 <?php
-
+// CONNEXION POUR LA VERSION EN MIGNE
 /**
  * CLASS BDD
  */
 class BDD
 {
-    const host   = 'localhost';
-    const user   = 'root';
-    const pwd    = '';
-    const dbname = 'hush_bdd;charset=UTF8';
+    // const host   = 'localhost';
+    // const user   = 'root';
+    // const pwd    = '';
+    // const dbname = 'hush_bdd;charset=UTF8';
     // FTP
-    // const host   = 'db772458236.hosting-data.io';
-    // const user   = 'dbo772458236';
-    // const pwd    = '24Blazer24$';
-    // const dbname = 'db772458236;charset=UTF8';
+    const host   = 'db772458236.hosting-data.io';
+    const user   = 'dbo772458236';
+    const pwd    = '24Blazer24$';
+    const dbname = 'db772458236;charset=UTF8';
 
     public static $bdd = false;
 

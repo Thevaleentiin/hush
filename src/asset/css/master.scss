@@ -18,6 +18,18 @@
         max-width: 100%;
     }
 
+    body {
+        position: relative;
+    }
+
+    .field-icon {
+        float: right;
+        margin-left: -25px;
+        margin-top: -25px;
+        position: relative;
+        z-index: 2;
+    }
+
     section.menu-inscription {
         div {
             ul {
@@ -73,6 +85,7 @@
         padding: 5px 20px;
         box-sizing: border-box;
         width: 100%;
+        z-index: 10;
 
         nav.navBar {
             ul {
@@ -159,6 +172,44 @@
                 .mapboxgl-ctrl > button:hover {
                     background: none !important;
                 }
+
+                .mapboxgl-ctrl-bottom-left {
+                    display: none!important;
+                }
+
+                .mapboxgl-ctrl-bottom-right {
+                    display: none!important;
+                }
+                // CSS pop up
+                .mapboxgl-popup {
+                    position: fixed;
+                    top: initial;
+                    transform: none!important;
+                    left: 0;
+                    bottom: 65px;
+                    display: -webkit-flex;
+                    display: flex;
+                    will-change: transform;
+                    pointer-events: none;
+                    width: 100%;
+                    will-change: initial;
+                    padding: 0 15px;
+                    box-sizing: border-box;
+                }
+
+                .mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
+                .mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip,
+                .mapboxgl-popup-anchor-left .mapboxgl-popup-tip,
+                .mapboxgl-popup-anchor-right .mapboxgl-popup-tip,
+                .mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip,
+                .mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
+                    display: none;
+                }
+
+                .mapboxgl-popup-content {
+                    width: 100%;
+                    box-sizing: border-box;
+                }
             }
 
             #geocoder {
@@ -167,9 +218,10 @@
                 width: 100%;
                 display: flex;
                 justify-content: center;
+                cursor: pointer;
 
                 .geocoder-icon-search {
-                    background-image: url("/hush/src/asset/images/loupe-noir.png");
+                    background-image: url("../images/loupe-noir.png");
                     background-size: 20px;
                 }
 
@@ -238,7 +290,7 @@
     }
     //Page d'accueil Cultiver
     body#indexCultiver {
-        background: lightgrey;
+        background: $grey-bakground;
 
         main {
             padding-top: 15%;
@@ -276,12 +328,12 @@
 
                     div.swiper-wrapper {
                         div.type-content {
-                            background: #d8d8d8;
+                            background: white;
                             display: flex;
                             flex-direction: column;
                             justify-content: flex-start;
                             align-items: flex-start;
-                            height: 130px;
+                            height: auto;
                             border-radius: 10px;
 
                             img {
@@ -290,7 +342,7 @@
                             }
 
                             p {
-                                margin: 10px 10px 0;
+                                margin: 10px 0 10px 15px;
                             }
                         }
                     }
@@ -311,13 +363,14 @@
 
                     div.swiper-wrapper {
                         div.type-content {
-                            background: #d8d8d8;
+                            background: white;
                             display: flex;
                             flex-direction: column;
                             justify-content: flex-start;
                             align-items: center;
-                            height: 185px;
+                            height: auto;
                             border-radius: 10px;
+                            padding-bottom: 5%;
 
                             img {
                                 border-top-left-radius: 10px;
@@ -338,21 +391,6 @@
                                         font-size: 12px;
                                     }
                                 }
-
-                                p:nth-child(3),
-                                p:nth-child(4) {
-                                    img {
-                                        width: 17px;
-                                        border-radius: 0;
-                                    }
-                                }
-
-                                p:last-of-type {
-                                    text-align: right;
-                                    padding-right: 10px;
-                                    font-weight: 600;
-                                    color: $blue-color;
-                                }
                             }
                         }
                     }
@@ -370,6 +408,14 @@
                     top: 13.3%;
                     right: 16%;
                 }
+
+                .mapboxgl-ctrl-bottom-left {
+                    display: none!important;
+                }
+
+                .mapboxgl-ctrl-bottom-right {
+                    display: none!important;
+                }
             }
 
             #geocoder {
@@ -378,9 +424,10 @@
                 width: 100%;
                 display: flex;
                 justify-content: center;
+                cursor: pointer;
 
                 .geocoder-icon-search {
-                    background-image: url("/hush/src/asset/images/loupe-noir.png");
+                    background-image: url("../images/loupe-noir.png");
                     background-size: 20px;
                 }
 
@@ -521,6 +568,14 @@
                 .mapboxgl-canvas:focus {
                     outline: none !important;
                 }
+
+                .mapboxgl-ctrl-bottom-left {
+                    display: none!important;
+                }
+
+                .mapboxgl-ctrl-bottom-right {
+                    display: none!important;
+                }
             }
 
             section {
@@ -608,6 +663,14 @@
                 .mapboxgl-canvas:focus {
                     outline: none !important;
                 }
+
+                .mapboxgl-ctrl-bottom-left {
+                    display: none!important;
+                }
+
+                .mapboxgl-ctrl-bottom-right {
+                    display: none!important;
+                }
             }
 
             section {
@@ -692,16 +755,30 @@
                         width: 70%;
 
                         input {
-                            margin: 10% 10px;
-
                             &:first-of-type {
                                 margin-left: 0;
+                                margin-bottom: 0;
                             }
 
                             &:last-of-type {
-                                margin-bottom: 10%;
+                                margin-bottom: 0;
                                 margin-left: 0;
                             }
+                        }
+                    }
+
+                    div.container-password {
+                        width: 70%;
+                        position: relative;
+
+                        input {
+                            width: 100%;
+                        }
+
+                        span {
+                            position: absolute;
+                            bottom: 20px;
+                            right: 5%;
                         }
                     }
 
@@ -709,7 +786,7 @@
                         border: 0;
                         padding: 20px;
                         border-radius: 10px;
-                        margin: 10% 0;
+                        margin: 5% 0;
                         width: 70%;
                         background: $other-grey;
                         box-sizing: border-box;
@@ -720,14 +797,16 @@
 
                         &[type=submit] {
                             width: 100%;
-                            position: fixed;
                             bottom: 0;
                             left: 0;
-                            border-radius: 0;
                             background: $blue-color;
                             color: white;
                             margin: 0;
                             font-size: 16px;
+                            -webkit-appearance: none;
+                            width: 60%;
+                            border-radius: 10px;
+                            padding: 15px 20px;
                         }
                     }
                 }
@@ -765,14 +844,31 @@
 
                         &[type=submit] {
                             width: 100%;
-                            position: fixed;
                             bottom: 0;
                             left: 0;
-                            border-radius: 0;
                             background: $blue-color;
                             color: white;
                             margin: 0;
                             font-size: 16px;
+                            -webkit-appearance: none;
+                            width: 60%;
+                            border-radius: 10px;
+                            padding: 15px 20px;
+                        }
+                    }
+
+                    div.container-password {
+                        width: 70%;
+                        position: relative;
+
+                        input {
+                            width: 100%;
+                        }
+
+                        span {
+                            position: absolute;
+                            bottom: 20px;
+                            right: 5%;
                         }
                     }
                 }
@@ -1355,6 +1451,7 @@
                         float: right;
                         display: flex;
                         align-items: center;
+                        justify-content: flex-end;
 
                         img {
                             width: 30px;
@@ -1493,6 +1590,70 @@
                         padding-left: 4%;
                         list-style: none;
                         margin: 10px 0;
+                    }
+                }
+            }
+        }
+    }
+    // page mentions légales
+    body#profilParam {
+        main {
+            header {
+                border-top: 1px solid #bcbcbc;
+            }
+
+            section.content {
+                padding-top: 20%;
+                border-bottom: 1px solid #bcbcbc;
+
+                h1 {
+                    color: #000;
+                    padding-left: 30px;
+                    padding-bottom: 20px;
+                }
+
+                a.BtnReturn {
+                    position: absolute;
+                }
+            }
+
+            section.parameters-profil {
+                article.modification-compte {
+                    padding: 0;
+                    box-sizing: border-box;
+
+                    form.modif-form {
+                        ul {
+                            li {
+                                border-bottom: 1px solid $blue-color;
+                                list-style: none;
+                                margin-left: 5%;
+
+                                &:last-of-type {
+                                    border-bottom: 0;
+                                    margin: 7% auto 0;
+                                    width: 50%;
+                                }
+
+                                input {
+                                    display: block;
+                                    width: 100%;
+                                    border: 0;
+                                    padding: 10% 0 5%;
+
+                                    &:focus {
+                                        outline: none;
+                                    }
+
+                                    &[type=submit] {
+                                        background: $blue-color;
+                                        color: white;
+                                        padding: 0;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

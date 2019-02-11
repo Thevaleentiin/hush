@@ -93,6 +93,7 @@ session_start();
             $ctrl->appelRender('mentions-legales');
             break;
         default:
-            echo'defaut';
+            $ctrl = new UserController();
+            $ctrl->appelRender('home');
             break;
     }

@@ -16,7 +16,7 @@
         require_once '../controller/ChatController.php';
 
         $Msg = new ChatController();
-        $SendMessage = $Msg->SendMessage($toid, $fromid, $message);
+        $SendMessage = $Msg->SendMessage($toid, $fromid, $message); //fromid = $_SESSION['fromid']; pour pouvoir recharger la page message
         echo $toid;
         echo $SendMessage;
     } else {

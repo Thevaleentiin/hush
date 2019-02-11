@@ -1,6 +1,6 @@
   <body id="inscription">
       <main>
-          <a href="#" class="BtnReturn"><img src="/hush/src/asset/images/arrow-left-noir.png" alt="flèche gauche retour en arrière"></a>
+          <a href="#" class="BtnReturn"><img src="src/asset/images/arrow-left-noir.png" alt="flèche gauche retour en arrière"></a>
           <section class="menu-inscription">
             <div>
               <ul>
@@ -16,9 +16,12 @@
                     <input type="text" name="prenom" id="prenom" value="" placeholder="Prénom">
                 </div>
                 <input type="email" name="email" id="email" value="" placeholder="Adresse e-mail">
-                <input type="text" name="phone" id="phone" value="" placeholder="Numéro de téléphone">
-                <input type="password" name="mdp" id="mdp" value="" placeholder="Mot de Passe">
-                <input type="submit" name="inscription" value="Inscription">
+                <input type="number" name="phone" id="phone" value="" placeholder="Numéro de téléphone">
+                <div class="container-password">
+                    <input id="password-field" type="password" class="form-control" name="mdp" value="" placeholder="Mot de passe">
+                    <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                </div>
+                <input type="submit" name="inscription" id="s'inscrire" value="Inscription">
               </form>
           </section>
       </main>

@@ -55,3 +55,19 @@
                     </div>
           </section>
       </main>
+      <script type="text/javascript">
+        $(document).ready(function () {
+            //initialize swiper when document ready
+            var mySwiper = new Swiper ('.swiper-container', {
+            // Optional parameters
+            direction: 'horizontal',
+            slidesPerView: 2,
+            spaceBetween: 15,
+            slidesOffsetBefore: 15,
+            slidesOffsetAfter: 15,
+            roundLengths : true,
+            freeMode: true,
+            centeredSlides : false
+            })
+            });
+        </script>

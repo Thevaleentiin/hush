@@ -9,4 +9,10 @@ class BorneController extends DefaultController
     {
         parent::render($vue, $variables);
     }
+    public function afficherBorne($coordinates)
+    {
+        $born = new BorneManager();
+        $borne = $born->afficherInfoBorne($coordinates);
+        return $borne;
+    }
 }

@@ -4,9 +4,9 @@
               <nav class="navBar">
                   <ul>
                       <li><a href="?p=home"><img src="/hush/src/asset/images/prise-noir.png" alt=""><span>Recharger</span></a></li>
-                      <li><a href="?p=home-cultiver"><img src="/hush/src/asset/images/feuille-bleu.png" alt=""><span>Cultiver</span></a></li>
-                      <li><a href="?p=mycarnet"><img src="/hush/src/asset/images/carnet-bleu.png" alt=""><span>Carnet</span></a></li>
-                      <li><a href=""><img src="/hush/src/asset/images/message-bleu.png" alt=""><span>Message</span></a></li>
+                      <li><a href="?p=home-cultiver"><img src="/hush/src/asset/images/feuille-noir.png" alt=""><span>Cultiver</span></a></li>
+                      <li><a href="?p=mycarnet"><img src="/hush/src/asset/images/carnet-noir.png" alt=""><span>Carnet</span></a></li>
+                      <li><a href=""><img src="/hush/src/asset/images/message-noir.png" alt=""><span>Message</span></a></li>
                       <li><a href="?p=moncompte"><img src="/hush/src/asset/images/profil-empty-noir.png" alt=""><span>Compte</span></a></li>
                   </ul>
               </nav>

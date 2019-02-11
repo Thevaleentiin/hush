@@ -8,7 +8,7 @@ $resultat = $recup->AfficherNomCompte($_SESSION['email'], 'prenom');
                 <ul>
                     <li><a href="?p=home"><img src="src/asset/images/prise-noir.png" alt=""><span>Recharger</span></a></li>
                     <li><a href="?p=home-cultiver"><img src="src/asset/images/feuille-noir.png" alt=""><span>Cultiver</span></a></li>
-                    <li><a href=""><img src="src/asset/images/carnet-noir.png" alt=""><span>Carnet</span></a></li>
+                    <li><a href="?p=mycarnet"><img src="src/asset/images/carnet-noir.png" alt=""><span>Carnet</span></a></li>
                     <li><a href="?p=conversations"><img src="src/asset/images/message-noir.png" alt=""><span>Message</span></a></li>
                     <li><a href="?p=moncompte"><img src="src/asset/images/profil-empty-bleu.png" alt=""><span  class="active">Compte</span></a></li>
                 </ul>
