@@ -1,6 +1,6 @@
 <body id="borneAroundMe">
       <main>
-          <a href="#" class="BtnReturn"><img src="/hush/src/asset/images/arrow-left-noir.png" alt="flèche gauche retour en arrière"></a>
+          <a href="javascript:history.back()" class="BtnReturn"><img src="/hush/src/asset/images/arrow-left-noir.png" alt="flèche gauche retour en arrière"></a>
           <section class="container-search">
               <form class="search_bar" id="SearchBar" action="index.html" method="post">
                   <input type="text" name="search" value="" placeholder="Où allez-vous ?">

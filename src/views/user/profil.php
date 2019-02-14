@@ -12,7 +12,7 @@
             </nav>
         </header>
         <section class="content-top">
-            <a href="#" class="BtnReturn"><img src="src/asset/images/arrow-left-noir.png" alt="flèche gauche retour en arrière"></a>
+            <a href="javascript:history.back()" class="BtnReturn"><img src="src/asset/images/arrow-left-noir.png" alt="flèche gauche retour en arrière"></a>
             <a href="#" class="MsgButton"><img src="src/asset/images/message-noir.png" alt="pictogramme message"></a>
             <div class="profil-info">
                 <img src="src/asset/images/profil-picture.png" alt="photo de profil">

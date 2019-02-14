@@ -1,6 +1,6 @@
   <body id="connexion">
       <main>
-          <a href="#" class="BtnReturn"><img src="src/asset/images/arrow-left-noir.png" alt="flèche gauche retour en arrière"></a>
+          <a href="javascript:history.back()" class="BtnReturn"><img src="src/asset/images/arrow-left-noir.png" alt="flèche gauche retour en arrière"></a>
           <section class="menu-inscription">
             <div>
               <ul>

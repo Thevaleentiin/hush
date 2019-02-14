@@ -92,6 +92,10 @@ session_start();
             $ctrl = new UserController();
             $ctrl->appelRender('mentions-legales');
             break;
+        case 'method-payment':
+            $ctrl = new BorneController();
+            $ctrl->appelRender('paiement/method-paiement');
+            break;
         default:
             $ctrl = new UserController();
             $ctrl->appelRender('home');

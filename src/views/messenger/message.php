@@ -16,7 +16,7 @@
             </nav>
         </header>
         <section class="content-top">
-            <a href="?p=conversations" class="BtnReturn"><img src="src/asset/images/arrow-left-noir.png" alt="flèche gauche retour en arrière"></a>
+            <a href="javascript:history.back()" class="BtnReturn"><img src="src/asset/images/arrow-left-noir.png" alt="flèche gauche retour en arrière"></a>
             <h1><?= $_POST['Nom'];?></h1>
         </section>
         <section class="messages">

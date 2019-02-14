@@ -1,5 +1,5 @@
-<?php $recup = new UserController();
-$resultat = $recup->AfficherNomCompte($_SESSION['email'], 'prenom');
+<?php
+//var_dump($_SESSION);
 ?>
 <body id="Myprofil">
     <main>
@@ -15,11 +15,11 @@ $resultat = $recup->AfficherNomCompte($_SESSION['email'], 'prenom');
             </nav>
         </header>
         <section class="content-top">
-            <a href="#" class="BtnReturn"><img src="src/asset/images/arrow-left-noir.png" alt="flèche gauche retour en arrière"></a>
+            <a href="javascript:history.back()" class="BtnReturn"><img src="src/asset/images/arrow-left-noir.png" alt="flèche gauche retour en arrière"></a>
             <a href="?p=reglage-compte" class="MsgButton"><img src="src/asset/images/ellipsis.png" alt="pictogramme message"></a>
             <div class="profil-info">
                 <img src="src/asset/images/profil-picture.png" alt="photo de profil">
-                <h1><?= $_SESSION['prenom']; ?></h1>
+                <h1><?= $_SESSION['nom'].' '.$_SESSION['prenom'] ?></h1>
                 <p>Borne Nation</p>
             </div>
         </section>
@@ -42,49 +42,54 @@ $resultat = $recup->AfficherNomCompte($_SESSION['email'], 'prenom');
                 <form class="" action="" method="post">
                     <div class="container-input">
                         <img src="src/asset/images/profil-picture.png" alt="photo de profil">
-                        <textarea name="message" rows="5" placeholder="Exprimez-vous"></textarea>
+                        <textarea name="message" id="PubliTextArea" rows="5" placeholder="Exprimez-vous"></textarea>
                     </div>
                     <div class="cont-bottom">
                         <img src="src/asset/images/photo.png" alt="appareil à photo">
+                        <input type="submit" name="SendOne" class="SendMsgPubli" id="SendOne" value="">
                     </div>
                 </form>
             </article>
-            <article class="publication-content">
-                <div class="top-content">
-                    <img src="src/asset/images/profil-picture.png" alt="photo de profil">
-                    <div class="text-content">
-                        <p class="title-content"><span>Julie Sauvignet</span> à partagé une publication</p>
-                        <p class="date">mardi, à 17:30</p>
-                    </div>
-                </div>
-                <p class="message-content">
-                    J’ai entretenue les tulipes aujourd’hui ! Elle sont sublime.
-                </p>
-            </article>
-            <article class="publication-content">
-                <div class="top-content">
-                    <img src="src/asset/images/profil-picture.png" alt="photo de profil">
-                    <div class="text-content">
-                        <p class="title-content"><span>Julie Sauvignet</span> à partagé une publication</p>
-                        <p class="date">mardi, à 17:30</p>
-                    </div>
-                </div>
-                <p class="message-content">
-                    J’ai entretenue les tulipes aujourd’hui ! Elle sont sublime.
-                </p>
-            </article>
-            <article class="publication-content">
-                <div class="top-content">
-                    <img src="src/asset/images/profil-picture.png" alt="photo de profil">
-                    <div class="text-content">
-                        <p class="title-content"><span>Julie Sauvignet</span> à partagé une publication</p>
-                        <p class="date">mardi, à 17:30</p>
-                    </div>
-                </div>
-                <p class="message-content">
-                    J’ai entretenue les tulipes aujourd’hui ! Elle sont sublime.
-                </p>
-            </article>
+            <div class="publication-affiche">
+            </div>
         </section>
-
     </main>
+    <script type="text/javascript">
+        autosize($('#PubliTextArea'));
+
+        // function récupérer les messages
+         function recup_publi(){
+             $.post('src/ajax/getPublication.php?id_user=<?= $_SESSION['id'] ?>&nom=<?= $_SESSION['nom'] ?>&prenom=<?= $_SESSION['prenom'] ?>', function(data){
+                 $('#Myprofil .publication-affiche').html(data);
+             });
+
+         }
+         setInterval(recup_publi,2000);
+         recup_publi();
+         //function qui envoie les messages
+         function sendMessage(){
+            let messageBox = $('#PubliTextArea');
+            publication = $.trim(messageBox.val());
+            $.post('src/ajax/sendPublication.php?id_user=<?= $_SESSION['id'] ?>&id_borne=0', { publication:publication }, function(r){
+            console.log(r);
+                if(r.length !== 0) {
+                    recup_publi();
+                    messageBox.val('');
+                }
+                else{
+                    // Affiche msg erreur
+                }
+            });
+
+           }
+
+     </script>
+
+   <script type="text/javascript">
+     $(document).ready(function () {
+         $('#SendOne').click(function(e){
+             e.preventDefault();
+             sendMessage();
+         });
+        });
+     </script>

@@ -59,7 +59,7 @@
                           {
                             "type": "Feature",
                             "properties": {
-                              "description":"<?php $req = new BorneController();$requete = $req->afficherBorne($coordinates->getAdresse()); ?><div><?= $requete ?></div>",
+                              "description":"<?php $req = new BorneController();$requete = $req->afficherBorne($coordinates->getAdresse(), $coordinates->getId()); ?><?= $requete ?>",
                               "icon": "custom-marker"
                             },
                             "geometry": {

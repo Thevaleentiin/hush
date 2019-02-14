@@ -12,7 +12,7 @@
         </nav>
     </header>
     <section class="content">
-        <a href="?p=reglage-compte" class="BtnReturn"><img src="/hush/src/asset/images/arrow-left-noir.png" alt="flèche gauche retour en arrière"></a>
+        <a href="javascript:history.back()" class="BtnReturn"><img src="/hush/src/asset/images/arrow-left-noir.png" alt="flèche gauche retour en arrière"></a>
         <h1>Mention légale </h1>
     </section>
     <section class="contenu">

@@ -104,10 +104,13 @@ class UserManager extends User
     public function accountExist()
     {
         $compte = self::connexion();
-        // var_dump($compte);
+        var_dump($compte);
         if (!empty($compte)) {
             $_SESSION['email'] = $this->email;
             $_SESSION['pwd'] = $this->mdp;
+            $_SESSION['id'] = $compte[0]->getId();
+            $_SESSION['nom'] = $compte[0]->getNom();
+            $_SESSION['prenom'] = $compte[0]->getPrenom();
             header('location: ?p=moncompte');
         } else {
             echo'<p> Mauvais email ou mdp</p>';

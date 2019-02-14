@@ -22,6 +22,10 @@
         position: relative;
     }
 
+    input:focus {
+        outline: 0;
+    }
+
     .field-icon {
         float: right;
         margin-left: -25px;
@@ -209,6 +213,77 @@
                 .mapboxgl-popup-content {
                     width: 100%;
                     box-sizing: border-box;
+                    padding: 10px 0 0;
+                    border-radius: 10px;
+
+                    .mapboxgl-popup-close-button {
+                        position: absolute;
+                        right: 5px;
+                        top: 0;
+                        border: 0;
+                        border-radius: 0 3px 0 0;
+                        cursor: pointer;
+                        background-color: transparent;
+                    }
+
+                    div.container-borne {
+                        position: relative;
+
+                        p.distance-borne {
+                            position: absolute;
+                            top: 0;
+                            right: 19px;
+                            font-size: 17px;
+                            color: $blue-color;
+                            font-weight: bold;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: white;
+                            background: $blue-color;
+                            display: block;
+                            width: 100%;
+                            padding: 15px 0;
+                            box-sizing: border-box;
+                            text-align: center;
+                            border-bottom-right-radius: 10px;
+                            border-bottom-left-radius: 10px;
+                            font-size: 18px;
+                        }
+
+                        h2,
+                        p:nth-child(2) {
+                            padding-left: 10px;
+                        }
+
+                        .container-infos {
+                            padding: 0 10px;
+                            margin: 15px 0;
+
+                            div.infos-borne {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+
+                                span {
+                                    color: $blue-color;
+                                    margin: 0 5px;
+                                    font-size: 20px;
+                                }
+
+                                p {
+                                    font-size: 13px;
+                                    padding-left: 5px;
+                                }
+
+                                img {
+                                    width: 15px;
+                                    height: 15px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
@@ -283,6 +358,51 @@
                             color: black;
                             margin-bottom: 10px;
                         }
+                    }
+                }
+            }
+        }
+    }
+    //Page Method de paiement
+    body#methodPaiement {
+        main {
+            section.content {
+                padding-top: 20%;
+
+                h1 {
+                    color: #000;
+                    padding-left: 30px;
+                    padding-bottom: 20px;
+                }
+
+                a.BtnReturn {
+                    position: absolute;
+                }
+            }
+
+            section.methode {
+                padding: 0 10%;
+                box-sizing: border-box;
+                margin-top: 15%;
+
+                div {
+                    padding: 35px;
+                    box-sizing: border-box;
+                    width: 100%;
+                    background: $other-grey;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 10px;
+                    margin: 4% 0;
+
+                    &:nth-child(2) {
+                        margin-top: 0;
+                    }
+
+                    img {
+                        width: 50px;
+                        height: auto;
                     }
                 }
             }
@@ -801,7 +921,7 @@
                             left: 0;
                             background: $blue-color;
                             color: white;
-                            margin: 0;
+                            margin: 5% 0 0;
                             font-size: 16px;
                             -webkit-appearance: none;
                             width: 60%;
@@ -833,6 +953,8 @@
                         border-radius: 5px;
                         margin: 50px 0;
                         width: 60%;
+                        border-radius: 10px;
+                        background: $other-grey;
 
                         &:first-of-type {
                             margin-bottom: 0;
@@ -848,7 +970,7 @@
                             left: 0;
                             background: $blue-color;
                             color: white;
-                            margin: 0;
+                            margin: 5% 0 0;
                             font-size: 16px;
                             -webkit-appearance: none;
                             width: 60%;
@@ -863,6 +985,9 @@
 
                         input {
                             width: 100%;
+                            box-sizing: border-box;
+                            border-radius: 10px;
+                            background: $other-grey;
                         }
 
                         span {
@@ -1258,8 +1383,17 @@
                             text-align: right;
 
                             img {
-                                width: 25px;
+                                width: 23px;
                                 height: auto;
+                                margin: 0 10px 10px 0;
+                            }
+
+                            input.SendMsgPubli {
+                                background: url("../images/send-bleu.png") no-repeat;
+                                width: 25px;
+                                height: 34px;
+                                background-size: 25px;
+                                border: 0;
                                 margin: 0 10px 10px 0;
                             }
                         }
