@@ -57,6 +57,11 @@ class UserController extends DefaultController
             echo 'erreur de syntaxe , veuillez réessayer';
         }
     }
+    public function lancerAddFavoris($id_borne, $email){
+        $mis = new UserManager();
+        $req = $mis->addBorneFav($id_borne, $email);
+        return $req;
+    }
     public function lancerDelete($post)
     {
         if (isset($post['email'])) {
@@ -71,6 +76,12 @@ class UserController extends DefaultController
         $resultat = $test->findAnythingByEmail($data, $champ);
         return $resultat;
         // var_dump($resultat);
+    }
+    public function findNameForOneUser($id_user)
+    {
+        $usr = new UserManager();
+        $user = $usr->findNameById($id_user);
+        return $user;
     }
     public function AddOneuser($params)
     {

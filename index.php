@@ -6,13 +6,16 @@ session_start();
     require_once 'src/orm/user.php';
     require_once 'src/models/UserManager.php';
     require_once 'src/orm/borne.php';
+    require_once 'src/orm/publication.php';
     require_once 'src/orm/chat.php';
     require_once 'src/models/BorneManager.php';
+    require_once 'src/models/PublicationManager.php';
     require_once 'src/models/ChatManager.php';
     require_once 'src/controller/DefaultController.php';
     require_once 'src/controller/UserController.php';
     require_once 'src/controller/BorneController.php';
     require_once 'src/controller/ChatController.php';
+    require_once 'src/controller/PublicationController.php';
 
     $page = ''; // Page par défaut
   if (isset($_GET['p'])) { // Si on reçois un paramètre "p"

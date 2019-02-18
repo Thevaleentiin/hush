@@ -17,6 +17,12 @@ class UserManager extends User
         $array = array('id'=> $id);
         return current(BDD::select($sql, $array, 'UserManager'));
     }
+    public static function findNameById($id)
+    {
+        $sql = 'SELECT nom, prenom FROM users WHERE id= :id ';
+        $array = array('id'=> $id);
+        return current(BDD::select($sql, $array, 'UserManager'));
+    }
     public static function findOneByEmail($email)
     {
         $sql = 'SELECT * FROM users WHERE email = :email';
@@ -111,6 +117,7 @@ class UserManager extends User
             $_SESSION['id'] = $compte[0]->getId();
             $_SESSION['nom'] = $compte[0]->getNom();
             $_SESSION['prenom'] = $compte[0]->getPrenom();
+            $_SESSION['favoris_id'] = $compte[0]->getFavId();
             header('location: ?p=moncompte');
         } else {
             echo'<p> Mauvais email ou mdp</p>';
@@ -146,5 +153,16 @@ class UserManager extends User
     {
         $existe = self::findOneByEmail($email);
         return $existe;
+    }
+
+    // udapte id_borne / Ajouter une borne en Favoris
+    public function addBorneFav($id_borne, $email)
+    {
+        $sql ='UPDATE users SET favoris_id = :id_fav WHERE email = :email';
+        $array = array(
+            'id_fav' => $id_borne,
+            'email' => $email
+        );
+        return BDD::update($sql, $array);
     }
 }

@@ -39,5 +39,5 @@
             <?php
         }
     } else {
-        echo "T nul C cho";
+        echo 'Erreur d\'envoie';
     }

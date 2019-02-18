@@ -231,11 +231,27 @@
 
                         p.distance-borne {
                             position: absolute;
-                            top: 0;
+                            top: 2px;
                             right: 19px;
                             font-size: 17px;
                             color: $blue-color;
                             font-weight: bold;
+                        }
+
+                        form.cont-fav {
+                            position: absolute;
+                            top: 0;
+                            right: 60px;
+                            width: auto;
+                            padding: 0;
+
+                            input[type=submit] {
+                                background: url("../images/etoile-bleu.png") no-repeat;
+                                background-size: 20px;
+                                height: 20px;
+                                border: 0;
+                                width: 20px;
+                            }
                         }
 
                         a {
@@ -1070,11 +1086,23 @@
             section.content {
                 border-bottom: 1px solid #bcbcbc;
                 padding-top: 20px;
+                position: fixed;
+                width: 100%;
+                background: $other-grey;
+                top: 0;
 
                 h1 {
                     color: $blue-color;
                     padding-left: 30px;
+                    padding-bottom: 5px;
+                }
+
+                p {
+                    padding-left: 30px;
                     padding-bottom: 20px;
+                    font-size: 14px;
+                    color: $blue-color;
+                    font-weight: 600;
                 }
 
                 a.BtnReturn {
@@ -1083,7 +1111,7 @@
             }
 
             section.publication-container {
-                padding: 0 20px 80px;
+                padding: 95px 20px 80px;
                 box-sizing: border-box;
 
                 article.send-in {
@@ -1123,8 +1151,17 @@
                             text-align: right;
 
                             img {
-                                width: 25px;
+                                width: 23px;
                                 height: auto;
+                                margin: 0 10px 10px 0;
+                            }
+
+                            input.SendMsgPubli {
+                                background: url("../images/send-bleu.png") no-repeat;
+                                width: 25px;
+                                height: 34px;
+                                background-size: 25px;
+                                border: 0;
                                 margin: 0 10px 10px 0;
                             }
                         }
@@ -1133,6 +1170,9 @@
 
                 article.publication-content {
                     margin-top: 6%;
+                    background: white;
+                    border-radius: 10px;
+                    padding: 15px;
 
                     div.top-content {
                         display: flex;

@@ -14,7 +14,7 @@ class PublicationManager extends Publication
     {
         $sql = 'SELECT * FROM publications WHERE id= :id ';
         $array = array('id'=> $id);
-        return current(BDD::select($sql, $array, 'UserManager'));
+        return current(BDD::select($sql, $array, 'PublicationManager'));
     }
 
     public function AjouterPubli($id, $id_borne, $publication)
@@ -34,6 +34,12 @@ class PublicationManager extends Publication
     {
         $sql = 'SELECT * FROM publications WHERE id_user = :id ORDER BY timemessage DESC';
         $array = array('id'=>$id);
+        return BDD::select($sql, $array, 'PublicationManager');
+    }
+    public function getAllPublibyBorne($id_borne)
+    {
+        $sql = 'SELECT * FROM publications WHERE id_borne = :id ORDER BY timemessage DESC';
+        $array = array('id'=>$id_borne);
         return BDD::select($sql, $array, 'PublicationManager');
     }
 }

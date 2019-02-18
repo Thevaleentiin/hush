@@ -20,7 +20,11 @@
             <div class="profil-info">
                 <img src="src/asset/images/profil-picture.png" alt="photo de profil">
                 <h1><?= $_SESSION['nom'].' '.$_SESSION['prenom'] ?></h1>
-                <p>Borne Nation</p>
+                <p><?php
+                    $adr = new BorneController();
+                    $adresse = $adr->chercherUneBorne($_SESSION['favoris_id']);
+                    echo $adresse->getAdresse();
+                 ?></p>
             </div>
         </section>
         <section class="icon-profil">
@@ -70,8 +74,8 @@
          function sendMessage(){
             let messageBox = $('#PubliTextArea');
             publication = $.trim(messageBox.val());
-            $.post('src/ajax/sendPublication.php?id_user=<?= $_SESSION['id'] ?>&id_borne=0', { publication:publication }, function(r){
-            console.log(r);
+            $.post('src/ajax/sendPublication.php?id_user=<?= $_SESSION['id'] ?>&id_borne=<?= $_SESSION['favoris_id'] ?>', { publication:publication }, function(r){
+            // console.log(r);
                 if(r.length !== 0) {
                     recup_publi();
                     messageBox.val('');

@@ -20,7 +20,7 @@
 
         $Msg = new PublicationController();
         $SendMessage = $Msg->SendPublication($id, $id_borne, $publication);
-
+        var_dump($SendMessage);
     } else {
         echo 'erreur d\'envoie';
     }

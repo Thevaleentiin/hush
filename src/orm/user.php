@@ -11,6 +11,7 @@ class User extends BDD
     protected $prenom;
     protected $phone;
     protected $id;
+    protected $favoris_id;
 
     public function setEmail($email)
     {
@@ -59,5 +60,13 @@ class User extends BDD
     public function getId()
     {
         return $this->id;
+    }
+    public function setFavId($favoris_id)
+    {
+        $this->favoris_id = $favoris_id;
+    }
+    public function getFavId()
+    {
+        return $this->favoris_id;
     }
 }
