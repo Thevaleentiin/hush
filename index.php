@@ -87,6 +87,10 @@ session_start();
             $ctrl = new BorneController();
             $ctrl->appelRender('paiement/method-paiement');
             break;
+        case 'cb-payment':
+            $ctrl = new BorneController();
+            $ctrl->appelRender('paiement/card-select');
+            break;
         default:
             $ctrl = new UserController();
             $ctrl->appelRender('home');

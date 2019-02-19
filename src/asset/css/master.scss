@@ -1809,5 +1809,75 @@
             }
         }
     }
+    // page card select
+    body#CardPayment {
+        main {
+            section.content {
+                padding-top: 20%;
+
+                h1 {
+                    color: #000;
+                    padding-left: 30px;
+                    padding-bottom: 20px;
+                }
+
+                a.BtnReturn {
+                    position: absolute;
+                }
+            }
+
+            section.card-form {
+                form {
+                    div.payement-bloc {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+
+                        input {
+                            border: 0;
+                            padding: 20px;
+                            border-radius: 5px;
+                            margin: 10% 0;
+                            width: 75%;
+                            border-radius: 10px;
+                            background: $other-grey;
+                            box-sizing: border-box;
+                        }
+
+                        div.container-datacard {
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            justify-content: center;
+                            width: 75%;
+
+                            input {
+                                margin: 0 10px 0 0;
+
+                                &:last-of-type {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                    }
+
+                    input[type=submit] {
+                        /* width: 100%; */
+                        background: #2895a1;
+                        color: white;
+                        border: 0;
+                        font-size: 16px;
+                        -webkit-appearance: none;
+                        width: 60%;
+                        border-radius: 10px;
+                        padding: 15px 20px;
+                        margin: 5% auto 0;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
     //fin media query
 }

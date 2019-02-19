@@ -6,7 +6,7 @@
         </section>
         <section class="methode">
             <div class="">
-                <a href="#">
+                <a href="?p=cb-payment&id_borne=<?= $_GET['id_borne'] ?>">
                     <img src="src/asset/images/cb.png" alt="logo carte bleu">
                 </a>
             </div>
