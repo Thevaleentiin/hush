@@ -31,18 +31,6 @@ session_start();
             $ctrl = new UserController();
             $ctrl->appelRender('home-cultiver');
             break;
-        case 'borne-around':
-            $ctrl = new UserController();
-            $ctrl->appelRender('bornes/borne-aroundme');
-            break;
-        case 'borne-around-cultiver':
-            $ctrl = new UserController();
-            $ctrl->appelRender('bornes/borne-aroundme-cultiver');
-            break;
-        case 'borne':
-            $ctrl = new UserController();
-            $ctrl->appelRender('bornes/borne');
-            break;
         case 'borne-cultiver':
             $ctrl = new UserController();
             $ctrl->appelRender('bornes/borne-cultiver');

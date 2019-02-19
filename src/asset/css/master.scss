@@ -508,22 +508,27 @@
                             border-radius: 10px;
                             padding-bottom: 5%;
 
-                            img {
-                                border-top-left-radius: 10px;
-                                border-top-right-radius: 10px;
-                            }
+                            a {
+                                text-decoration: none;
+                                color: black;
 
-                            div.content-borne {
-                                margin-top: 5px;
-                                font-size: 13px;
-                                width: 100%;
-                                padding-left: 10px;
-                                box-sizing: border-box;
+                                img {
+                                    border-top-left-radius: 10px;
+                                    border-top-right-radius: 10px;
+                                }
 
-                                p.title-borne {
-                                    font-weight: 600;
+                                div.content-borne {
+                                    margin-top: 5px;
+                                    font-size: 13px;
+                                    width: 100%;
+                                    padding-left: 10px;
+                                    box-sizing: border-box;
 
-                                    &.adress-borne {
+                                    p.title-borne {
+                                        font-weight: 600;
+                                    }
+
+                                    p.adress-borne {
                                         font-size: 12px;
                                     }
                                 }
@@ -586,190 +591,6 @@
             }
         }
     }
-    //Page bornes autour de moi
-    body#borneAroundMe {
-        background: lightgrey;
-        padding-top: 20%;
-        box-sizing: border-box;
-        min-height: 100vh;
-
-        main {
-            section.container-search {
-                form {
-                    text-align: center;
-
-                    input {
-                        padding: 16px 0 15px 40px;
-                        border-radius: 5px;
-                        border: 0;
-                        background: url('/hush/src/asset/images/loupe-noir.png')no-repeat;
-                        background-position: 5px 11px;
-                        background-color: white;
-                        background-size: 25px;
-                        width: 80%;
-                        box-sizing: border-box;
-                    }
-                }
-            }
-
-            section.aroundMe {
-                margin-top: 5%;
-                position: fixed;
-                bottom: 2%;
-
-                h2 {
-                    font-size: 30px;
-                    padding-left: 15px;
-                }
-
-                div.container-type {
-                    div.swiper-wrapper {
-                        div.type-content {
-                            background: #d8d8d8;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: flex-start;
-                            align-items: center;
-                            height: auto;
-                            border-radius: 10px;
-
-                            img {
-                                border-top-left-radius: 10px;
-                                border-top-right-radius: 10px;
-                                align-self: flex-start;
-                            }
-
-                            div.content-borne {
-                                margin-top: 5px;
-                                font-size: 13px;
-                                width: 100%;
-                                padding-left: 10px;
-                                box-sizing: border-box;
-
-                                p.title-borne {
-                                    font-weight: 600;
-
-                                    &.adress-borne {
-                                        font-size: 12px;
-                                    }
-                                }
-
-                                p:nth-child(3),
-                                p:nth-child(4) {
-                                    img {
-                                        width: 17px;
-                                        border-radius: 0;
-                                    }
-                                }
-
-                                p:last-of-type {
-                                    text-align: right;
-                                    padding-right: 10px;
-                                    font-weight: 600;
-                                    color: $blue-color;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
-    //Page bornes
-    body#borne {
-        box-sizing: border-box;
-        min-height: 100vh;
-
-        main {
-            a.BtnReturn {
-                z-index: 1;
-            }
-
-            #map {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                height: 100%!important;
-                border-bottom: 1px solid #bcbcbc;
-
-                .mapboxgl-control-container {
-                    display: none!important;
-                }
-
-                .mapboxgl-ctrl-top-right {
-                    top: 13.3%;
-                    right: 16%;
-                }
-
-                .mapboxgl-canvas:focus {
-                    outline: none !important;
-                }
-
-                .mapboxgl-ctrl-bottom-left {
-                    display: none!important;
-                }
-
-                .mapboxgl-ctrl-bottom-right {
-                    display: none!important;
-                }
-            }
-
-            section {
-                z-index: 1;
-                position: fixed;
-                bottom: 10px;
-                padding: 0 5%;
-                box-sizing: border-box;
-
-                div.borne-content {
-                    background: white;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                    align-items: center;
-                    height: auto;
-                    z-index: 1;
-                    border-radius: 10px;
-
-                    img {
-                        border-top-left-radius: 10px;
-                        border-top-right-radius: 10px;
-                    }
-
-                    div.content-borne {
-                        margin-top: 5px;
-                        font-size: 13px;
-                        width: 100%;
-                        padding: 0 0 10px 10px;
-                        box-sizing: border-box;
-
-                        p.title-borne {
-                            font-weight: 900;
-                            letter-spacing: 0.5px;
-
-                            &.adress-borne {
-                                font-size: 12px;
-                            }
-                        }
-
-                        p:nth-child(3) {
-                            text-align: right;
-                            color: $blue-color;
-                            font-weight: 600;
-                            padding-right: 10px;
-                        }
-
-                        p:last-of-type {
-                            text-align: center;
-                            letter-spacing: 1px;
-                            color: $blue-color;
-                            font-size: 17px;
-                        }
-                    }
-                }
-            }
-        }
-    }
     //Page bornes cultiver
     body#borneCultiver {
         box-sizing: border-box;
@@ -784,20 +605,25 @@
                 position: absolute;
                 top: 0;
                 bottom: 0;
-                height: 100%!important;
+                height: 100% !important;
                 border-bottom: 1px solid #bcbcbc;
 
-                .mapboxgl-control-container {
-                    display: none!important;
+                .mapboxgl-ctrl-top-right {
+                    top: 10px;
+                    right: 10px;
                 }
 
-                .mapboxgl-ctrl-top-right {
-                    top: 13.3%;
-                    right: 16%;
+                .mapboxgl-ctrl-group {
+                    background: none!important;
+                    box-shadow: none!important;
                 }
 
                 .mapboxgl-canvas:focus {
                     outline: none !important;
+                }
+
+                .mapboxgl-ctrl > button:hover {
+                    background: none !important;
                 }
 
                 .mapboxgl-ctrl-bottom-left {
@@ -806,6 +632,153 @@
 
                 .mapboxgl-ctrl-bottom-right {
                     display: none!important;
+                }
+                // CSS pop up
+                .mapboxgl-popup {
+                    position: fixed;
+                    top: initial;
+                    transform: none!important;
+                    left: 0;
+                    bottom: 10px;
+                    display: -webkit-flex;
+                    display: flex;
+                    will-change: transform;
+                    pointer-events: none;
+                    width: 100%;
+                    will-change: initial;
+                    padding: 0 15px;
+                    box-sizing: border-box;
+                }
+
+                .mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip,
+                .mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip,
+                .mapboxgl-popup-anchor-left .mapboxgl-popup-tip,
+                .mapboxgl-popup-anchor-right .mapboxgl-popup-tip,
+                .mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip,
+                .mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
+                    display: none;
+                }
+
+                .mapboxgl-popup-content {
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding: 0;
+                    border-radius: 10px;
+
+                    .mapboxgl-popup-close-button {
+                        position: absolute;
+                        right: 5px;
+                        top: 0;
+                        border: 0;
+                        border-radius: 0 3px 0 0;
+                        cursor: pointer;
+                        background-color: transparent;
+                        z-index: 1;
+                    }
+
+                    div.container-borne {
+                        position: relative;
+
+                        p.distance-borne {
+                            position: absolute;
+                            top: 2px;
+                            right: 95px;
+                            font-size: 17px;
+                            color: $blue-color;
+                            font-weight: bold;
+                        }
+
+                        img {
+                            position: absolute;
+                            width: 85px;
+                            right: 0;
+                            top: 0;
+                            border-bottom-left-radius: 50%;
+                            border-top-right-radius: 10px;
+                        }
+
+                        a {
+                            text-decoration: none;
+                            color: white;
+                            background: $blue-color;
+                            display: block;
+                            width: 100%;
+                            padding: 15px 0;
+                            box-sizing: border-box;
+                            text-align: center;
+                            border-bottom-right-radius: 10px;
+                            border-bottom-left-radius: 10px;
+                            font-size: 18px;
+                        }
+
+                        h2 {
+                            padding-top: 10px;
+                        }
+
+                        h2,
+                        p:nth-child(2) {
+                            padding-left: 10px;
+                        }
+
+                        .container-infos {
+                            padding: 0 10px;
+                            margin: 15px 0;
+
+                            div.infos-borne {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+
+                                span {
+                                    color: $blue-color;
+                                    margin: 0 5px;
+                                    font-size: 20px;
+                                }
+
+                                p {
+                                    font-size: 13px;
+                                    padding-left: 5px;
+                                }
+
+                                img {
+                                    width: 15px;
+                                    height: 15px;
+                                    position: inherit;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            #geocoder {
+                position: absolute;
+                top: 12%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                cursor: pointer;
+
+                .geocoder-icon-search {
+                    background-image: url("../images/loupe-noir.png");
+                    background-size: 20px;
+                }
+
+                .mapboxgl-ctrl-geocoder,
+                .mapboxgl-ctrl-geocoder ul {
+                    -webkit-box-shadow: 5px 5px 5px 0 rgba(46,74,117,0.32);
+                    -moz-box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
+                    box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
+                    -webkit-box-shadow: 5px 5px 5px 0 rgba(46,74,117,0.32);
+                    -moz-box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
+                    box-shadow: 2px 2px 1px 0 rgba(46,74,117,0.32);
+                    border-radius: 10px;
+                }
+
+                .mapboxgl-ctrl-geocoder input[type='text'] {
+                    padding: 16px 0 15px 40px;
+                    border-radius: 5px;
+                    width: 80%;
                 }
             }
 
@@ -1027,8 +1000,8 @@
 
                 h1 {
                     color: $blue-color;
-                    padding-left: 30px;
-                    padding-bottom: 20px;
+                    padding: 0 20px 20px 30px;
+                    font-size: 1.2rem;
                 }
 
                 a.BtnReturn {
@@ -1042,6 +1015,9 @@
 
                 article.publication-content {
                     margin-top: 6%;
+                    background: white;
+                    border-radius: 10px;
+                    padding: 15px;
 
                     div.top-content {
                         display: flex;

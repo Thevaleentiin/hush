@@ -18,7 +18,7 @@ class PublicationController extends DefaultController
         $rez = new PublicationManager();
         return $rez->AjouterPubli($id, $id_borne, $publication);
     }
-     public function RecupererDesPubli($id_borne, $nom, $prenom)
+     public function RecupererDesPubli($id_borne)
      {
          $pb = new PublicationManager();
          $publis = $pb->getAllPublibyBorne($id_borne);

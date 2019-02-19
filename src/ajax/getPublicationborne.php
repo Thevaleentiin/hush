@@ -22,7 +22,7 @@
             $brn = new BorneController();
             $bornes = $brn->chercherUneBorne($_SESSION['favoris_id']);
             $mes = new PublicationController();
-            $publications = $mes->RecupererDesPubli($_SESSION['favoris_id'], $_SESSION['nom'], $_SESSION['prenom']);
+            $publications = $mes->RecupererDesPubli($_SESSION['favoris_id']);
             echo $publications;
         }else{
             if ($_POST['id_borne'] == "0" || !isset($_POST)) {

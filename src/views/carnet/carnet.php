@@ -13,68 +13,27 @@
         </header>
         <section class="content">
             <a href="javascript:history.back()" class="BtnReturn"><img src="/hush/src/asset/images/arrow-left-noir.png" alt="flèche gauche retour en arrière"></a>
-            <h1>Borne Fondation Louis Vuitton</h1>
+            <h1><?php
+                $adr = new BorneController();
+                $adresse = $adr->chercherUneBorne($_GET['id_borne']);
+                echo $adresse->getAdresse();
+             ?></h1>
         </section>
         <section class="publication-container">
-            <article class="publication-content">
-                <div class="top-content">
-                    <img src="src/asset/images/profil-picture.png" alt="photo de profil">
-                    <div class="text-content">
-                        <p class="title-content"><span>Julie Sauvignet</span> à partagé une publication</p>
-                        <p class="date">mardi, à 17:30</p>
-                    </div>
-                </div>
-                <p class="message-content">
-                    J’ai entretenue les tulipes aujourd’hui ! Elle sont sublime.
-                </p>
-            </article>
-            <article class="publication-content">
-                <div class="top-content">
-                    <img src="src/asset/images/profil-picture.png" alt="photo de profil">
-                    <div class="text-content">
-                        <p class="title-content"><span>Julie Sauvignet</span> à partagé une publication</p>
-                        <p class="date">mardi, à 17:30</p>
-                    </div>
-                </div>
-                <p class="message-content">
-                    J’ai entretenue les tulipes aujourd’hui ! Elle sont sublime.
-                </p>
-            </article>
-            <article class="publication-content">
-                <div class="top-content">
-                    <img src="src/asset/images/profil-picture.png" alt="photo de profil">
-                    <div class="text-content">
-                        <p class="title-content"><span>Julie Sauvignet</span> à partagé une publication</p>
-                        <p class="date">mardi, à 17:30</p>
-                    </div>
-                </div>
-                <p class="message-content">
-                    J’ai entretenue les tulipes aujourd’hui ! Elle sont sublime.
-                </p>
-            </article>
-            <article class="publication-content">
-                <div class="top-content">
-                    <img src="src/asset/images/profil-picture.png" alt="photo de profil">
-                    <div class="text-content">
-                        <p class="title-content"><span>Julie Sauvignet</span> à partagé une publication</p>
-                        <p class="date">mardi, à 17:30</p>
-                    </div>
-                </div>
-                <p class="message-content">
-                    J’ai entretenue les tulipes aujourd’hui ! Elle sont sublime.
-                </p>
-            </article>
-            <article class="publication-content">
-                <div class="top-content">
-                    <img src="src/asset/images/profil-picture.png" alt="photo de profil">
-                    <div class="text-content">
-                        <p class="title-content"><span>Julie Sauvignet</span> à partagé une publication</p>
-                        <p class="date">mardi, à 17:30</p>
-                    </div>
-                </div>
-                <p class="message-content">
-                    J’ai entretenue les tulipes aujourd’hui ! Elle sont sublime.
-                </p>
-            </article>
+            <?php
+            if (isset($_GET['id_borne'])) {
+
+                $mes = new PublicationController();
+                $publications = $mes->RecupererDesPubli($_GET['id_borne']);
+                echo $publications;
+
+
+
+
+            }else{
+                echo 'Erreur d\'accès à la borne';
+            }
+
+             ?>
         </section>
     </main>

@@ -15,6 +15,12 @@ class BorneController extends DefaultController
         $borne = $born->afficherInfoBorne($coordinates, $idborne);
         return $borne;
     }
+    public function afficherBorneCultiver($coordinates, $idborne)
+    {
+        $born = new BorneManager();
+        $borne = $born->afficherInfoBornecultiver($coordinates, $idborne);
+        return $borne;
+    }
     public function chercherUneBorne($id){
         $req = new BorneManager();
         $borne = $req->findOneById($id);
